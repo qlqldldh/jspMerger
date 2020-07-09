@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from educhamp.themetrades.com/demo/admin/teacher-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:11:35 GMT -->
+<!-- Mirrored from educhamp.themetrades.com/demo/admin/user-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:11:35 GMT -->
 <jsp:include page="common-components/header.jsp" flush="false" />
 <body class="ttr-opened-sidebar ttr-pinned-sidebar">
 
@@ -13,12 +13,12 @@
 	<!-- Left sidebar menu end -->
 
 	<!--Main container start -->
-	<jsp:include page="components/orders-main-section.jsp" flush="false" />
+	<jsp:include page="components/orders-insert-section.jsp" flush="false" />
 
 	<!-- External JavaScripts -->
 	<jsp:include page="common-components/external-javascript.jsp"
 		flush="false" />
 </body>
 
-<!-- Mirrored from educhamp.themetrades.com/demo/admin/teacher-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:11:35 GMT -->
+<!-- Mirrored from educhamp.themetrades.com/demo/admin/orders-insert.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:11:35 GMT -->
 </html>
