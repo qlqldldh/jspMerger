@@ -6,7 +6,7 @@
 <body class="ttr-opened-sidebar ttr-pinned-sidebar">
 	
 	<!-- header start -->
-	<jsp:include page="common-components/header.jsp" flush="false"/>
+	<jsp:include page="common-components/header-section.jsp" flush="false"/>
 	<!-- header end -->
 	<!-- Left sidebar menu start -->
 	<jsp:include page="common-components/left-sidebar.jsp" flush="false"/>
