@@ -64,7 +64,7 @@
                     <div class="tab-content active">
                         <article>
                             <figure>
-                                <img src="images/latest-blog-img-home-v1.jpg" alt="Latest Blog">
+                                <img src="${pageContext.request.contextPath}/images/latest-blog-img-home-v1.jpg" alt="Latest Blog">
                                 <figcaption>
                                     <a href="#.">
                                         <span class="date">07</span>
@@ -113,7 +113,7 @@
                     <div class="tab-content">
                         <article>
                             <figure>
-                                <img src="images/latest-blog-img-home-v1-2.jpg" alt="Latest Blog">
+                                <img src="${pageContext.request.contextPath}/images/latest-blog-img-home-v1-2.jpg" alt="Latest Blog">
                                 <figcaption>
                                     <a href="#.">
                                         <span class="date">06</span>
@@ -162,7 +162,7 @@
                     <div class="tab-content">
                         <article>
                             <figure>
-                                <img src="images/latest-blog-img-home-v1.jpg" alt="Latest Blog">
+                                <img src="${pageContext.request.contextPath}/images/latest-blog-img-home-v1.jpg" alt="Latest Blog">
                                 <figcaption>
                                     <a href="#.">
                                         <span class="date">05</span>
@@ -211,7 +211,7 @@
                     <div class="tab-content">
                         <article>
                             <figure>
-                                <img src="images/latest-blog-img-home-v1-2.jpg" alt="Latest Blog">
+                                <img src="${pageContext.request.contextPath}/images/latest-blog-img-home-v1-2.jpg" alt="Latest Blog">
                                 <figcaption>
                                     <a href="#.">
                                         <span class="date">04</span>
@@ -260,7 +260,7 @@
                     <div class="tab-content">
                         <article>
                             <figure>
-                                <img src="images/latest-blog-img-home-v1.jpg" alt="Latest Blog">
+                                <img src="${pageContext.request.contextPath}/images/latest-blog-img-home-v1.jpg" alt="Latest Blog">
                                 <figcaption>
                                     <a href="#.">
                                         <span class="date">03</span>
@@ -309,7 +309,7 @@
                     <div class="tab-content">
                         <article>
                             <figure>
-                                <img src="images/latest-blog-img-home-v1-2.jpg" alt="Latest Blog">
+                                <img src="${pageContext.request.contextPath}/images/latest-blog-img-home-v1-2.jpg" alt="Latest Blog">
                                 <figcaption>
                                     <a href="#.">
                                         <span class="date">02</span>

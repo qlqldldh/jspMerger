@@ -9,7 +9,7 @@
             <div class="team-list">
                 <div class="team-member">
                     <figure>
-                        <img src="images/team-img-01.jpg" alt="team" />
+                        <img src="${pageContext.request.contextPath}/images/team-img-01.jpg" alt="team" />
                     </figure>
                     <div class="content-block">
                         <div class="member-info">
@@ -45,7 +45,7 @@
                 </div>
                 <div class="team-member">
                     <figure>
-                        <img src="images/team-img-02.jpg" alt="team" />
+                        <img src="${pageContext.request.contextPath}/images/team-img-02.jpg" alt="team" />
                     </figure>
                     <div class="content-block">
                         <div class="member-info">
@@ -81,7 +81,7 @@
                 </div>
                 <div class="team-member">
                     <figure>
-                        <img src="images/team-img-03.jpg" alt="team" />
+                        <img src="${pageContext.request.contextPath}/images/team-img-03.jpg" alt="team" />
                     </figure>
                     <div class="content-block">
                         <div class="member-info">

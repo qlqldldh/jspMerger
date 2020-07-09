@@ -9,7 +9,7 @@
             <div class="owl-carousel">
                 <div class="single-testimonial-box">
                     <div class="top-portion">
-                        <img src="images/testimonial-image-01.jpg" alt="Testimonial Image" />
+                        <img src="${pageContext.request.contextPath}/images/testimonial-image-01.jpg" alt="Testimonial Image" />
                         <div class="user-comment">
                             <div class="arrow-left"></div>
                             <blockquote cite="#">
@@ -38,7 +38,7 @@
                 </div>
                 <div class="single-testimonial-box">
                     <div class="top-portion">
-                        <img src="images/testimonial-image-02.jpg" alt="Testimonial Image" />
+                        <img src="${pageContext.request.contextPath}/images/testimonial-image-02.jpg" alt="Testimonial Image" />
                         <div class="user-comment">
                             <div class="arrow-left"></div>
                             <blockquote cite="#">
@@ -67,7 +67,7 @@
                 </div>
                 <div class="single-testimonial-box">
                     <div class="top-portion">
-                        <img src="images/testimonial-image-01.jpg" alt="Testimonial Image" />
+                        <img src="${pageContext.request.contextPath}/images/testimonial-image-01.jpg" alt="Testimonial Image" />
                         <div class="user-comment">
                             <div class="arrow-left"></div>
                             <blockquote cite="#">
@@ -96,7 +96,7 @@
                 </div>
                 <div class="single-testimonial-box">
                     <div class="top-portion">
-                        <img src="images/testimonial-image-02.jpg" alt="Testimonial Image" />
+                        <img src="${pageContext.request.contextPath}/images/testimonial-image-02.jpg" alt="Testimonial Image" />
                         <div class="user-comment">
                             <div class="arrow-left"></div>
                             <blockquote cite="#">
@@ -125,7 +125,7 @@
                 </div>
                 <div class="single-testimonial-box">
                     <div class="top-portion">
-                        <img src="images/testimonial-image-01.jpg" alt="Testimonial Image" />
+                        <img src="${pageContext.request.contextPath}/images/testimonial-image-01.jpg" alt="Testimonial Image" />
                         <div class="user-comment">
                             <div class="arrow-left"></div>
                             <blockquote cite="#">
@@ -154,7 +154,7 @@
                 </div>
                 <div class="single-testimonial-box">
                     <div class="top-portion">
-                        <img src="images/testimonial-image-02.jpg" alt="Testimonial Image" />
+                        <img src="${pageContext.request.contextPath}/images/testimonial-image-02.jpg" alt="Testimonial Image" />
                         <div class="user-comment">
                             <div class="arrow-left"></div>
                             <blockquote cite="#">
@@ -183,7 +183,7 @@
                 </div>
                 <div class="single-testimonial-box">
                     <div class="top-portion">
-                        <img src="images/testimonial-image-01.jpg" alt="Testimonial Image" />
+                        <img src="${pageContext.request.contextPath}/images/testimonial-image-01.jpg" alt="Testimonial Image" />
                         <div class="user-comment">
                             <div class="arrow-left"></div>
                             <blockquote cite="#">
@@ -212,7 +212,7 @@
                 </div>
                 <div class="single-testimonial-box">
                     <div class="top-portion">
-                        <img src="images/testimonial-image-02.jpg" alt="Testimonial Image" />
+                        <img src="${pageContext.request.contextPath}/images/testimonial-image-02.jpg" alt="Testimonial Image" />
                         <div class="user-comment">
                             <div class="arrow-left"></div>
                             <blockquote cite="#">
