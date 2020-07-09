@@ -256,7 +256,7 @@
 										<li class="col-sm-3">
 											<div class="fact-item icon-ebooks">
 												<div class="fact-icon">
-													<img src="images/icon-ebooks.png" alt="" />
+													<img src="${pageContext.request.contextPath}/images/icon-ebooks.png" alt="" />
 												</div>
 												<span>eBooks<strong class="fact-counter">45780</strong></span>
 											</div>
@@ -264,7 +264,7 @@
 										<li class="col-sm-3">
 											<div class="fact-item icon-eaudio">
 												<div class="fact-icon">
-													<img src="images/icon-eaudio.png" alt="" />
+													<img src="${pageContext.request.contextPath}/images/icon-eaudio.png" alt="" />
 												</div>
 												<span>eAudio<strong class="fact-counter">32450</strong></span>
 											</div>
@@ -272,7 +272,7 @@
 										<li class="col-sm-3">
 											<div class="fact-item icon-magazine">
 												<div class="fact-icon">
-													<img src="images/icon-magazine.png" alt="" />
+													<img src="${pageContext.request.contextPath}/images/icon-magazine.png" alt="" />
 												</div>
 												<span>Magazine<strong class="fact-counter">14450</strong></span>
 											</div>
@@ -280,7 +280,7 @@
 										<li class="col-sm-3">
 											<div class="fact-item icon-videos">
 												<div class="fact-icon">
-													<img src="images/icon-videos.png" alt="" />
+													<img src="${pageContext.request.contextPath}/images/icon-videos.png" alt="" />
 												</div>
 												<span>Videos<strong class="fact-counter">32450</strong></span>
 											</div>
@@ -350,7 +350,7 @@
 								<div class="owl-carousel">
 									<div class="single-testimonial-box">
 										<div class="top-portion">
-											<img src="images/testimonial-image-01.jpg"
+											<img src="${pageContext.request.contextPath}/images/testimonial-image-01.jpg"
 												alt="Testimonial Image" />
 											<div class="user-comment">
 												<div class="arrow-left"></div>
@@ -385,7 +385,7 @@
 									</div>
 									<div class="single-testimonial-box">
 										<div class="top-portion">
-											<img src="images/testimonial-image-02.jpg"
+											<img src="${pageContext.request.contextPath}/images/testimonial-image-02.jpg"
 												alt="Testimonial Image" />
 											<div class="user-comment">
 												<div class="arrow-left"></div>
@@ -420,7 +420,7 @@
 									</div>
 									<div class="single-testimonial-box">
 										<div class="top-portion">
-											<img src="images/testimonial-image-01.jpg"
+											<img src="${pageContext.request.contextPath}/images/testimonial-image-01.jpg"
 												alt="Testimonial Image" />
 											<div class="user-comment">
 												<div class="arrow-left"></div>
@@ -473,7 +473,7 @@
 									<li class="category-item">
 										<figure>
 											<img
-												src="images/category-filter/home-v1/category-filter-img-01.jpg"
+												src="${pageContext.request.contextPath}/images/category-filter/home-v1/category-filter-img-01.jpg"
 												alt="New Releaase" />
 											<figcaption class="bg-orange">
 												<div class="info-block">
@@ -508,7 +508,7 @@
 									<li class="category-item">
 										<figure>
 											<img
-												src="images/category-filter/home-v1/category-filter-img-02.jpg"
+												src="${pageContext.request.contextPath}/images/category-filter/home-v1/category-filter-img-02.jpg"
 												alt="New Releaase" />
 											<figcaption class="bg-orange">
 												<div class="info-block">
@@ -543,7 +543,7 @@
 									<li class="category-item">
 										<figure>
 											<img
-												src="images/category-filter/home-v1/category-filter-img-03.jpg"
+												src="${pageContext.request.contextPath}/images/category-filter/home-v1/category-filter-img-03.jpg"
 												alt="New Releaase" />
 											<figcaption class="bg-orange">
 												<div class="info-block">
@@ -578,7 +578,7 @@
 									<li class="category-item">
 										<figure>
 											<img
-												src="images/category-filter/home-v1/category-filter-img-04.jpg"
+												src="${pageContext.request.contextPath}/images/category-filter/home-v1/category-filter-img-04.jpg"
 												alt="New Releaase" />
 											<figcaption class="bg-orange">
 												<div class="info-block">
