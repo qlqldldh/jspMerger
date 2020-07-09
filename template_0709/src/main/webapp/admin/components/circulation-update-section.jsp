@@ -2,10 +2,10 @@
 	<main class="ttr-wrapper">
 		<div class="container-fluid">
 			<div class="db-breadcrumb">
-				<h4 class="breadcrumb-title">circulation-insert</h4>
+				<h4 class="breadcrumb-title">circulation-update</h4>
 				<ul class="db-breadcrumb-list">
 					<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-					<li>circulation-insert</li>
+					<li>circulation-update</li>
 				</ul>
 			</div>	
 			<div class="row">
@@ -13,7 +13,7 @@
 				<div class="col-lg-12 m-b30">
 					<div class="widget-box">
 						<div class="wc-title">
-							<h4>circulation-insert</h4>
+							<h4>circulation-update</h4>
 						</div>
 						<div class="widget-inner">
 							<form class="edit-profile m-b30">
