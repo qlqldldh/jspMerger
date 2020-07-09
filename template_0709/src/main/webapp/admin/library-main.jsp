@@ -13,7 +13,7 @@
 	<!-- Left sidebar menu end -->
 
 	<!--Main container start -->
-	<jsp:include page="components/orders-main-section.jsp" flush="false" />
+	<jsp:include page="components/library-main-section.jsp" flush="false" />
 
 	<!-- External JavaScripts -->
 	<jsp:include page="common-components/external-javascript.jsp"
