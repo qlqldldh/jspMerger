@@ -13,7 +13,7 @@
 	<!-- Left sidebar menu end -->
 
 	<!--Main container start -->
-	<jsp:include page="components/circulation-main-section.jsp" flush="false" />
+	<jsp:include page="components/circulation-insert-section.jsp" flush="false" />
 
 	<!-- External JavaScripts -->
 	<jsp:include page="common-components/external-javascript.jsp" flush="false" />
