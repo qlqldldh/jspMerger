@@ -7,7 +7,7 @@
 		<div class="item active">
 			<figure>
 				<img alt="Home Slide"
-					src="images/header-slider/home-v1/header-slide.jpg" />
+					src="${pageContext.request.contextPath}/images/header-slider/home-v1/header-slide.jpg" />
 			</figure>
 			<div class="container">
 				<div class="carousel-caption">
@@ -26,7 +26,7 @@
 		<div class="item">
 			<figure>
 				<img alt="Home Slide"
-					src="images/header-slider/home-v1/header-slide.jpg" />
+					src="${pageContext.request.contextPath}/images/header-slider/home-v1/header-slide.jpg" />
 			</figure>
 			<div class="container">
 				<div class="carousel-caption">
@@ -45,7 +45,7 @@
 		<div class="item">
 			<figure>
 				<img alt="Home Slide"
-					src="images/header-slider/home-v1/header-slide.jpg" />
+					src="${pageContext.request.contextPath}/images/header-slider/home-v1/header-slide.jpg" />
 			</figure>
 			<div class="container">
 				<div class="carousel-caption">
