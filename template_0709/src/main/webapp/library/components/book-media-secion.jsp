@@ -39,7 +39,7 @@
                                             <div class="post-thumbnail">
                                                 <div class="book-list-icon yellow-icon"></div>
                                                 <a href="books-media-detail-v2.html"><img alt="Book"
-                                                        src="images/books-media/list-view/book-media-01.jpg" /></a>
+                                                        src="${pageContext.request.contextPath}/images/books-media/list-view/book-media-01.jpg" /></a>
                                             </div>
                                             <div class="post-detail">
                                                 <div class="books-social-sharing">
@@ -139,7 +139,7 @@
                                             <div class="post-thumbnail">
                                                 <div class="book-list-icon light-green-icon"></div>
                                                 <a href="books-media-detail-v2.html"><img alt="Book"
-                                                        src="images/books-media/list-view/book-media-02.jpg" /></a>
+                                                        src="${pageContext.request.contextPath}/images/books-media/list-view/book-media-02.jpg" /></a>
                                             </div>
                                             <div class="post-detail">
                                                 <div class="books-social-sharing">
@@ -237,7 +237,7 @@
                                             <div class="post-thumbnail">
                                                 <div class="book-list-icon blue-icon"></div>
                                                 <a href="books-media-detail-v2.html"><img alt="Book"
-                                                        src="images/books-media/list-view/book-media-03.jpg" /></a>
+                                                        src="${pageContext.request.contextPath}/images/books-media/list-view/book-media-03.jpg" /></a>
                                             </div>
                                             <div class="post-detail">
                                                 <div class="books-social-sharing">
@@ -335,7 +335,7 @@
                                             <div class="post-thumbnail">
                                                 <div class="book-list-icon red-icon"></div>
                                                 <a href="books-media-detail-v1.html"><img alt="Book"
-                                                        src="images/books-media/list-view/book-media-04.jpg" /></a>
+                                                        src="${pageContext.request.contextPath}/images/books-media/list-view/book-media-04.jpg" /></a>
                                             </div>
                                             <div class="post-detail">
                                                 <div class="books-social-sharing">
@@ -433,7 +433,7 @@
                                             <div class="post-thumbnail">
                                                 <div class="book-list-icon red-icon"></div>
                                                 <a href="books-media-detail-v1.html"><img alt="Book"
-                                                        src="images/books-media/list-view/book-media-05.jpg" /></a>
+                                                        src="${pageContext.request.contextPath}/images/books-media/list-view/book-media-05.jpg" /></a>
                                             </div>
                                             <div class="post-detail">
                                                 <div class="books-social-sharing">
@@ -531,7 +531,7 @@
                                             <div class="post-thumbnail">
                                                 <div class="book-list-icon green-icon"></div>
                                                 <a href="books-media-detail-v1.html"><img alt="Book"
-                                                        src="images/books-media/list-view/book-media-06.jpg" /></a>
+                                                        src="${pageContext.request.contextPath}/images/books-media/list-view/book-media-06.jpg" /></a>
                                             </div>
                                             <div class="post-detail">
                                                 <div class="books-social-sharing">
@@ -813,7 +813,7 @@
                                         <ul>
                                             <li>
                                                 <figure>
-                                                    <img src="images/order-item-01.jpg" alt="product" />
+                                                    <img src="${pageContext.request.contextPath}/images/order-item-01.jpg" alt="product" />
                                                 </figure>
                                                 <a href="#">The Sonic Boom</a>
                                                 <span class="price"><strong>Author:</strong> F. Scott Fitzgerald</span>
@@ -829,7 +829,7 @@
                                             </li>
                                             <li>
                                                 <figure>
-                                                    <img src="images/order-item-02.jpg" alt="product" />
+                                                    <img src="${pageContext.request.contextPath}/images/order-item-02.jpg" alt="product" />
                                                 </figure>
                                                 <a href="#">The Sonic Boom</a>
                                                 <span class="price"><strong>Author:</strong> F. Scott Fitzgerald</span>
@@ -845,7 +845,7 @@
                                             </li>
                                             <li>
                                                 <figure>
-                                                    <img src="images/order-item-03.jpg" alt="product" />
+                                                    <img src="${pageContext.request.contextPath}/images/order-item-03.jpg" alt="product" />
                                                 </figure>
                                                 <a href="#">The Sonic Boom</a>
                                                 <span class="price"><strong>Author:</strong> F. Scott Fitzgerald</span>

@@ -138,7 +138,7 @@
                                                     </div>
                                                 </div>
                                                 <figure>
-                                                    <img src="images/news-event/new-detail-img.jpg" alt="News &amp; Event">
+                                                    <img src="${pageContext.request.contextPath}/images/news-event/new-detail-img.jpg" alt="News &amp; Event">
                                                 </figure>
                                                 <div class="content-block">
                                                     <div class="member-info">
@@ -188,7 +188,7 @@
                                                     <p>Email: suport@virtualsoft.com</p>
                                                     <p>Website: www.virtualsoft.com</p>
                                                     <br>
-                                                    <img src="images/contact-location.jpg" alt="Google Map">
+                                                    <img src="${pageContext.request.contextPath}/images/contact-location.jpg" alt="Google Map">
                                                 </div>
                                             </div>
                                             <div class="col-xs-12 col-sm-7">
@@ -317,7 +317,7 @@
                                             <div class="owl-carousel-event">
                                                 <div class="single-related-event">
                                                     <figure>
-                                                        <a href="news-events-detail.html"><img src="images/news-event/related-event-01.jpg" alt="Related event"></a>
+                                                        <a href="news-events-detail.html"><img src="${pageContext.request.contextPath}/images/news-event/related-event-01.jpg" alt="Related event"></a>
                                                         <figcaption>
                                                             <header>
                                                                 <ul class="news-event-info">
@@ -342,7 +342,7 @@
                                                 </div>
                                                 <div class="single-related-event">
                                                     <figure>
-                                                        <a href="news-events-detail.html"><img src="images/news-event/related-event-02.jpg" alt="Related event"></a>
+                                                        <a href="news-events-detail.html"><img src="${pageContext.request.contextPath}/images/news-event/related-event-02.jpg" alt="Related event"></a>
                                                         <figcaption>
                                                             <header>
                                                                 <ul class="news-event-info">
@@ -367,7 +367,7 @@
                                                 </div>
                                                 <div class="single-related-event">
                                                     <figure>
-                                                        <a href="news-events-detail.html"><img src="images/news-event/related-event-03.jpg" alt="Related event"></a>
+                                                        <a href="news-events-detail.html"><img src="${pageContext.request.contextPath}/images/news-event/related-event-03.jpg" alt="Related event"></a>
                                                         <figcaption>
                                                             <header>
                                                                 <ul class="news-event-info">
@@ -392,7 +392,7 @@
                                                 </div>
                                                 <div class="single-related-event">
                                                     <figure>
-                                                        <a href="news-events-detail.html"><img src="images/news-event/related-event-01.jpg" alt="Related event"></a>
+                                                        <a href="news-events-detail.html"><img src="${pageContext.request.contextPath}/images/news-event/related-event-01.jpg" alt="Related event"></a>
                                                         <figcaption>
                                                             <header>
                                                                 <ul class="news-event-info">
@@ -417,7 +417,7 @@
                                                 </div>
                                                 <div class="single-related-event">
                                                     <figure>
-                                                        <a href="news-events-detail.html"><img src="images/news-event/related-event-02.jpg" alt="Related event"></a>
+                                                        <a href="news-events-detail.html"><img src="${pageContext.request.contextPath}/images/news-event/related-event-02.jpg" alt="Related event"></a>
                                                         <figcaption>
                                                             <header>
                                                                 <ul class="news-event-info">
@@ -442,7 +442,7 @@
                                                 </div>
                                                 <div class="single-related-event">
                                                     <figure>
-                                                        <a href="news-events-detail.html"><img src="images/news-event/related-event-03.jpg" alt="Related event"></a>
+                                                        <a href="news-events-detail.html"><img src="${pageContext.request.contextPath}/images/news-event/related-event-03.jpg" alt="Related event"></a>
                                                         <figcaption>
                                                             <header>
                                                                 <ul class="news-event-info">
@@ -498,7 +498,7 @@
                                             <ul>
                                                 <li>
                                                     <figure>
-                                                        <img src="images/order-item-04.jpg" alt="product" />
+                                                        <img src="${pageContext.request.contextPath}/images/order-item-04.jpg" alt="product" />
                                                     </figure>
                                                     <a href="#">It uses a dictionary</a>
                                                     <span><i class="fa fa-calendar"></i> &nbsp; July 25, 2016</span>
@@ -508,7 +508,7 @@
                                                 </li>
                                                 <li>
                                                     <figure>
-                                                        <img src="images/order-item-05.jpg" alt="product" />
+                                                        <img src="${pageContext.request.contextPath}/images/order-item-05.jpg" alt="product" />
                                                     </figure>
                                                     <a href="#">It uses a dictionary</a>
                                                     <span><i class="fa fa-calendar"></i> &nbsp; July 25, 2016</span>
@@ -518,7 +518,7 @@
                                                 </li>
                                                 <li>
                                                     <figure>
-                                                        <img src="images/order-item-06.jpg" alt="product" />
+                                                        <img src="${pageContext.request.contextPath}/images/order-item-06.jpg" alt="product" />
                                                     </figure>
                                                     <a href="#">It uses a dictionary</a>
                                                     <span><i class="fa fa-calendar"></i> &nbsp; July 25, 2016</span>
