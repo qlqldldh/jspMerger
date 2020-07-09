@@ -10,7 +10,7 @@
             <div class="news-events-list">
                 <div class="single-news-event">
                     <figure>
-                        <img src="images/news-event/news-event-01.jpg" alt="News & Event" />
+                        <img src="${pageContext.request.contextPath}/images/news-event/news-event-01.jpg" alt="News & Event" />
                     </figure>
                     <div class="content-block">
                         <div class="member-info">
@@ -50,7 +50,7 @@
                 </div>
                 <div class="single-news-event">
                     <figure>
-                        <img src="images/news-event/news-event-02.jpg" alt="News & Event" />
+                        <img src="${pageContext.request.contextPath}/images/news-event/news-event-02.jpg" alt="News & Event" />
                     </figure>
                     <div class="content-block">
                         <div class="member-info">
@@ -82,7 +82,7 @@
                 </div>
                 <div class="single-news-event">
                     <figure>
-                        <img src="images/news-event/news-event-03.jpg" alt="News & Event" />
+                        <img src="${pageContext.request.contextPath}/images/news-event/news-event-03.jpg" alt="News & Event" />
                     </figure>
                     <div class="content-block">
                         <div class="member-info">

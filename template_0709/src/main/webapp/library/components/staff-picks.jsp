@@ -9,12 +9,12 @@
                             <div class="team-list">
                                 <div class="team-member">
                                     <figure>
-                                        <img src="images/books-media/staff-pick/staff-picks-01.jpg" alt="Staff Pick" />
+                                        <img src="${pageContext.request.contextPath}/images/books-media/staff-pick/staff-picks-01.jpg" alt="Staff Pick" />
                                     </figure>
                                     <div class="content-block">
                                         <div class="member-info">
                                             <div class="member-thumb">
-                                                <img src="images/books-media/staff-pick/gail.jpg" alt="Katherine">
+                                                <img src="${pageContext.request.contextPath}/images/books-media/staff-pick/gail.jpg" alt="Katherine">
                                             </div>
                                             <div class="member-content">
                                                 <span class="designation">Downtown & Business</span>
@@ -50,12 +50,12 @@
                                 </div>
                                 <div class="team-member">
                                     <figure>
-                                        <img src="images/books-media/staff-pick/staff-picks-02.jpg" alt="Staff Pick" />
+                                        <img src="${pageContext.request.contextPath}/images/books-media/staff-pick/staff-picks-02.jpg" alt="Staff Pick" />
                                     </figure>
                                     <div class="content-block">
                                         <div class="member-info">
                                             <div class="member-thumb">
-                                                <img src="images/books-media/staff-pick/katherine.jpg" alt="Katherine">
+                                                <img src="${pageContext.request.contextPath}/images/books-media/staff-pick/katherine.jpg" alt="Katherine">
                                             </div>
                                             <div class="member-content">
                                                 <span class="designation">Katherine, West End</span>
@@ -91,12 +91,12 @@
                                 </div>
                                 <div class="team-member">
                                     <figure>
-                                        <img src="images/books-media/staff-pick/staff-picks-03.jpg" alt="Staff Pick" />
+                                        <img src="${pageContext.request.contextPath}/images/books-media/staff-pick/staff-picks-03.jpg" alt="Staff Pick" />
                                     </figure>
                                     <div class="content-block">
                                         <div class="member-info">
                                             <div class="member-thumb">
-                                                <img src="images/books-media/staff-pick/chris.jpg" alt="Katherine">
+                                                <img src="${pageContext.request.contextPath}/images/books-media/staff-pick/chris.jpg" alt="Katherine">
                                             </div>
                                             <div class="member-content">
                                                 <span class="designation">Chris, East Liberty</span>
