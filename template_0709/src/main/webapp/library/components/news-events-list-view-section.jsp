@@ -137,7 +137,7 @@
                                                 </div>
                                             </div>
                                             <figure>
-                                                <a href="news-events-detail.html"><img src="images/news-event/news-listing-01.jpg" alt="News &amp; Event"></a>
+                                                <a href="news-events-detail.html"><img src="${pageContext.request.contextPath}/images/news-event/news-listing-01.jpg" alt="News &amp; Event"></a>
                                             </figure>
                                             <div class="content-block">
                                                 <div class="member-info">
@@ -194,7 +194,7 @@
                                                 </div>
                                             </div>
                                             <figure>
-                                                <a href="news-events-detail.html"><img src="images/news-event/news-listing-02.jpg" alt="News &amp; Event"></a>
+                                                <a href="news-events-detail.html"><img src="${pageContext.request.contextPath}/images/news-event/news-listing-02.jpg" alt="News &amp; Event"></a>
                                             </figure>
                                             <div class="content-block">
                                                 <div class="member-info">
@@ -251,7 +251,7 @@
                                                 </div>
                                             </div>
                                             <figure>
-                                                <a href="news-events-detail.html"><img src="images/news-event/news-listing-03.jpg" alt="News &amp; Event"></a>
+                                                <a href="news-events-detail.html"><img src="${pageContext.request.contextPath}/images/news-event/news-listing-03.jpg" alt="News &amp; Event"></a>
                                             </figure>
                                             <div class="content-block">
                                                 <div class="member-info">
@@ -308,7 +308,7 @@
                                                 </div>
                                             </div>
                                             <figure>
-                                                <a href="news-events-detail.html"><img src="images/news-event/news-listing-04.jpg" alt="News &amp; Event"></a>
+                                                <a href="news-events-detail.html"><img src="${pageContext.request.contextPath}/images/news-event/news-listing-04.jpg" alt="News &amp; Event"></a>
                                             </figure>
                                             <div class="content-block">
                                                 <div class="member-info">
@@ -385,7 +385,7 @@
                                             <ul>
                                                 <li>
                                                     <figure>
-                                                        <img src="images/order-item-04.jpg" alt="product" />
+                                                        <img src="${pageContext.request.contextPath}/images/order-item-04.jpg" alt="product" />
                                                     </figure>
                                                     <a href="#">It uses a dictionary</a>
                                                     <span><i class="fa fa-calendar"></i> &nbsp; July 25, 2016</span>
@@ -395,7 +395,7 @@
                                                 </li>
                                                 <li>
                                                     <figure>
-                                                        <img src="images/order-item-05.jpg" alt="product" />
+                                                        <img src="${pageContext.request.contextPath}/images/order-item-05.jpg" alt="product" />
                                                     </figure>
                                                     <a href="#">It uses a dictionary</a>
                                                     <span><i class="fa fa-calendar"></i> &nbsp; July 25, 2016</span>
@@ -405,7 +405,7 @@
                                                 </li>
                                                 <li>
                                                     <figure>
-                                                        <img src="images/order-item-06.jpg" alt="product" />
+                                                        <img src="${pageContext.request.contextPath}/images/order-item-06.jpg" alt="product" />
                                                     </figure>
                                                     <a href="#">It uses a dictionary</a>
                                                     <span><i class="fa fa-calendar"></i> &nbsp; July 25, 2016</span>

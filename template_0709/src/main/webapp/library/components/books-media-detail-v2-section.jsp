@@ -57,7 +57,7 @@
                                     <div class="col-xs-12 col-sm-5 col-md-3">
                                         <div class="post-thumbnail">
                                             <div class="book-list-icon blue-icon"></div>
-                                            <img src="images/books-media/detail-page/detail-page-image.jpg" alt="Book Image">
+                                            <img src="${pageContext.request.contextPath}/images/books-media/detail-page/detail-page-image.jpg" alt="Book Image">
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-7 col-md-6">
@@ -242,7 +242,7 @@
                             <li>
                                 <div class="book-list-icon blue-icon"></div>
                                 <figure>
-                                    <img src="images/books-media/layout-3/books-media-layout3-01.jpg" alt="Book">
+                                    <img src="${pageContext.request.contextPath}/images/books-media/layout-3/books-media-layout3-01.jpg" alt="Book">
                                     <figcaption>
                                         <header>
                                             <h4><a href="#.">The Great Gatsby</a></h4>
@@ -289,7 +289,7 @@
                             <li>
                                 <div class="book-list-icon yellow-icon"></div>
                                 <figure>
-                                    <img src="images/books-media/layout-3/books-media-layout3-02.jpg" alt="Book">
+                                    <img src="${pageContext.request.contextPath}/images/books-media/layout-3/books-media-layout3-02.jpg" alt="Book">
                                     <figcaption>
                                         <header>
                                             <h4><a href="#.">The Great Gatsby</a></h4>
@@ -336,7 +336,7 @@
                             <li>
                                 <div class="book-list-icon green-icon"></div>
                                 <figure>
-                                    <img src="images/books-media/layout-3/books-media-layout3-03.jpg" alt="Book">
+                                    <img src="${pageContext.request.contextPath}/images/books-media/layout-3/books-media-layout3-03.jpg" alt="Book">
                                     <figcaption>
                                         <header>
                                             <h4><a href="#.">The Great Gatsby</a></h4>
@@ -383,7 +383,7 @@
                             <li>
                                 <div class="book-list-icon blue-icon"></div>
                                 <figure>
-                                    <img src="images/books-media/layout-3/books-media-layout3-01.jpg" alt="Book">
+                                    <img src="${pageContext.request.contextPath}/images/books-media/layout-3/books-media-layout3-01.jpg" alt="Book">
                                     <figcaption>
                                         <header>
                                             <h4><a href="#.">The Great Gatsby</a></h4>
@@ -430,7 +430,7 @@
                             <li>
                                 <div class="book-list-icon yellow-icon"></div>
                                 <figure>
-                                    <img src="images/books-media/layout-3/books-media-layout3-02.jpg" alt="Book">
+                                    <img src="${pageContext.request.contextPath}/images/books-media/layout-3/books-media-layout3-02.jpg" alt="Book">
                                     <figcaption>
                                         <header>
                                             <h4><a href="#.">The Great Gatsby</a></h4>
@@ -477,7 +477,7 @@
                             <li>
                                 <div class="book-list-icon green-icon"></div>
                                 <figure>
-                                    <img src="images/books-media/layout-3/books-media-layout3-03.jpg" alt="Book">
+                                    <img src="${pageContext.request.contextPath}/images/books-media/layout-3/books-media-layout3-03.jpg" alt="Book">
                                     <figcaption>
                                         <header>
                                             <h4><a href="#.">The Great Gatsby</a></h4>
