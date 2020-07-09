@@ -9,7 +9,7 @@
 								<div class="row">
 									<div class="col-md-12">
 										<div class="error-box bg-dark margin-left text-center">
-											<img src="images/error-img.png" alt="Error Image">
+											<img src="${pageContext.request.contextPath}/images/error-img.png" alt="Error Image">
 										</div>
 									</div>
 								</div>
@@ -23,10 +23,13 @@
 											</h2>
 											<form class="search-404" method="post">
 												<input class="input-text" placeholder="First Name"
-													name="search" type="text" /> <span>Can't find what
-													you need? Take a moment and do a search below or start from
-													our homepage.</span> <input class="search-submit" type="submit"
-													value="Search" />
+													name="search" type="text" />
+													<span>
+													Can't find what you need? 
+													Take a moment and do a search below 
+													or start from our homepage.
+													</span>
+													<input class="search-submit" type="submit" value="Search" />
 											</form>
 										</div>
 									</div>
