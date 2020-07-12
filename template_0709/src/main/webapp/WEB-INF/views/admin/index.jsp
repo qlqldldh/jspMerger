@@ -1,5 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<html lang="en">
+<!-- <html lang="en"> -->
 
 <!-- Mirrored from educhamp.themetrades.com/demo/admin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:08:15 GMT -->
 <jsp:include page="common-components/header.jsp" flush="false" />
@@ -9,7 +12,7 @@
 	<jsp:include page="common-components/left-sidebar.jsp" flush="false" />
 	<jsp:include page="components/index-section.jsp" flush="false" />
 	<jsp:include page="common-components/external-javascript.jsp" flush="false" />
-<script>
+<!-- <script>
   $(document).ready(function() {
 
     $('#calendar').fullCalendar({
@@ -87,7 +90,7 @@
 
   });
 
-</script>
+</script> -->
 </body>
 
 <!-- Mirrored from educhamp.themetrades.com/demo/admin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:09:05 GMT -->

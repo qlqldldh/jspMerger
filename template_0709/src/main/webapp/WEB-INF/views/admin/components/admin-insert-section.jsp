@@ -16,11 +16,11 @@
 						<h4>admin-insert</h4>
 					</div>
 					<div class="widget-inner">
-						<form class="edit-profile m-b30">
+						<form class="edit-profile m-b30" action="" method="get">
 							<div class="">
 								<div class="form-group row">
 									<div class="col-sm-10  ml-auto">
-										<h3>1. Personal Details</h3>
+										<h3>Personal Details</h3>
 									</div>
 								</div>
 								<div class="form-group row">
@@ -30,21 +30,21 @@
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="col-sm-2 col-form-label">Occupation</label>
+									<label class="col-sm-2 col-form-label">Your Email</label>
 									<div class="col-sm-7">
 										<input class="form-control" type="text" value="CTO">
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="col-sm-2 col-form-label">Company Name</label>
+									<label class="col-sm-2 col-form-label">Position</label>
 									<div class="col-sm-7">
 										<input class="form-control" type="text" value="EduChamp">
-										<span class="help">If you want your invoices addressed
-											to a company. Leave blank to use your full name.</span>
+										<!-- <span class="help">If you want your invoices addressed
+											to a company. Leave blank to use your full name.</span> -->
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="col-sm-2 col-form-label">Phone No.</label>
+									<label class="col-sm-2 col-form-label">Department</label>
 									<div class="col-sm-7">
 										<input class="form-control" type="text"
 											value="+120 012345 6789">
@@ -53,7 +53,7 @@
 
 								<div class="seperator"></div>
 
-								<div class="form-group row">
+								<!-- <div class="form-group row">
 									<div class="col-sm-10 ml-auto">
 										<h3>2. Address</h3>
 									</div>
@@ -120,21 +120,21 @@
 										<input class="form-control" type="text"
 											value="www.instagram.com">
 									</div>
-								</div>
+								</div> -->
 							</div>
 							<div class="">
 								<div class="">
 									<div class="row">
 										<div class="col-sm-2"></div>
 										<div class="col-sm-7">
-											<button type="reset" class="btn">Save changes</button>
-											<button type="reset" class="btn-secondry">Cancel</button>
+											<input type="button" class="btn" value="Insert">
+											<input type="reset" class="btn-secondry" value="Cancel">
 										</div>
 									</div>
 								</div>
 							</div>
 						</form>
-						<form class="edit-profile">
+						<!-- <form class="edit-profile">
 							<div class="">
 								<div class="form-group row">
 									<div class="col-sm-10 ml-auto">
@@ -168,7 +168,7 @@
 								</div>
 							</div>
 
-						</form>
+						</form> -->
 					</div>
 				</div>
 			</div>

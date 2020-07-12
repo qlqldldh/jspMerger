@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!--Main container start -->
 	<main class="ttr-wrapper">
 		<div class="container-fluid">
@@ -30,32 +31,37 @@
 												<thead>
 													<tr>
 														<th>Name</th>
+														<th>Tel</th>
+														<th>Pay</th>
 														<th>Position</th>
-														<th>Office</th>
-														<th>Age</th>
-														<th>Insert</th>
+														<th>Department</th>
 														<th>Update</th>
+														<!-- <th>Update</th> -->
 													</tr>
 												</thead>
 												<tfoot>
 													<tr>
 														<th>Name</th>
+														<th>Tel</th>
+														<th>Pay</th>
 														<th>Position</th>
-														<th>Office</th>
-														<th>Age</th>
-														<th>Insert</th>
+														<th>Department</th>
 														<th>Update</th>
+														<!-- <th>Update</th> -->
 													</tr>
 												</tfoot>
 												<tbody>
+													<c:forEach var="itm" items="${hrlist }">
 													<tr>
-														<td>Tiger Nixon</td>
-														<td>System Architect</td>
-														<td>Edinburgh</td>
-														<td>61</td>
-														<td><button type="button" class="btn-secondry m-r5">Insert</button></td>
-														<td><button type="button" class="btn-secondry m-r5">Update</button></td>
+														<td>${itm.name }</td>
+														<td>${itm.tel }</td>
+														<td>${itm.pay }</td>
+														<td>${itm.position }</td>
+														<td>${itm.dname }</td>
+														<td><button type="button" class="btn-secondry m-r5">Insert</button>&nbsp;
+														<button type="button" class="btn-secondry m-r5">Update</button></td>
 													</tr>
+													</c:forEach>
 												</tbody>
 											</table>
 										</div>
