@@ -57,20 +57,20 @@ public class PageController {
 		return "admin/circulation-main";
 	}
 	
-	@RequestMapping("/hrInsert")
-	public String hrInsert(Model model) {
-		return "admin/hr-insert";
-	}
+//	@RequestMapping("/hrInsert")
+//	public String hrInsert(Model model) {
+//		return "admin/hr-insert";
+//	}
 	
 //	@RequestMapping("/hrMain")
 //	public String hrMain(Model model) {
 //		return "admin/hr-main";
 //	}
 	
-	@RequestMapping("/hrUpdate")
-	public String hrUpdate(Model model) {
-		return "admin/hr-update";
-	}
+//	@RequestMapping("/hrUpdate")
+//	public String hrUpdate(Model model) {
+//		return "admin/hr-update";
+//	}
 	
 	@RequestMapping("/incomeInsert")
 	public String incomeInsert(Model model) {

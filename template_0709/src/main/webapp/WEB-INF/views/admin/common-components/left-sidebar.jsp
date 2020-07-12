@@ -32,7 +32,7 @@
 								class="ttr-label">Add a book</span></a></li>
 					</ul></li>
 				<li><a href="#" class="ttr-material-button"> <span
-						class="ttr-icon"><i class="ti-user"></i></span> <span
+						class="ttr-icon"><i class="ti-book"></i></span> <span
 						class="ttr-label">Circulation</span> <span class="ttr-arrow-icon"><i
 							class="fa fa-angle-down"></i></span>
 				</a>
@@ -52,13 +52,22 @@
 						class="ttr-label">Requested Books</span>
 				</a></li>
 				<li><a href="#" class="ttr-material-button"> <span
-						class="ttr-icon"><i class="ti-comments"></i></span> <span
+						class="ttr-icon"><i class="ti-user"></i></span> <span
 						class="ttr-label">Users</span> <span class="ttr-arrow-icon"><i
 							class="fa fa-angle-down"></i></span>
 				</a>
 					<ul>
 						<li><a href="cash-ouput.html" class="ttr-material-button"><span
 								class="ttr-label">Add User</span></a></li>
+					</ul></li>
+					<li><a href="#" class="ttr-material-button"> <span
+						class="ttr-icon"><i class="ti-user"></i></span> <span
+						class="ttr-label">Admin</span> <span class="ttr-arrow-icon"><i
+							class="fa fa-angle-down"></i></span>
+				</a>
+					<ul>
+						<li><a href="book-lending.html" class="ttr-material-button"><span
+								class="ttr-label">Add a Admin</span></a></li>
 					</ul></li>
 				<li><a href="#" class="ttr-material-button"> <span
 						class="ttr-icon"><i class="ti-comments"></i></span> <span

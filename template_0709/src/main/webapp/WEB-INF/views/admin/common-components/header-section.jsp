@@ -27,7 +27,7 @@
 						<a href="#" class="ttr-material-button ttr-submenu-toggle"> Quick menu <i class="fa fa-angle-down"></i></a>
 						<div class="ttr-header-submenu">
 							<ul>
-								<li><a href="catalog.html">Dashboard</a></li>
+								<li><a href="index">Dashboard</a></li>
 								<li><a href="book-lending.html">Add a book</a></li>
                                 <li><a href="book-hope.html">Borrowed a book</a></li>
 								<li><a href="management-admin.html">Reserve a book</a></li>
