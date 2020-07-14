@@ -62,8 +62,8 @@
 														<td>${itm.pay }</td>
 														<td>${itm.position }</td>
 														<td>${itm.dname }</td>
-														<td><button type="button" class="btn-secondry m-r5" onclick="location.href='hrUpdate'">Update</button>&nbsp;
-														<button type="button" class="btn-secondry m-r5">Delete</button></td>
+														<td><button type="button" class="btn-secondry m-r5" onclick="location.href='hrUpdate?tel=${itm.tel}'">Update</button>&nbsp;
+														<button type="button" class="btn-secondry m-r5" onclick="location.href='hrDelete?tel=${itm.tel}'">Delete</button></td>
 													</tr>
 													</c:forEach>
 												</tbody>

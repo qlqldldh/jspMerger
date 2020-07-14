@@ -18,7 +18,7 @@
 		<!-- sidebar menu start -->
 		<nav class="ttr-sidebar-navi">
 			<ul>
-				<li><a href="catalog.html" class="ttr-material-button"> <span
+				<li><a href="index" class="ttr-material-button"> <span
 						class="ttr-icon"><i class="ti-home"></i></span> <span
 						class="ttr-label">Dashboard</span>
 				</a></li>
@@ -28,7 +28,7 @@
 							class="fa fa-angle-down"></i></span>
 				</a>
 					<ul>
-						<li><a href="book-lending.html" class="ttr-material-button"><span
+						<li><a href="libraryMain" class="ttr-material-button"><span
 								class="ttr-label">Add a book</span></a></li>
 					</ul></li>
 				<li><a href="#" class="ttr-material-button"> <span
@@ -47,7 +47,7 @@
 							class="ttr-material-button"><span class="ttr-label">Renewed</span></a>
 						</li>
 					</ul></li>
-				<li><a href="#" class="ttr-material-button"> <span
+				<li><a href="bookhope" class="ttr-material-button"> <span
 						class="ttr-icon"><i class="ti-book"></i></span> <span
 						class="ttr-label">Requested Books</span>
 				</a></li>
@@ -57,7 +57,7 @@
 							class="fa fa-angle-down"></i></span>
 				</a>
 					<ul>
-						<li><a href="cash-ouput.html" class="ttr-material-button"><span
+						<li><a href="usersMain" class="ttr-material-button"><span
 								class="ttr-label">Add User</span></a></li>
 					</ul></li>
 					<li><a href="#" class="ttr-material-button"> <span
@@ -66,7 +66,7 @@
 							class="fa fa-angle-down"></i></span>
 				</a>
 					<ul>
-						<li><a href="book-lending.html" class="ttr-material-button"><span
+						<li><a href="adminMain" class="ttr-material-button"><span
 								class="ttr-label">Add a Admin</span></a></li>
 					</ul></li>
 				<li><a href="#" class="ttr-material-button"> <span
@@ -75,7 +75,7 @@
 							class="fa fa-angle-down"></i></span>
 				</a>
 					<ul>
-						<li><a href="cash-ouput.html" class="ttr-material-button"><span
+						<li><a href="hrMain" class="ttr-material-button"><span
 								class="ttr-label">Add Employee</span></a></li>
 					</ul></li>
 				<li><a href="#" class="ttr-material-button"> <span
@@ -84,9 +84,9 @@
 							class="fa fa-angle-down"></i></span>
 				</a>
 					<ul>
-						<li><a href="cash-ouput.html" class="ttr-material-button"><span
+						<li><a href="ordersMain" class="ttr-material-button"><span
 								class="ttr-label">Orders</span></a></li>
-						<li><a href="cash-ouput.html" class="ttr-material-button"><span
+						<li><a href="incomeMain" class="ttr-material-button"><span
 								class="ttr-label">Income</span></a></li>
 					</ul></li>
 				<li><a href="#" class="ttr-material-button"> <span

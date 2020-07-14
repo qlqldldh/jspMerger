@@ -10,6 +10,16 @@ public class HrempVO {
 	private String position;
 	private String dname;
 	
+	public HrempVO() {}
+	
+	public HrempVO(String name, String tel, String pay, String position, String dname) {
+		this.name=name;
+		this.tel=tel;
+		this.pay=pay;
+		this.position=position;
+		this.dname=dname;
+	}
+	
 	public String getName() {
 		return name;
 	}
