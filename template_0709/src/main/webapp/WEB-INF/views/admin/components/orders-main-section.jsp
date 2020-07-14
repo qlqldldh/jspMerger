@@ -24,13 +24,12 @@
 									<div class="card-header">
 										<i class="fas fa-table mr-1"></i> orders-main
 									</div>
-									<div style="text-align:right;padding-right:20px;padding-top:20px;">
+											<div style="text-align:right;padding-right:20px;padding-top:20px;">
 												<button type="button" class="btn-secondry m-r5" onclick="location.href='ordersInsert'">Insert</button>
 											</div>
 									<div class="card-body">
 										<div class="table-responsive">
-											<table class="table table-bordered" id="dataTable"
-												width="100%" cellspacing="0">
+											<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 												<thead>
 													<tr>
 														<th>Ordernum</th>
