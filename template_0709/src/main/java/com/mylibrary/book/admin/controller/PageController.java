@@ -136,6 +136,35 @@ public class PageController {
 		return "admin/users-update";
 	}
 	
+	@RequestMapping("/borrowedInsert")
+	public String borrowedInsert(Model model) {
+		return "admin/borrowed-insert";
+	}
+	
+	@RequestMapping("/borrowedMain")
+	public String borrowedMain(Model model) {
+		return "admin/borrowed-main";
+	}
+	
+	@RequestMapping("/borrowedUpdate")
+	public String borrowedUpdate(Model model) {
+		return "admin/borrowed-update";
+	}
+	
+	@RequestMapping("/reservedInsert")
+	public String reservedInsert(Model model) {
+		return "admin/reserved-insert";
+	}
+	
+	@RequestMapping("/reservedMain")
+	public String reservedMain(Model model) {
+		return "admin/reserved-main";
+	}
+	
+	@RequestMapping("/reservedUpdate")
+	public String reservedUpdate(Model model) {
+		return "admin/reserved-update";
+	}
 }
 
 
