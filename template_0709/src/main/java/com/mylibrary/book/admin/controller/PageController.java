@@ -4,10 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 // summary methods for panning pages
 @Controller
 @RequestMapping("/admin")
 public class PageController {
+
 	/* Page-Panning Controller */
 	
 	@RequestMapping("/index")
