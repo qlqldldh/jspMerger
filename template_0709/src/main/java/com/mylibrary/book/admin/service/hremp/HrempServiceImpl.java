@@ -9,11 +9,12 @@ import com.mylibrary.book.admin.dao.hremp.HrempDAO;
 import com.mylibrary.book.admin.vo.HrempVO;
 
 @Service
-public class HrempServiceImpl implements HrempService{
-	@Autowired
-	HrempDAO hrempDAO;
-	
-	public List<HrempVO> showAll(){
-		return hrempDAO.selectAll();
-	}
+public class HrempServiceImpl implements HrempService {
+
+    @Autowired
+    HrempDAO hrempDAO;
+
+    public List<HrempVO> showAll() {
+	return hrempDAO.selectAll();
+    }
 }

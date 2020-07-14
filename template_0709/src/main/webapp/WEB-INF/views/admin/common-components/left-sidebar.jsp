@@ -91,7 +91,7 @@
 					</ul></li>
 				<li><a href="#" class="ttr-material-button"> <span
 						class="ttr-icon"><i class="ti-comments"></i></span> <span
-						class="ttr-label">Reports</span>
+						class="ttr-label">Notice</span>
 				</a></li>
 				<li class="ttr-seperate"></li>
 			</ul>

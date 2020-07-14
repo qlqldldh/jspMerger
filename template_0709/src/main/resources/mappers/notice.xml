@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.mylibrary.book.admin.mapper.NoticeMapper">
+	<resultMap id="noticeMap"
+		type="com.mylibrary.book.admin.vo.NoticeVO">
+		<result property="nid" column="nid" />
+		<result property="nemail" column="nemail" />
+		<result property="uldate" column="uldate" />
+		<result property="ncontents" column="ncontents" />
+	</resultMap>
+
+
+
+	<select id="showList" resultMap="noticeMap">
+		SELECT * FROM BNOTICE
+	</select>
+
+	<insert id="insertNotice"
+		parameterType="com.mylibrary.book.admin.vo.NoticeVO">
+		INSERT INTO BNOTICE VALUES 
+		(#{nid, javaType=String,jdbcType=VARCHAR}, 
+		#{nemail,javaType=String,jdbcType=VARCHAR},
+		#{uldate, javaType=String,jdbcType=VARCHAR}, 
+		#{ncontents, javaType=String,jdbcType=VARCHAR})
+	</insert>
+
+	<update id="updateNotice" parameterType="map">
+		UPDATE BNOTICE SET
+		nemail=#{nemail, javaType=String,jdbcType=VARCHAR},
+		uldate = #{uldate,
+		javaType=String,jdbcType=VARCHAR},
+		ncontents=#{ncontents,
+		javaType=String,jdbcType=VARCHAR}
+		WHERE nid =
+		#{nid,
+		javaType=String,jdbcType=VARCHAR}
+	</update>
+
+	<delete id="deleteNotice" parameterType="java.lang.String">
+		DELETE FROM BNOTICE
+		WHERE
+		NID =
+		#{NID}
+	</delete>
+
+</mapper>
+
