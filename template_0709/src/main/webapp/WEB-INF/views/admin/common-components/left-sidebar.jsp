@@ -31,7 +31,7 @@
 						<li><a href="libraryMain" class="ttr-material-button"><span
 								class="ttr-label">Add a book</span></a></li>
 					</ul></li>
-				<li><a href="#" class="ttr-material-button"> <span
+				<li><a href="noticeMain" class="ttr-material-button"> <span
 						class="ttr-icon"><i class="ti-book"></i></span> <span
 						class="ttr-label">Circulation</span> <span class="ttr-arrow-icon"><i
 							class="fa fa-angle-down"></i></span>
@@ -47,7 +47,7 @@
 							class="ttr-material-button"><span class="ttr-label">Renewed</span></a>
 						</li>
 					</ul></li>
-				<li><a href="bookhope" class="ttr-material-button"> <span
+				<li><a href="bhMain" class="ttr-material-button"> <span
 						class="ttr-icon"><i class="ti-book"></i></span> <span
 						class="ttr-label">Requested Books</span>
 				</a></li>
@@ -91,7 +91,7 @@
 					</ul></li>
 				<li><a href="#" class="ttr-material-button"> <span
 						class="ttr-icon"><i class="ti-comments"></i></span> <span
-						class="ttr-label">Reports</span>
+						class="ttr-label">Notice</span>
 				</a></li>
 				<li class="ttr-seperate"></li>
 			</ul>
