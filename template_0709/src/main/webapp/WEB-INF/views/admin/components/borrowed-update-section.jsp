@@ -1,11 +1,11 @@
-<!--Main container start -->
+	<!--Main container start -->
 	<main class="ttr-wrapper">
 		<div class="container-fluid">
 			<div class="db-breadcrumb">
-				<h4 class="breadcrumb-title">orders update</h4>
+				<h4 class="breadcrumb-title">borrowed-update</h4>
 				<ul class="db-breadcrumb-list">
 					<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-					<li>orders update</li>
+					<li>borrowed-update</li>
 				</ul>
 			</div>	
 			<div class="row">
@@ -13,84 +13,70 @@
 				<div class="col-lg-12 m-b30">
 					<div class="widget-box">
 						<div class="wc-title">
-							<h4>orders update</h4>
+							<h4>borrowed-update</h4>
 						</div>
 						<div class="widget-inner">
-							<form class="edit-profile m-b30" action="ordersUpdatedo" method="GET">
+							<form class="edit-profile m-b30" action="borrowedUpdatedo" method="GET">
 								<div class="">
 									<div class="form-group row">
 										<div class="col-sm-10  ml-auto">
 											<h3> orders-update </h3>
 										</div>
 									</div>
-	
+
 									<div class="form-group row">
+									<label class="col-sm-2 col-form-label">BorrowedId</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="hidden" value="${itm.ordernum}" name="ordernum">
-									</div>
-								</div>
-									
-									<div class="form-group row">
-									<label class="col-sm-2 col-form-label">Odate</label>
-									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.odate }" name="odate">
+										<input class="form-control" type="text" value="${itm.rentid }" name="rentid">
 									</div>
 								</div>
 								
 								<div class="form-group row">
-									<label class="col-sm-2 col-form-label">Txnum</label>
+									<label class="col-sm-2 col-form-label">BorrowedEmail</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.txnum }" name="txnum">
+										<input class="form-control" type="text" value="${itm.renemail }" name="renemail">
 									</div>
 								</div>
 								
 								<div class="form-group row">
-									<label class="col-sm-2 col-form-label">Title</label>
+									<label class="col-sm-2 col-form-label">BorrowedBid</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.title }" name="title">
+										<input class="form-control" type="text" value="${itm.renbid }" name="renbid">
 									</div>
 								</div>
 								
 								<div class="form-group row">
-									<label class="col-sm-2 col-form-label">ISBN</label>
+									<label class="col-sm-2 col-form-label">Isdate</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.isbn }" name="isbn">
+										<input class="form-control" type="text" value="${itm.isdate }" name="isdate">
 									</div>
 								</div>
 								
 								<div class="form-group row">
-									<label class="col-sm-2 col-form-label">Price</label>
+									<label class="col-sm-2 col-form-label">Exdate</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.price }" name="price">
+										<input class="form-control" type="text" value="${itm.exdate }" name="exdate">
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="col-sm-2 col-form-label">Unit</label>
+									<label class="col-sm-2 col-form-label">BorrowedDate</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.unit }" name="unit">
+										<input class="form-control" type="text" value="${itm.retdate }" name="retdate">
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="col-sm-2 col-form-label">ExtraCost</label>
+									<label class="col-sm-2 col-form-label">Bldate</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.extracost }" name="extracost">
+										<input class="form-control" type="text" value="${itm.bldate }" name="bldate">
 									</div>
 								</div>
 								
 								<div class="form-group row">
-									<label class="col-sm-2 col-form-label">Descript</label>
+									<label class="col-sm-2 col-form-label">IsExpanded</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.descript }" name="descript">
+										<input class="form-control" type="text" value="${itm.isExpanded }" name="isExpanded">
 									</div>
 								</div>
-								
-								<div class="form-group row">
-									<label class="col-sm-2 col-form-label">TotalCost</label>
-									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.totalcost }" name="totalcost">
-									</div>
-								</div>
-									
 									<div class="seperator"></div>
 									
 									

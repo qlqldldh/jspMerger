@@ -16,153 +16,52 @@
 							<h4>income update</h4>
 						</div>
 						<div class="widget-inner">
-							<form class="edit-profile m-b30">
+							<form class="edit-profile m-b30"  action="incomeUpdatedo"  method="post">
 								<div class="">
 									<div class="form-group row">
 										<div class="col-sm-10  ml-auto">
-											<h3>1. Personal Details</h3>
+											<h3>update Details</h3>
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Full Name</label>
+										<label class="col-sm-2 col-form-label">Incomenum</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="text" value="Mark Andre">
+											<input class="form-control" type="hidden" name="incomenum"  value=${icl.incomenum }>
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Occupation</label>
+										<label class="col-sm-2 col-form-label">Idate</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="text" value="CTO">
+											<input class="form-control" type="text" name="idate" value="${icl.idate }">
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Company Name</label>
+										<label class="col-sm-2 col-form-label">Price</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="text" value="EduChamp">
-											<span class="help">If you want your invoices addressed to a company. Leave blank to use your full name.</span>
+											<input class="form-control" type="text" name="price" value="${icl.price }">
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Phone No.</label>
+										<label class="col-sm-2 col-form-label">Itype</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="text" value="+120 012345 6789">
+											<input class="form-control" type="text" name="itype" value="${icl.itype }">
 										</div>
 									</div>
 									
-									<div class="seperator"></div>
-									
-									<div class="form-group row">
-										<div class="col-sm-10 ml-auto">
-											<h3>2. Address</h3>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Address</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="5-S2-20 Dummy City, UK">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">City</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="US">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">State</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="California">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Postcode</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="000702">
-										</div>
-									</div>
-
-									<div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x"></div>
-
-									<div class="form-group row">
-										<div class="col-sm-10 ml-auto">
-											<h3 class="m-form__section">3. Social Links</h3>
-										</div>
-									</div>
-
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Linkedin</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="www.linkedin.com">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Facebook</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="www.facebook.com">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Twitter</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="www.twitter.com">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Instagram</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="www.instagram.com">
-										</div>
-									</div>
-								</div>
 								<div class="">
 									<div class="">
 										<div class="row">
 											<div class="col-sm-2">
 											</div>
 											<div class="col-sm-7">
-												<button type="reset" class="btn">Save changes</button>
-												<button type="reset" class="btn-secondry">Cancel</button>
+												<input type="submit" class="btn" value="update">
+												<button type="button" class="btn-secondry" onclick="location.href='incomeMain'">Cancel</button>
 											</div>
 										</div>
 									</div>
 								</div>
 							</form>
-							<form class="edit-profile">
-								<div class="">
-									<div class="form-group row">
-										<div class="col-sm-10 ml-auto">
-											<h3>4. Password</h3>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Current Password</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="password" value="">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">New Password</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="password" value="">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Re Type Password</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="password" value="">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-2">
-									</div>
-									<div class="col-sm-7">
-										<button type="reset" class="btn">Save changes</button>
-										<button type="reset" class="btn-secondry">Cancel</button>
-									</div>
-								</div>
-									
-							</form>
+						
 						</div>
 					</div>
 				</div>

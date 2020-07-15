@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/admin")
 public class PageController {
-	
+
 	/* Page-Panning Controller */
 	
 	@RequestMapping("/index")
@@ -37,10 +37,10 @@ public class PageController {
 		return "admin/balance";
 	}
 	
-	@RequestMapping("/bookhope")
-	public String bookhope(Model model) {
-		return "admin/bookhope";
-	}
+//	@RequestMapping("/bookhope")
+//	public String bookhope(Model model) {
+//		return "admin/bookhope";
+//	}
 	
 	@RequestMapping("/circulInsert")
 	public String circulInsert(Model model) {
@@ -61,31 +61,31 @@ public class PageController {
 //	public String hrInsert(Model model) {
 //		return "admin/hr-insert";
 //	}
-	
+//	
 //	@RequestMapping("/hrMain")
 //	public String hrMain(Model model) {
 //		return "admin/hr-main";
 //	}
-	
+//	
 //	@RequestMapping("/hrUpdate")
 //	public String hrUpdate(Model model) {
 //		return "admin/hr-update";
 //	}
 	
-	@RequestMapping("/incomeInsert")
-	public String incomeInsert(Model model) {
-		return "admin/income-insert";
-	}
-	
-	@RequestMapping("/incomeMain")
-	public String incomeMain(Model model) {
-		return "admin/income-main";
-	}
-	
-	@RequestMapping("/incomeUpdate")
-	public String incomeUpdate(Model model) {
-		return "admin/income-update";
-	}
+//	@RequestMapping("/incomeInsert")
+//	public String incomeInsert(Model model) {
+//		return "admin/income-insert";
+//	}
+//	
+//	@RequestMapping("/incomeMain")
+//	public String incomeMain(Model model) {
+//		return "admin/income-main";
+//	}
+//	
+//	@RequestMapping("/incomeUpdate")
+//	public String incomeUpdate(Model model) {
+//		return "admin/income-update";
+//	}
 	
 	@RequestMapping("/libraryInsert")
 	public String libraryInsert(Model model) {
@@ -102,20 +102,20 @@ public class PageController {
 		return "admin/library-update";
 	}
 	
-	@RequestMapping("/ordersInsert")
-	public String ordersInsert(Model model) {
-		return "admin/orders-insert";
-	}
-	
-	@RequestMapping("/ordersMain")
-	public String ordersMain(Model model) {
-		return "admin/orders-main";
-	}
-	
-	@RequestMapping("/ordersUpdate")
-	public String ordersUpdate(Model model) {
-		return "admin/orders-update";
-	}
+//	@RequestMapping("/ordersInsert")
+//	public String ordersInsert(Model model) {
+//		return "admin/orders-insert";
+//	}
+//	
+//	@RequestMapping("/ordersMain")
+//	public String ordersMain(Model model) {
+//		return "admin/orders-main";
+//	}
+//	
+//	@RequestMapping("/ordersUpdate")
+//	public String ordersUpdate(Model model) {
+//		return "admin/orders-update";
+//	}
 	
 	@RequestMapping("/userProf")
 	public String userProf(Model model) {
@@ -137,6 +137,35 @@ public class PageController {
 		return "admin/users-update";
 	}
 	
+	@RequestMapping("/borrowedInsert")
+	public String borrowedInsert(Model model) {
+		return "admin/borrowed-insert";
+	}
+	
+	@RequestMapping("/borrowedMain")
+	public String borrowedMain(Model model) {
+		return "admin/borrowed-main";
+	}
+	
+	@RequestMapping("/borrowedUpdate")
+	public String borrowedUpdate(Model model) {
+		return "admin/borrowed-update";
+	}
+	
+	@RequestMapping("/reservedInsert")
+	public String reservedInsert(Model model) {
+		return "admin/reserved-insert";
+	}
+	
+	@RequestMapping("/reservedMain")
+	public String reservedMain(Model model) {
+		return "admin/reserved-main";
+	}
+	
+	@RequestMapping("/reservedUpdate")
+	public String reservedUpdate(Model model) {
+		return "admin/reserved-update";
+	}
 }
 
 
