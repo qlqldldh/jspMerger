@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.example.sample.controller">
+	<logger name="com.mylibrary.book">
 		<level value="info" />
 	</logger>
 	

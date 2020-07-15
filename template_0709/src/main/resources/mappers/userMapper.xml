@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
+<mapper namespace="user">
+	<insert id="insertUser">
+	<![CDATA[ 
+		insert into BUSER(email, passwd, name, birth, phone,
+		address, enabled, authority)
+		values (#{email}, #{passwd}, #{name},
+		#{birth}, #{phone}, #{address}, 1, #{authority})
+		]]>
+	</insert>
+	<update id="updatePassword" parameterType="java.util.Map">
+  			<![CDATA[ 
+  				UPDATE BUSER SET passwd=#{passwd} where email=#{email}
+  			]]>
+	</update>
+	<update id="updateUser" parameterType="java.util.Map">
+  			<![CDATA[ 
+  				UPDATE BUSER SET name=#{name}, birth=#{birth}, phone=#{phone}, address=#{address}  where email=#{email}
+  			]]>
+	</update>
+	
+	<select id="selectUser" resultType="java.util.Map">
+	<![CDATA[ 
+		select email as username,
+		passwd as password,
+		name, enabled, authority
+		from BUSER
+		where email=#{email}
+		]]>
+	</select>
+	<select id="selectUserNoAs" resultType="java.util.Map">
+	<![CDATA[ 
+		select name, birth,
+		phone, address
+		from BUSER
+		where email=#{email}
+		]]>
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
