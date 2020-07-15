@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mylibrary.book.admin.mapper.BorrowedMapper">
+	<resultMap type="com.mylibrary.book.admin.vo.BorrowedVO" id="borrowedMap">
+	<result property="rentid" column="rentid"/>
+	<result property="renemail" column="renemail"/>
+	<result property="renbid" column="renbid"/>
+	<result property="isdate" column="isdate"/>
+	<result property="exdate" column="exdate"/>
+	<result property="retdate" column="retdate"/>
+	<result property="bldate" column="bldate"/>
+	<result property="isExpanded" column="isExpanded"/>
+	</resultMap>
+	
+	<select id="selectAll" resultMap="borrowedMap">
+		select * from rentinfo1
+	</select>
+	
+	<delete id="borrowedDelete" parameterType="com.mylibrary.book.admin.vo.BorrowedVO">
+		delete from rentinfo1 where rentid=#{rentid}
+	</delete>
+
+
+
+</mapper>
