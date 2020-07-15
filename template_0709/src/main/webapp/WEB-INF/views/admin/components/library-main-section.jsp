@@ -1,11 +1,12 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!--Main container start -->
 <main class="ttr-wrapper">
 	<div class="container-fluid">
 		<div class="db-breadcrumb">
-			<h4 class="breadcrumb-title">library-main</h4>
+			<h4 class="breadcrumb-title">library-Main</h4>
 			<ul class="db-breadcrumb-list">
 				<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-				<li>library-main</li>
+				<li>library-Main</li>
 			</ul>
 		</div>
 		<div class="row">
@@ -13,7 +14,7 @@
 			<div class="col-lg-12 m-b30">
 				<div class="widget-box">
 					<div class="wc-title">
-						<h4>library-main</h4>
+						<h4>library-Main</h4>
 					</div>
 					<div class="widget-inner"></div>
 					<br />
@@ -21,7 +22,12 @@
 						<div class="container-fluid">
 							<div class="card mb-4">
 								<div class="card-header">
-									<i class="fas fa-table mr-1"></i> library-main
+									<i class="fas fa-table mr-1"></i> library-Main
+								</div>
+								<div
+									style="text-align: right; padding-right: 20px; padding-top: 20px;">
+									<button type="button" class="btn-secondry m-r5"
+										onclick="location.href='booklistInsert'">Insert</button>
 								</div>
 								<div class="card-body">
 									<div class="table-responsive">
@@ -29,33 +35,67 @@
 											width="100%" cellspacing="0">
 											<thead>
 												<tr>
-													<th>Name</th>
-													<th>Position</th>
-													<th>Office</th>
-													<th>Age</th>
-													<th>Insert</th>
-													<th>Update</th>
+													<th>Book ID</th>
+													<th>Title</th>
+													<th>Author</th>
+													<th>Publisher</th>
+													<th>Publication Date</th>
+													<th>ISBN</th>
+													<th>Category</th>
+													<th>Place of Publication</th>
+													<th>Number of Printed Copies</th>
+													<th>Description</th>
+													<th>Number of Pages</th>
+													<th>Discontinue
+													<th>
 												</tr>
 											</thead>
-											<tfoot>
+											<tfoot style="border-color: white;">
 												<tr>
-													<th>Name</th>
-													<th>Position</th>
-													<th>Office</th>
-													<th>Age</th>
-													<th>Insert</th>
-													<th>Update</th>
+													<th>Book ID</th>
+													<th>Title</th>
+													<th>Author</th>
+													<th>Publisher</th>
+													<th>Publication Date</th>
+													<th>ISBN</th>
+													<th>Category</th>
+													<th>Place of Publication</th>
+													<th>Number of Printed Copies</th>
+													<th>Description</th>
+													<th>Number of Pages</th>
+													<th>Discontinue <!-- <p>
+										<input type="radio" >
+										Yes</input>
+									</p>
+									<p>
+										<input type="radio" />
+										No</input>
+									</p> -->
+													<th>
 												</tr>
 											</tfoot>
 											<tbody>
-												<tr>
-													<td>Tiger Nixon</td>
-													<td>System Architect</td>
-													<td>Edinburgh</td>
-													<td>61</td>
-													<td><button type="button" class="btn-secondry m-r5">Insert</button></td>
-													<td><button type="button" class="btn-secondry m-r5">Update</button></td>
-												</tr>
+												<c:forEach var="book" items="${booklist }">
+													<tr>
+														<td>${book.bid}</td>
+														<td>${book.title}</td>
+														<td>${book.author}</td>
+														<td>${book.publisher}</td>
+														<td>${book.pubdate}</td>
+														<td>${book.isbn}</td>
+														<td>${book.bcategory}</td>
+														<td>${book.blocation}</td>
+														<td>${book.bcount}</td>
+														<td>${book.descrip}</td>
+														<td>${book.bpages}</td>
+														<td>${book.willdel}</td>
+
+														<td><button type="button" class="btn-secondry m-r5"
+																onclick="location.href='booklistUpdate?bid=${book.bid}'">Update</button>&nbsp;
+															<button type="button" class="btn-secondry m-r5"
+																onclick="location.href='booklistDelete?bid=${book.bid}'">Delete</button></td>
+													</tr>
+												</c:forEach>
 											</tbody>
 										</table>
 									</div>
