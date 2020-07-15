@@ -69,7 +69,7 @@
 															<td>${itm.isExpanded }</td>
 
 															<td><button type="button" class="btn-secondry m-r5" onclick="">Update</button>&nbsp;
-																<button type="button" class="btn-secondry m-r5" onclick="">Delete</button></td>
+																<button type="button" class="btn-secondry m-r5" onclick="location.href='borrowedDelete?rentid=${itm.rentid }'">Delete</button></td>
 														</tr>
 													</c:forEach>
 											</tbody>
