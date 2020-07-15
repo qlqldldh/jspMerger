@@ -36,19 +36,17 @@
 											<thead>
 												<tr>
 													<th>Notice ID</th>
-													<th>Email</th>
 													<th>Upload Date</th>
 													<th>Contents</th>
-													<!-- <th>Update</th> -->
+													<th>Option</th>
 												</tr>
 											</thead>
 											<tfoot style="border-color: white;">
 												<tr>
 													<th>Notice ID</th>
-													<th>Email</th>
 													<th>Upload Date</th>
 													<th>Contents</th>
-													<!-- <th>Update</th> -->
+													<th>Option</th>
 
 												</tr>
 											</tfoot>
@@ -56,7 +54,6 @@
 												<c:forEach var="itm" items="${noticelist }">
 													<tr>
 														<td>${itm.nid}</td>
-														<td>${itm.nemail}</td>
 														<td>${itm.uldate}</td>
 														<td>${itm.ncontents}</td>
 														<td><button type="button" class="btn-secondry m-r5"

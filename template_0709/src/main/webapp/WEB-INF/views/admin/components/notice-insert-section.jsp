@@ -27,26 +27,20 @@
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Notice ID</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="NoticeID" name="nid">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-2 col-form-label">Email</label>
-									<div class="col-sm-7">
-										<input class="form-control" type="text" value="Email" name="nemail">
+										<input class="form-control" type="text" placeholder="NoticeID" name="nid">
 									</div>
 								</div>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Upload Date</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="YYYY-MM-DD" name="uldate">
+										<input class="form-control" type="text" placeholder="YYYY-MM-DD" name="uldate">
 										<span class="help">Please follow the format</span>
 									</div>
 								</div>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Contents</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="Contents" name="ncontents">
+										<input class="form-control" type="text" placeholder="Contents" name="ncontents">
 									</div>
 								</div>
 

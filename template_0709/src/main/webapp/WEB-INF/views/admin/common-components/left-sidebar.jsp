@@ -89,7 +89,7 @@
 						<li><a href="incomeMain" class="ttr-material-button"><span
 								class="ttr-label">Income</span></a></li>
 					</ul></li>
-				<li><a href="#" class="ttr-material-button"> <span
+				<li><a href="noticeMain" class="ttr-material-button"> <span
 						class="ttr-icon"><i class="ti-comments"></i></span> <span
 						class="ttr-label">Notice</span>
 				</a></li>

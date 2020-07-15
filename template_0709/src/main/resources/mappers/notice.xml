@@ -8,7 +8,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<resultMap id="noticeMap"
 		type="com.mylibrary.book.admin.vo.NoticeVO">
 		<result property="nid" column="nid" />
-		<result property="nemail" column="nemail" />
 		<result property="uldate" column="uldate" />
 		<result property="ncontents" column="ncontents" />
 	</resultMap>
@@ -23,14 +22,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		parameterType="com.mylibrary.book.admin.vo.NoticeVO">
 		INSERT INTO BNOTICE VALUES 
 		(#{nid, javaType=String,jdbcType=VARCHAR}, 
-		#{nemail,javaType=String,jdbcType=VARCHAR},
 		#{uldate, javaType=String,jdbcType=VARCHAR}, 
 		#{ncontents, javaType=String,jdbcType=VARCHAR})
 	</insert>
 
 	<update id="updateNotice" parameterType="map">
 		UPDATE BNOTICE SET
-		nemail=#{nemail, javaType=String,jdbcType=VARCHAR},
 		uldate = #{uldate,
 		javaType=String,jdbcType=VARCHAR},
 		ncontents=#{ncontents,
