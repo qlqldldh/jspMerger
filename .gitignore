@@ -4,3 +4,6 @@ target/
 
 /template_0709/src/main/webapp/WEB-INF/spring/context-datasource.xml
 
+*.DS_Store
+
+template_0709/pom.xml

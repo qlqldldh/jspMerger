@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 public class NoticeVO {
 
     private String nid;
-    private String nemail;
     private String uldate;
     private String ncontents;
 
@@ -16,14 +15,6 @@ public class NoticeVO {
 
     public void setNid(String nid) {
 	this.nid = nid;
-    }
-
-    public String getNemail() {
-	return nemail;
-    }
-
-    public void setNemail(String nemail) {
-	this.nemail = nemail;
     }
 
     public String getUldate() {

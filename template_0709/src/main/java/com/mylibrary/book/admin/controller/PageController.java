@@ -37,10 +37,10 @@ public class PageController {
 		return "admin/balance";
 	}
 	
-	@RequestMapping("/bookhope")
-	public String bookhope(Model model) {
-		return "admin/bookhope";
-	}
+//	@RequestMapping("/bookhope")
+//	public String bookhope(Model model) {
+//		return "admin/bookhope";
+//	}
 	
 	@RequestMapping("/circulInsert")
 	public String circulInsert(Model model) {
@@ -72,20 +72,20 @@ public class PageController {
 //		return "admin/hr-update";
 //	}
 	
-	@RequestMapping("/incomeInsert")
-	public String incomeInsert(Model model) {
-		return "admin/income-insert";
-	}
-	
-	@RequestMapping("/incomeMain")
-	public String incomeMain(Model model) {
-		return "admin/income-main";
-	}
-	
-	@RequestMapping("/incomeUpdate")
-	public String incomeUpdate(Model model) {
-		return "admin/income-update";
-	}
+//	@RequestMapping("/incomeInsert")
+//	public String incomeInsert(Model model) {
+//		return "admin/income-insert";
+//	}
+//	
+//	@RequestMapping("/incomeMain")
+//	public String incomeMain(Model model) {
+//		return "admin/income-main";
+//	}
+//	
+//	@RequestMapping("/incomeUpdate")
+//	public String incomeUpdate(Model model) {
+//		return "admin/income-update";
+//	}
 	
 	@RequestMapping("/libraryInsert")
 	public String libraryInsert(Model model) {

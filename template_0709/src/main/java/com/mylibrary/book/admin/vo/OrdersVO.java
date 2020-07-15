@@ -15,6 +15,7 @@ public class OrdersVO {
 	private int extracost;
 	private String descript;
 	private int totalcost;
+	
 	public int getOrdernum() {
 		return ordernum;
 	}
