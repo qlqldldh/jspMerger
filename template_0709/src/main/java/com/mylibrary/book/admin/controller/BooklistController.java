@@ -82,5 +82,23 @@ public class BooklistController {
 	System.out.println("book deleted successfully!");
 	return "redirect:booklistMain";
     }
+    
+    // ====================================Detail===================================
+    @RequestMapping("/booklistDetail")
+    public ModelAndView booklistDetail(@RequestParam String bid, Model model) {
+	List<BooklistVO> listVO = booklistService.showList();
 
+	ModelAndView mav = new ModelAndView();
+
+	for (int i = 0; i < listVO.size(); i++) {
+	    if (listVO.get(i).getBid().equals(bid)) {
+		mav.addObject("item", listVO.get(i));
+		break;
+	    }
+	}
+	System.out.println("Controller: booklistDetail");
+	mav.setViewName("admin/library-detail");
+	return mav;
+    }
+    
 }

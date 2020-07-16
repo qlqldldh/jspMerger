@@ -38,7 +38,7 @@
 													<th>Notice ID</th>
 													<th>Upload Date</th>
 													<th>Contents</th>
-													<th>Option</th>
+													<th></th>
 												</tr>
 											</thead>
 											<tfoot style="border-color: white;">
@@ -46,7 +46,7 @@
 													<th>Notice ID</th>
 													<th>Upload Date</th>
 													<th>Contents</th>
-													<th>Option</th>
+													<th></th>
 
 												</tr>
 											</tfoot>

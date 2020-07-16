@@ -3,10 +3,10 @@
 	<main class="ttr-wrapper">
 		<div class="container-fluid">
 			<div class="db-breadcrumb">
-				<h4 class="breadcrumb-title">BookHope</h4>
+				<h4 class="breadcrumb-title">Requested Books</h4>
 				<ul class="db-breadcrumb-list">
-					<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-					<li>Bookhope</li>
+					<li><a href="/book/admin/index"><!-- <i class="fa fa-home"> --></i>Menu</a></li>
+					<li>Requested Books</li>
 				</ul>
 			</div>
 			<div class="row">
@@ -14,16 +14,16 @@
 				<div class="col-lg-12 m-b30">
 					<div class="widget-box">
 						<div class="wc-title">
-							<h4>BookHope</h4>
+							<h4>All Requested Books</h4>
 						</div>
 						<div class="widget-inner"></div>
 						<br />
 						<main>
 							<div class="container-fluid">
 								<div class="card mb-4">
-									<div class="card-header">
+									<!-- <div class="card-header">
 										<i class="fas fa-table mr-1"></i> BookHope
-									</div>
+									</div> -->
 									<div style="text-align:right;padding-right:20px;padding-top:20px;"></div>
 									<div class="card-body">
 										<div class="table-responsive">
@@ -31,18 +31,18 @@
 												width="100%" cellspacing="0">
 												<thead>
 													<tr>
-														<th>BookhopeID</th>
-														<th>User-email</th>
-														<th>Title</th>
+														<th>Request ID</th>
+														<th>User Email</th>
+														<th>Book Title</th>
 														<th>Author</th>
 														<th>Publisher</th>
-														<th>Comments</th>
-														<th>Option</th>
+														<!-- <th>Comments</th> --> <!-- could be too long -->
+														<th></th>
 														<!-- <th>Update</th> -->
 													</tr>
 												</thead>
 												<tfoot style="border-color:white;">
-													<tr>
+												<!-- 	<tr>
 														<th>BookhopeID</th>
 														<th>User-email</th>
 														<th>Title</th>
@@ -50,9 +50,9 @@
 														<th>Publisher</th>
 														<th>Comments</th>
 														<th>Option</th>
-														<!-- <th>Update</th> -->
+														<th>Update</th>
 														
-													</tr>
+													</tr> -->
 												</tfoot>
 												<tbody>
 													<c:forEach var="bh" items="${bookhopelist }">
@@ -62,7 +62,7 @@
 														<td>${bh.btitle }</td>
 														<td>${bh.bauthor }</td>
 														<td>${bh.bpublisher }</td>
-														<td>${bh.comments }</td>
+													<%-- 	<td>${bh.comments }</td> --%>
 														<td><button type="button" class="btn-secondry m-r5" onclick="location.href='bhDel?bhid=${bh.bhid}'">Deny</button>&nbsp;
 														<button type="button" class="btn-secondry m-r5" onclick="location.href='bhInsert?bhid=${bh.bhid}'">Accept</button></td>
 													</tr>

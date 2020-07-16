@@ -41,7 +41,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		#{bcount, javaType=integer,jdbcType=NUMERIC},
 		#{descrip, javaType=String,jdbcType=VARCHAR},
 		#{bpages, javaType=integer,jdbcType=NUMERIC},
-		#{willdel, javaType=integer,jdbcType=NUMERIC})
+		#{willdel, javaType=integer,jdbcType=NUMERIC},
+		'ooo')
 		
 	</insert>
 

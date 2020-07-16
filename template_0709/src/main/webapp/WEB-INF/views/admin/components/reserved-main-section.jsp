@@ -24,9 +24,9 @@
 								<div class="card-header">
 									<i class="fas fa-table mr-1"></i> reserved-main
 								</div>
-											<div style="text-align:right;padding-right:20px;padding-top:20px;">
+											<!-- <div style="text-align:right;padding-right:20px;padding-top:20px;">
 												<button type="button" class="btn-secondry m-r5" onclick="location.href='reservedInsert'">Insert</button>
-											</div>
+											</div> -->
 								<div class="card-body">
 									<div class="table-responsive">
 										<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -56,8 +56,8 @@
 															<td>${itm.resbid }</td>
 															<td>${itm.resdate }</td>
 
-															<td><button type="button" class="btn-secondry m-r5" onclick="">Update</button>&nbsp;
-																<button type="button" class="btn-secondry m-r5" onclick="">Delete</button></td>
+															<td><!-- <button type="button" class="btn-secondry m-r5" onclick="">Update</button>&nbsp; -->
+																<button type="button" class="btn-secondry m-r5" onclick="location.href='reservedDeletedo?resid=${itm.resid}'">Delete</button></td>
 														</tr>
 													</c:forEach>
 											</tbody>
