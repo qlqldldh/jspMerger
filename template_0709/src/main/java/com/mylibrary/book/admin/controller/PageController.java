@@ -42,7 +42,7 @@ public class PageController {
 //		return "admin/bookhope";
 //	}
 	
-	@RequestMapping("/circulInsert")
+	@RequestMapping("/circulInsert") // borrowed & reserved
 	public String circulInsert(Model model) {
 		return "admin/circulation-insert";
 	}
@@ -87,20 +87,20 @@ public class PageController {
 //		return "admin/income-update";
 //	}
 	
-	@RequestMapping("/libraryInsert")
-	public String libraryInsert(Model model) {
-		return "admin/library-insert";
-	}
-	
-	@RequestMapping("/libraryMain")
-	public String libraryMain(Model model) {
-		return "admin/library-main";
-	}
-	
-	@RequestMapping("/libraryUpdate")
-	public String libraryUpdate(Model model) {
-		return "admin/library-update";
-	}
+//	@RequestMapping("/libraryInsert")
+//	public String libraryInsert(Model model) {
+//		return "admin/library-insert";
+//	}
+//	
+//	@RequestMapping("/libraryMain")
+//	public String libraryMain(Model model) {
+//		return "admin/library-main";
+//	}
+//	
+//	@RequestMapping("/libraryUpdate")
+//	public String libraryUpdate(Model model) {
+//		return "admin/library-update";
+//	}
 	
 //	@RequestMapping("/ordersInsert")
 //	public String ordersInsert(Model model) {
@@ -137,20 +137,20 @@ public class PageController {
 		return "admin/users-update";
 	}
 	
-	@RequestMapping("/borrowedInsert")
-	public String borrowedInsert(Model model) {
-		return "admin/borrowed-insert";
-	}
-	
-	@RequestMapping("/borrowedMain")
-	public String borrowedMain(Model model) {
-		return "admin/borrowed-main";
-	}
-	
-	@RequestMapping("/borrowedUpdate")
-	public String borrowedUpdate(Model model) {
-		return "admin/borrowed-update";
-	}
+//	@RequestMapping("/borrowedInsert")
+//	public String borrowedInsert(Model model) {
+//		return "admin/borrowed-insert";
+//	}
+//	
+//	@RequestMapping("/borrowedMain")
+//	public String borrowedMain(Model model) {
+//		return "admin/borrowed-main";
+//	}
+//	
+//	@RequestMapping("/borrowedUpdate")
+//	public String borrowedUpdate(Model model) {
+//		return "admin/borrowed-update";
+//	}
 	
 	@RequestMapping("/reservedInsert")
 	public String reservedInsert(Model model) {
