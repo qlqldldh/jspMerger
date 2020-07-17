@@ -1,14 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <script>
-    function passwordReset(){
+    /* function passwordReset(){
         var formData = $("#passwordReset").serialize();
 
         $.ajax({
             cache : false,
-            url : "${pageContext.request.contextPath}/user/passwordReset", // 요기에
-            type : 'POST', 
+            url : "${pageContext.request.contextPath}/user/passwordReset2", // 요기에
+            dataType : "POST",
             data : formData, 
-            success : function() {
-                alert("success");
+            success : function(data) {
+                alert(data);
+            }, // success 
+    
+            error : function() {
+            	alert("error");
+            }
+        }); // $.ajax */
+//    }
+    function udpateInform(){
+        var formData = $("#udpateInform").serialize();
+
+        $.ajax({
+            cache : false,
+            url : "${pageContext.request.contextPath}/user/udpateInform", // 요기에
+            type : "POST", 
+            data : formData, 
+            success : function(data) {
+                alert(data);
+                window.location.reload(true);
             }, // success 
     
             error : function() {
@@ -16,16 +35,17 @@
             }
         }); // $.ajax */
     }
-    function udpateInform(){
-        var formData = $("#udpateInform").serialize();
+    function passwordReset(){
+        var formData = $("#passwordReset").serialize();
 
         $.ajax({
             cache : false,
-            url : "${pageContext.request.contextPath}/user/udpateInform", // 요기에
-            type : 'POST', 
+            url : "${pageContext.request.contextPath}/user/passwordReset", // 요기에
+            type : "POST", 
             data : formData, 
-            success : function() {
-                alert("success");
+            success : function(data) {
+                alert(data);
+                window.location.reload(true);
             }, // success 
     
             error : function() {
@@ -58,7 +78,7 @@
 													<label> <span>${sessionScope.email}</span>
 													</label> <br>
 												</p>
-												<form id="passwordReset" class="passwordReset" method="post">
+												<form id="passwordReset" class="passwordReset">
 													<p class="form-row input-required">
 														<label> <span class="first-letter">Password</span>
 															<span class="second-letter">*</span>
@@ -73,11 +93,11 @@
 													</p>
 													<div class="clear"></div>
 													<input type="submit" value="Password reset" name="Password reset"
-														class="button btn btn-default" onclick="passwordReset();">
+														class="button btn btn-default" onclick="passwordReset(); return false;">
 													<div class="clear"></div>
 												</form>
 												<br>
-												<form id="udpateInform" class="udpateInform" method="post">
+												<form id="udpateInform" class="udpateInform">
 													<p class="form-row input-required">
 														<label> <span class="first-letter">NAME : ${ user.NAME }</span> <span
 															class="second-letter">*</span>
@@ -104,7 +124,7 @@
 													</p>
 													<div class="clear"></div>
 													<input type="submit" value="Inform reset" name="Inform reset"
-														class="button btn btn-default" onclick="udpateInform();">
+														class="button btn btn-default" onclick="udpateInform(); return false;">
 													<div class="clear"></div>
 												</form>
 											</div>
