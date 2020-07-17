@@ -1,4 +1,4 @@
-<!-- Start: SignIn Section -->
+<!-- Start: SignUp Section -->
 <div id="content" class="site-content">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -17,18 +17,54 @@
 													<p>If no barcode has been assigned for your account,
 														please contact the library.</p>
 												</div>
-												<form class="login" method="post">
+												<form class="signup" action="insertUser" method="post">
 													<p class="form-row form-row-first input-required">
-														<label> <span class="first-letter">Barcode</span>
-															<span class="second-letter">*</span>
-														</label> <input type="text" id="username1" name="username"
+														<label> <span class="first-letter">email</span> <span
+															class="second-letter">*</span>
+														</label> <input type="text" id="email" name="email"
 															class="input-text">
 													</p>
 													<p class="form-row input-required">
 														<label> <span class="first-letter">Password</span>
 															<span class="second-letter">*</span>
-														</label> <input type="password" id="password1" name="password"
+														</label> <input type="password" id="passwd" name="passwd"
 															class="input-text">
+													</p>
+													<p class="form-row input-required">
+														<label> <span class="first-letter">Password Repeat</span>
+															<span class="second-letter">*</span>
+														</label> <input type="password" id="passwdre" name="passwdre"
+															class="input-text">
+													</p>
+													<p class="form-row input-required">
+														<label> <span class="first-letter">name</span> <span
+															class="second-letter">*</span>
+														</label> <input type="text" id="name" name="name"
+															class="input-text">
+													</p>
+													<p class="form-row input-required">
+														<label> <span class="first-letter">birth</span> <span
+															class="second-letter">*</span>
+														</label> <input type="text" id="birth" name="birth"
+															class="input-text">
+													</p>
+													<p class="form-row input-required">
+														<label> <span class="first-letter">phone</span> <span
+															class="second-letter">*</span>
+														</label> <input type="text" id="phone" name="phone"
+															class="input-text">
+													</p>
+													<p class="form-row input-required">
+														<label> <span class="first-letter">address</span> <span
+															class="second-letter">*</span>
+														</label> <input type="text" id="address" name="address"
+															class="input-text">
+													</p>
+													<p>
+														<select name="authority">
+															<option value="ROLE_USER">ROLE_USER</option>
+															<option value="ROLE_ADMIN">ROLE_ADMIN</option>
+														</select>
 													</p>
 													<div class="clear"></div>
 													<input type="submit" value="Signup" name="signup"
@@ -47,4 +83,4 @@
 		</main>
 	</div>
 </div>
-<!-- End: SignIn Section -->
+<!-- End: SignUp Section -->

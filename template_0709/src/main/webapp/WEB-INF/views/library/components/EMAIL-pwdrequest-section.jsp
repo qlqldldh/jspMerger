@@ -1,3 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<script>
+    function mailSending(){
+        var formData = $("#mailSending").serialize();
+        $.ajax({
+            cache : false,
+            url : "${pageContext.request.contextPath}/user/mailSending", // 요기에
+            type : 'POST', 
+            data : formData, 
+            success : function(data) {
+                alert("상태 : "+data);
+            }, // success 
+            error : function() {
+            	alert("error");
+            }
+        }); // $.ajax */
+    }
+</script>
 <div id="content" class="site-content">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -14,18 +32,18 @@
 													<h2>E-mail Please!</h2>
 													<span class="underline left"></span>
 												</div>
-												<form class="SendEmail" method="post">
+												<form id="mailSending" class="mailSending" method="post">
 													<p class="form-row form-row-last input-required">
 														<label> <span class="first-letter">Your
 																Login Mail please. Can not be Blank.</span> <span
 															class="second-letter">*</span>
-														</label> <input type="email" id="email" name="user-email"
+														</label> <input type="email" id="email" name="email"
 															class="input-text">
 													</p>
 													<div class="clear"></div>
 													<div class="password-form-row"></div>
 													<input type="submit" value="SEND" name="send"
-														class="button btn btn-default">
+														class="button btn btn-default" onclick="mailSending(); return false;">
 													<div class="clear"></div>
 												</form>
 											</div>

@@ -15,30 +15,27 @@
 													<h2>Sign in</h2>
 													<span class="underline left"></span>
 												</div>
-												<form class="login" method="post">
+												<form class="login" action="login_check" method="post">
 													<p class="form-row form-row-first input-required">
 														<label> <span class="first-letter">Barcode
 																or Username</span> <span class="second-letter">*</span>
-														</label> <input type="text" id="username" name="username"
+														</label> <input type="text" id="email" name="email"
 															class="input-text">
 													</p>
 													<p class="form-row form-row-last input-required">
 														<label> <span class="first-letter">Pin</span> <span
 															class="second-letter">*</span>
-														</label> <input type="password" id="password" name="password"
+														</label> <input type="password" id="passwd" name="passwd"
 															class="input-text">
 													</p>
 													<div class="clear"></div>
 													<div class="password-form-row">
-														<p class="form-row input-checkbox">
-															<input type="checkbox" value="forever" id="rememberme"
-																name="rememberme"> <label class="inline"
-																for="rememberme">Remember me</label>
-														</p>
+														<span style="color:red;">${errMsg}</span>
 														<p class="lost_password">
 															<a href="#">Lost your Pin?</a>
 														</p>
 													</div>
+													<br/>
 													<input type="submit" value="Login" name="login"
 														class="button btn btn-default">
 													<div class="clear"></div>

@@ -2,6 +2,16 @@
 
 <!-- Mirrored from educhamp.themetrades.com/demo/admin/teacher-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:11:35 GMT -->
 <head>
+	<%-- 세션 email 제대로 들어가는지 확인하기 위해서 넣어봄 - 0714 
+	<c:out value="email=${sessionScope.email }"></c:out> --%>
+	<c:if test="${sessionScope.JSESSIONID == null}">
+		<script type="text/javascript">
+			window.history.forward();
+			function noBack() {
+				window.history.forward();
+			}
+		</script>
+	</c:if>
 
 	<!-- META ============================================= -->
 	<meta charset="utf-8">
