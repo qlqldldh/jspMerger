@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.mylibrary.book.admin.mapper.BooklistMapper">
+	<resultMap id="booklistMap"
+		type="com.mylibrary.book.admin.vo.BooklistVO">
+		<result property="bid" column="bid" />
+		<result property="title" column="title"/>
+		<result property="author" column="author"/>
+		<result property="publisher" column="publisher"/>
+		<result property="pubdate" column="pubdate"/>
+		<result property="isbn" column="isbn"/>
+		<result property="bcategory" column="bcategory"/>
+		<result property="blocation" column="blocation"/>
+		<result property="bcount" column="bcount"/>
+		<result property="descrip" column="descrip"/>
+		<result property="bpages" column="bpages"/>
+		<result property="willdel" column="willdel"/>
+	</resultMap>
+
+
+
+	<select id="showList" resultMap="booklistMap">
+		SELECT * FROM booklist1
+	</select>
+
+	<insert id="insertBooklist"
+		parameterType="com.mylibrary.book.admin.vo.BooklistVO">
+		INSERT INTO booklist1 VALUES 
+		(#{bid, javaType=String,jdbcType=VARCHAR}, 
+		#{title, javaType=String,jdbcType=VARCHAR}, 
+		#{author, javaType=String,jdbcType=VARCHAR}, 
+		#{publisher, javaType=String,jdbcType=VARCHAR},
+		#{pubdate, javaType=String,jdbcType=VARCHAR},
+		#{isbn, javaType=integer,jdbcType=NUMERIC},
+		#{bcategory, javaType=String,jdbcType=VARCHAR},
+		#{blocation, javaType=String,jdbcType=VARCHAR},
+		#{bcount, javaType=integer,jdbcType=NUMERIC},
+		#{descrip, javaType=String,jdbcType=VARCHAR},
+		#{bpages, javaType=integer,jdbcType=NUMERIC},
+		#{willdel, javaType=integer,jdbcType=NUMERIC},
+		'ooo')
+		
+	</insert>
+
+	<update id="updateBooklist" parameterType="map">
+		UPDATE booklist1 SET
+		title= #{title}, 
+		author=#{author}, 
+		publisher=#{publisher, javaType=String,jdbcType=VARCHAR},
+		pubdate=#{pubdate},
+		isbn=#{isbn},
+		bcategory=#{bcategory},
+		blocation=#{blocation},
+		bcount= #{bcount},
+		descrip=#{descrip},
+		bpages=#{bpages},
+		willdel=#{willdel}
+		WHERE bid = #{bid}
+	</update>
+
+	<delete id="deleteBooklist" parameterType="java.lang.String">
+		DELETE FROM booklist1
+		WHERE
+		bID =
+		#{bID}
+	</delete>
+
+</mapper>
+
+

@@ -3,10 +3,11 @@
 	<main class="ttr-wrapper">
 		<div class="container-fluid">
 			<div class="db-breadcrumb">
-				<h4 class="breadcrumb-title">orders-main</h4>
+				<h4 class="breadcrumb-title">Orders</h4>
 				<ul class="db-breadcrumb-list">
-					<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-					<li>orders-main</li>
+					<li><a href="#"><!-- <i class="fa fa-home"> --></i>Menu</a></li>
+					<li>Balance</li>
+					<li>Orders</li>
 				</ul>
 			</div>
 			<div class="row">
@@ -14,42 +15,45 @@
 				<div class="col-lg-12 m-b30">
 					<div class="widget-box">
 						<div class="wc-title">
-							<h4>orders-main</h4>
+							<h4>List of Ordered Books</h4>
 						</div>
 						<div class="widget-inner"></div>
 						<br />
 						<main>
 							<div class="container-fluid">
 								<div class="card mb-4">
-									<div class="card-header">
+									<!-- <div class="card-header">
 										<i class="fas fa-table mr-1"></i> orders-main
-									</div>
-									<div style="text-align:right;padding-right:20px;padding-top:20px;">
+									</div> -->
+									<!-- <div style="text-align:right;padding-right:20px;padding-top:20px;">
 												<button type="button" class="btn-secondry m-r5" onclick="location.href='ordersInsert'">Insert</button>
-											</div>
+											</div> -->
 									<div class="card-body">
 										<div class="table-responsive">
 											<table class="table table-bordered" id="dataTable"
 												width="100%" cellspacing="0">
 												<thead>
 													<tr>
-														<th>Ordernum</th>
-														<th>Odate</th>
-														<th>txnum</th>
+														<!-- <th>OrderID</th> -->
+														<th>Transaction ID</th>
+														<th>Order Date</th>
 														<th>Title</th>
-														<th>ISBN</th>
+														<!-- <th>ISBN</th> -->
 														<th>Price</th>
-														<th>unit</th>
-														<th>ExtraCost</th>
-														<th>descript</th>
-														<th>TotalCost</th>
-														<th>Option</th>
-														<!-- <th>Update</th> -->
+														<th>Unit</th>
+														<!-- <th>Extra Costs</th> -->
+														<!-- <th>descript</th> -->
+														<th>TotalCost
+														<th>
+														
+														<!-- <th>Option</th>
+														<th>Update</th> -->
+														
 													</tr>
 												</thead>
 												<tfoot style="border-color:white;">
 													<tr>
-														<th>Ordernum</th>
+														<!-- th>Ordernum</th>
 														<th>Odate</th>
 														<th>txnum</th>
 														<th>Title</th>
@@ -59,7 +63,7 @@
 														<th>ExtraCost</th>
 														<th>descript</th>
 														<th>TotalCost</th>
-														<th>Option</th>
+														<th>Option</th> -->
 														<!-- <th>Update</th> -->
 														
 													</tr>
@@ -67,15 +71,15 @@
 												<tbody>
 													<c:forEach var="itm" items="${orderslist }">
 													<tr>
-												 		<td>${itm.ordernum }</td>
+												 		<%-- <td>${itm.ordernum }</td> --%>
 														<td>${itm.odate }</td>
 														<td>${itm.txnum }</td>
-														<td>${itm.title }</td>
-														<td>${itm.isbn }</td>
+														<td><a href="ordersDetail?ordernum=${itm.ordernum }">${itm.title }</a></td>
+													<%-- 	<td>${itm.isbn }</td> --%>
 														<td>${itm.price }</td>
 														<td>${itm.unit }</td>
-														<td>${itm.extracost }</td>
-														<td>${itm.descript }</td>
+														<%-- <td>${itm.extracost }</td>
+														<td>${itm.descript }</td> --%>
 														<td>${itm.totalcost }</td>
 														
 														<td><button type="button" class="btn-secondry m-r5" onclick="location.href='ordersUpdate?ordernum=${itm.ordernum}'">Update</button>&nbsp;

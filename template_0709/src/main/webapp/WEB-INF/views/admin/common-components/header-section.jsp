@@ -28,18 +28,18 @@
 						<div class="ttr-header-submenu">
 							<ul>
 								<li><a href="index">Dashboard</a></li>
-								<li><a href="libraryMain">Add a book</a></li>
-                                <li><a href="book-hope.html">Borrowed a book</a></li>
-								<li><a href="management-admin.html">Reserve a book</a></li>
+								<li><a href="booklistMain">BookList</a></li>
+                                <li><a href="borrowedMain">Borrowed book</a></li>
+								<li><a href="reservedMain">Reserved book</a></li>
                                 <li><a href="management-user.html">Renewed a book</a></li>
                                 <li><a href="bhMain">Requested books</a></li>
-                                <li><a href="usersMain">Add User</a></li>
-                                <li><a href="adminMain">Add Admin</a></li>
-                                <li><a href="hrMain">Add Employee</a></li>
+                                <li><a href="genMain">User</a></li>
+                                <li><a href="badminMain">Admin</a></li>
+                                <li><a href="hrMain">Employee</a></li>
                                 <li><a href="balance">Balance</a></li>
 								<li><a href="ordersMain">Orders</a></li>
 								<li><a href="incomeMain">Income</a></li>
-								<li><a href="cash-balance.html">Reports</a></li>
+								<li><a href="noticeMain">Notice</a></li>
 							</ul>
 						</div>
 					</li>

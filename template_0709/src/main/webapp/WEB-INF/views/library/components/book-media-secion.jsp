@@ -11,7 +11,7 @@
                             <div class="col-md-9 col-md-push-3">
                                 <div class="filter-options margin-list">
                                     <div class="row">
-                                        <div class="col-md-4 col-sm-4">
+                                        <!-- <div class="col-md-4 col-sm-4">
                                             <select name="orderby">
                                                 <option selected="selected">Default sorting</option>
                                                 <option>Sort by popularity</option>
@@ -22,15 +22,15 @@
                                         </div>
                                         <div class="col-md-4 col-sm-4">
                                             <div class="filter-result">Showing items 1 to 9 of 19 total</div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 pull-right">
+                                        </div> -->
+                                        <!-- <div class="col-md-3 col-sm-3 pull-right">
                                             <div class="filter-toggle">
                                                 <a href="books-media-gird-view-v1.html"><i
                                                         class="glyphicon glyphicon-th-large"></i></a>
                                                 <a href="books-media-list-view.html" class="active"><i
                                                         class="glyphicon glyphicon-th-list"></i></a>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                                 <div class="books-list">
@@ -38,11 +38,11 @@
                                         <div class="single-book-box">
                                             <div class="post-thumbnail">
                                                 <div class="book-list-icon yellow-icon"></div>
-                                                <a href="books-media-detail-v2.html"><img alt="Book"
+                                                <a href="bookDetail"><img alt="Book"
                                                         src="${pageContext.request.contextPath}/images/books-media/list-view/book-media-01.jpg" /></a>
                                             </div>
                                             <div class="post-detail">
-                                                <div class="books-social-sharing">
+                                                <!-- <div class="books-social-sharing">
                                                     <ul>
                                                         <li><a href="#" target="_blank"><i
                                                                     class="fa fa-facebook"></i></a></li>
@@ -89,12 +89,12 @@
                                                             </a>
                                                         </li>
                                                     </ul>
-                                                </div>
+                                                </div> -->
                                                 <header class="entry-header">
                                                     <div class="row">
                                                         <div class="col-sm-6">
                                                             <h3 class="entry-title">
-                                                                <a href="books-media-detail-v2.html">The Great
+                                                                <a href="bookDetail">The Great
                                                                     Gatsby</a>
                                                             </h3>
                                                             <ul>
@@ -106,7 +106,7 @@
                                                             <ul>
                                                                 <li><strong>Edition:</strong> First editio</li>
                                                                 <li><strong>Local Availability:</strong> 0 (of 1)</li>
-                                                                <li>
+                                                                <!-- <li>
                                                                     <div class="rating">
                                                                         <strong>Rating: </strong>
                                                                         <span>☆</span>
@@ -115,7 +115,7 @@
                                                                         <span>☆</span>
                                                                         <span>☆</span>
                                                                     </div>
-                                                                </li>
+                                                                </li> -->
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -127,7 +127,7 @@
                                                         slightly believable.</p>
                                                 </div>
                                                 <footer class="entry-footer">
-                                                    <a class="btn btn-dark-gray" href="books-media-detail-v2.html">Read
+                                                    <a class="btn btn-dark-gray" href="bookDetail">Read
                                                         More</a>
                                                 </footer>
                                             </div>
@@ -796,7 +796,7 @@
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
-                                    <div class="widget widget_recent_releases">
+                                    <!-- <div class="widget widget_recent_releases">
                                         <h4 class="widget-title">New Releases</h4>
                                         <ul>
                                             <li><a href="#">Books</a></li>
@@ -807,7 +807,7 @@
                                             <li><a href="#">eAudio</a></li>
                                         </ul>
                                         <div class="clearfix"></div>
-                                    </div>
+                                    </div> -->
                                     <div class="widget widget_recent_entries">
                                         <h4 class="widget-title">On-Order Items</h4>
                                         <ul>
@@ -866,8 +866,9 @@
                             </div>
                         </div>
                     </div>
-
-                    <jsp:include page="staff-picks.jsp" flush="faluse"/>
+						<br><br>
+                    <%-- <jsp:include page="staff-picks.jsp" flush="faluse"/> --%>
+                    <div style="text-align:right"><a class="btn btn-dark-gray" href="hopeBook">Request a wished book</a></div>
                 </div>
             </main>
         </div>

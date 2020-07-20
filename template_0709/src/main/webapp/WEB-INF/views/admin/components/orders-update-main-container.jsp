@@ -2,10 +2,11 @@
 	<main class="ttr-wrapper">
 		<div class="container-fluid">
 			<div class="db-breadcrumb">
-				<h4 class="breadcrumb-title">orders update</h4>
+				<h4 class="breadcrumb-title">Update Order</h4>
 				<ul class="db-breadcrumb-list">
-					<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-					<li>orders update</li>
+					<li><a href="#"><!-- <i class="fa fa-home"> --></i>Menu</a></li>
+					<li>Balance</li>
+					<li>Update Order</li>
 				</ul>
 			</div>	
 			<div class="row">
@@ -13,16 +14,16 @@
 				<div class="col-lg-12 m-b30">
 					<div class="widget-box">
 						<div class="wc-title">
-							<h4>orders update</h4>
+							<h4>Order Information</h4>
 						</div>
 						<div class="widget-inner">
 							<form class="edit-profile m-b30" action="ordersUpdatedo" method="GET">
 								<div class="">
-									<div class="form-group row">
+									<!-- <div class="form-group row">
 										<div class="col-sm-10  ml-auto">
 											<h3> orders-update </h3>
 										</div>
-									</div>
+									</div> -->
 	
 									<div class="form-group row">
 									<div class="col-sm-7">

@@ -5,7 +5,7 @@
                     <div class="main-news-list">
                         <div class="container">
                             <!-- Start: Search Section -->
-                            <section class="search-filters">
+                            <!-- <section class="search-filters">
                                 <div class="filter-box">
                                     <h3>Find the library events &amp; classes</h3>
                                     <form action="http://libraria.demo.presstigers.com/news-events-detail.html" method="get">
@@ -112,10 +112,11 @@
                                     </form>
                                 </div>
                                 <div class="clear"></div>
-                            </section>
+                            </section> -->
                             <!-- End: Search Section -->
                             <div class="row">
-                                <div class="col-md-9 col-md-push-3">
+                            <br><br>
+                                <!-- <div class="col-md-9 col-md-push-3"> -->
                                     <div class="news-list-detail">
                                         <div class="news-list-box">
                                             <div class="single-news-list">
@@ -174,7 +175,7 @@
                                                 <div class="clearfix"></div>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <%-- <div class="row">
                                             <div class="col-xs-12 col-sm-5">
                                                 <div class="contact-info">
                                                     <h3>Contact Info</h3>
@@ -466,10 +467,10 @@
                                                     </figure> 
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> --%>
                                     </div>
-                                </div>
-                                <div class="col-md-3 col-md-pull-9">
+                                <!-- </div> -->
+                                <%-- <div class="col-md-3 col-md-pull-9">
                                     <aside id="secondary" class="sidebar widget-area">
                                         <div class="widget widget_search">
                                             <h4 class="widget-title" data-control>Search News</h4>
@@ -570,7 +571,7 @@
                                             </div>
                                         </div>
                                     </aside>
-                                </div>
+                                </div> --%>
                             </div>
                         </div>
                     </div>

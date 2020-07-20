@@ -17,20 +17,20 @@ public class PageController {
 		return "admin/index";
 	}
 	
-	@RequestMapping("/adminInsert")
-	public String adminInsert(Model model) {
-		return "admin/admin-insert";
-	}
-	
-	@RequestMapping("/adminMain")
-	public String adminMain(Model model) {
-		return "admin/admin-main";
-	}
-	
-	@RequestMapping("/adminUpdate")
-	public String adminUpdate(Model model) {
-		return "admin/admin-update";
-	}
+//	@RequestMapping("/adminInsert")
+//	public String adminInsert(Model model) {
+//		return "admin/admin-insert";
+//	}
+//	
+//	@RequestMapping("/adminMain")
+//	public String adminMain(Model model) {
+//		return "admin/admin-main";
+//	}
+//	
+//	@RequestMapping("/adminUpdate")
+//	public String adminUpdate(Model model) {
+//		return "admin/admin-update";
+//	}
 	
 	@RequestMapping("/balance")
 	public String balance(Model model) {
@@ -42,7 +42,7 @@ public class PageController {
 //		return "admin/bookhope";
 //	}
 	
-	@RequestMapping("/circulInsert")
+	@RequestMapping("/circulInsert") // borrowed & reserved
 	public String circulInsert(Model model) {
 		return "admin/circulation-insert";
 	}
@@ -87,20 +87,20 @@ public class PageController {
 //		return "admin/income-update";
 //	}
 	
-	@RequestMapping("/libraryInsert")
-	public String libraryInsert(Model model) {
-		return "admin/library-insert";
-	}
-	
-	@RequestMapping("/libraryMain")
-	public String libraryMain(Model model) {
-		return "admin/library-main";
-	}
-	
-	@RequestMapping("/libraryUpdate")
-	public String libraryUpdate(Model model) {
-		return "admin/library-update";
-	}
+//	@RequestMapping("/libraryInsert")
+//	public String libraryInsert(Model model) {
+//		return "admin/library-insert";
+//	}
+//	
+//	@RequestMapping("/libraryMain")
+//	public String libraryMain(Model model) {
+//		return "admin/library-main";
+//	}
+//	
+//	@RequestMapping("/libraryUpdate")
+//	public String libraryUpdate(Model model) {
+//		return "admin/library-update";
+//	}
 	
 //	@RequestMapping("/ordersInsert")
 //	public String ordersInsert(Model model) {
@@ -122,50 +122,50 @@ public class PageController {
 		return "admin/user-profile";
 	}
 	
-	@RequestMapping("/usersInsert")
-	public String usersInsert(Model model) {
-		return "admin/users-insert";
-	}
+//	@RequestMapping("/usersInsert")
+//	public String usersInsert(Model model) {
+//		return "admin/users-insert";
+//	}
+//	
+//	@RequestMapping("/usersMain")
+//	public String usersMain(Model model) {
+//		return "admin/users-main";
+//	}
+//	
+//	@RequestMapping("/usersUpdate")
+//	public String usersUpdate(Model model) {
+//		return "admin/users-update";
+//	}
 	
-	@RequestMapping("/usersMain")
-	public String usersMain(Model model) {
-		return "admin/users-main";
-	}
+//	@RequestMapping("/borrowedInsert")
+//	public String borrowedInsert(Model model) {
+//		return "admin/borrowed-insert";
+//	}
+//	
+//	@RequestMapping("/borrowedMain")
+//	public String borrowedMain(Model model) {
+//		return "admin/borrowed-main";
+//	}
+//	
+//	@RequestMapping("/borrowedUpdate")
+//	public String borrowedUpdate(Model model) {
+//		return "admin/borrowed-update";
+//	}
 	
-	@RequestMapping("/usersUpdate")
-	public String usersUpdate(Model model) {
-		return "admin/users-update";
-	}
-	
-	@RequestMapping("/borrowedInsert")
-	public String borrowedInsert(Model model) {
-		return "admin/borrowed-insert";
-	}
-	
-	@RequestMapping("/borrowedMain")
-	public String borrowedMain(Model model) {
-		return "admin/borrowed-main";
-	}
-	
-	@RequestMapping("/borrowedUpdate")
-	public String borrowedUpdate(Model model) {
-		return "admin/borrowed-update";
-	}
-	
-	@RequestMapping("/reservedInsert")
-	public String reservedInsert(Model model) {
-		return "admin/reserved-insert";
-	}
-	
-	@RequestMapping("/reservedMain")
-	public String reservedMain(Model model) {
-		return "admin/reserved-main";
-	}
-	
-	@RequestMapping("/reservedUpdate")
-	public String reservedUpdate(Model model) {
-		return "admin/reserved-update";
-	}
+//	@RequestMapping("/reservedInsert")
+//	public String reservedInsert(Model model) {
+//		return "admin/reserved-insert";
+//	}
+//	
+//	@RequestMapping("/reservedMain")
+//	public String reservedMain(Model model) {
+//		return "admin/reserved-main";
+//	}
+//	
+//	@RequestMapping("/reservedUpdate")
+//	public String reservedUpdate(Model model) {
+//		return "admin/reserved-update";
+//	}
 }
 
 

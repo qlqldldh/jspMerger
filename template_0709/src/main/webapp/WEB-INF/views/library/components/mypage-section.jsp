@@ -1,68 +1,132 @@
-<!-- Start: Cart Section -->
-	<div id="content" class="site-content">
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main">
-				<div class="signin-main">
-					<div class="container">
-						<div class="woocommerce">
-							<div class="woocommerce-login">
-								<div class="company-info signin-register">
-									<div class="col-md-8 col-md-offset-2 border-dark new-user">
-										<div class="row">
-											<div class="col-md-12">
-												<div
-													class="company-detail new-account bg-light margin-right">
-													<div class="new-user-head">
-														<h2>My page</h2>
-														<p></p>
-													</div>
-													<div class="widget-inner">
-														<form class="edit-profile m-b30">
-															<div class="form-group row">
-																<label class="col-sm-2 col-form-label">한현탁</label>
-																<div class="col-sm-7">
-																	<input class="form-control" type="text" value="ID">
-																</div>
-															</div>
-															<div class=""></div>
-															<div class="form-group row">
-																<label class="col-sm-2 col-form-label">이름</label>
-																<div class="col-sm-7">
-																	<input class="form-control" type="text" value="name">
-																</div>
-															</div>
-															<div class="form-group row">
-																<label class="col-sm-2 col-form-label">주소</label>
-																<div class="col-sm-7">
-																	<input class="form-control" type="text" value="adress">
-																</div>
-															</div>
-															<div class="form-group row">
-																<label class="col-sm-2 col-form-label">핸드폰</label>
-																<div class="col-sm-7">
-																	<input class="form-control" type="text"
-																		value="phone no.">
-																</div>
-															</div>
-															<div class="form-group row">
-																<label class="col-sm-2 col-form-label">이메일</label>
-																<div class="col-sm-7">
-																	<input class="form-control" type="text" value="email">
-																</div>
-															</div>
-															<div class="">
-																<div class="">
-																	<div class="row">
-																		<div class="col-sm-3"></div>
-																		<div class="col-sm-7">
-																			<button type="reset" class="btn">수정</button>
-																			<button type="reset" class="btn-secondry">취소</button>
-																		</div>
-																	</div>
-																</div>
-															</div>
-													</div>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<script>
+    /* function passwordReset(){
+        var formData = $("#passwordReset").serialize();
+
+        $.ajax({
+            cache : false,
+            url : "${pageContext.request.contextPath}/user/passwordReset2", // 요기에
+            dataType : "POST",
+            data : formData, 
+            success : function(data) {
+                alert(data);
+            }, // success 
+    
+            error : function() {
+            	alert("error");
+            }
+        }); // $.ajax */
+//    }
+    function udpateInform(){
+        var formData = $("#udpateInform").serialize();
+
+        $.ajax({
+            cache : false,
+            url : "${pageContext.request.contextPath}/user/udpateInform", // 요기에
+            type : "POST", 
+            data : formData, 
+            success : function(data) {
+                alert(data);
+                window.location.reload(true);
+            }, // success 
+    
+            error : function() {
+            	alert("error");
+            }
+        }); // $.ajax */
+    }
+    function passwordReset(){
+        var formData = $("#passwordReset").serialize();
+
+        $.ajax({
+            cache : false,
+            url : "${pageContext.request.contextPath}/user/passwordReset", // 요기에
+            type : "POST", 
+            data : formData, 
+            success : function(data) {
+                alert(data);
+                window.location.reload(true);
+            }, // success 
+    
+            error : function() {
+            	alert("error");
+            }
+        }); // $.ajax */
+    }
+</script>
+<!-- Start: Mypage Section -->
+<div id="content" class="site-content">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+			<div class="signin-main">
+				<div class="container">
+					<div class="woocommerce">
+						<div class="woocommerce-login">
+							<div class="company-info signin-register">
+								<div class="col-md-8 col-md-offset-2 border-dark new-user">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="company-detail new-account bg-light margin-right">
+												<div class="new-user-head">
+													<h2>MyPage</h2>
+													<span class="underline left"></span>
+													<p>If no barcode has been assigned for your account,
+														please contact the library.</p>
 												</div>
+
+												<p class="form-row form-row-first input-required">
+													<label> <span>${sessionScope.email}</span>
+													</label> <br>
+												</p>
+												<form id="passwordReset" class="passwordReset">
+													<p class="form-row input-required">
+														<label> <span class="first-letter">Password</span>
+															<span class="second-letter">*</span>
+														</label> <input type="password" id="passwd" name="passwd"
+															class="input-text">
+													</p>
+													<p class="form-row input-required">
+														<label> <span class="first-letter">Password
+																Repeat</span> <span class="second-letter">*</span>
+														</label> <input type="password" id="passwdre" name="passwdre"
+															class="input-text">
+													</p>
+													<div class="clear"></div>
+													<input type="submit" value="Password reset" name="Password reset"
+														class="button btn btn-default" onclick="passwordReset(); return false;">
+													<div class="clear"></div>
+												</form>
+												<br>
+												<form id="udpateInform" class="udpateInform">
+													<p class="form-row input-required">
+														<label> <span class="first-letter">NAME : ${ user.NAME }</span> <span
+															class="second-letter">*</span>
+														</label> <input type="text" id="name" name="name"
+															class="input-text">
+													</p>
+													<p class="form-row input-required">
+														<label> <span class="first-letter">BIRTH : ${ user.BIRTH }</span> <span
+															class="second-letter">*</span>
+														</label> <input type="text" id="birth" name="birth"
+															class="input-text">
+													</p>
+													<p class="form-row input-required">
+														<label> <span class="first-letter">PHONE : ${ user.PHONE }</span> <span
+															class="second-letter">*</span>
+														</label> <input type="text" id="phone" name="phone"
+															class="input-text">
+													</p>
+													<p class="form-row input-required">
+														<label> <span class="first-letter">ADDRESS : ${ user.ADDRESS }</span>
+															<span class="second-letter">*</span>
+														</label> <input type="text" id="address" name="address"
+															class="input-text">
+													</p>
+													<div class="clear"></div>
+													<input type="submit" value="Inform reset" name="Inform reset"
+														class="button btn btn-default" onclick="udpateInform(); return false;">
+													<div class="clear"></div>
+												</form>
 											</div>
 										</div>
 									</div>
@@ -70,7 +134,9 @@
 							</div>
 						</div>
 					</div>
-			</main>
-		</div>
+				</div>
+			</div>
+		</main>
 	</div>
-	<!-- End: Cart Section -->
+</div>
+<!-- End: Mypage Section -->

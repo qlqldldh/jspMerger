@@ -12,7 +12,7 @@
 	<jsp:include page="common-components/header-section.jsp" flush="false" />
 	<jsp:include page="common-components/page-banner.jsp" flush="false" />
 	<jsp:include page="components/mypage-section.jsp" flush="false" />
-	<jsp:include page="common-components/social-network.jsp" flush="false" />
+	<%-- <jsp:include page="common-components/social-network.jsp" flush="false" /> --%>
 	<jsp:include page="common-components/footer.jsp" flush="false" />
 	<jsp:include page="common-components/footer-javascript.jsp"
 		flush="false" />
