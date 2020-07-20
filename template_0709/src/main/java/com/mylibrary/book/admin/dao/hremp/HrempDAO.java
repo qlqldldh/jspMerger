@@ -6,4 +6,5 @@ import com.mylibrary.book.admin.vo.HrempVO;
 
 public interface HrempDAO {
 	public List<HrempVO> selectAll();
+	public void insertHR(HrempVO hv);
 }

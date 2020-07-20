@@ -32,12 +32,13 @@
 													<div class="password-form-row">
 														<span style="color:red;">${errMsg}</span>
 														<p class="lost_password">
-															<a href="#">Lost your Pin?</a>
+															<a href="email">Lost your Pin?</a>
 														</p>
 													</div>
 													<br/>
 													<input type="submit" value="Login" name="login"
-														class="button btn btn-default">
+														class="button btn btn-default">&nbsp;
+														<a class="btn btn-dark-gray" href="join">Register</a>
 													<div class="clear"></div>
 												</form>
 											</div>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mylibrary.book.admin.mapper.BadminMapper">
+	<resultMap id="badminMap" type="com.mylibrary.book.admin.vo.BadminVO">
+		<result property="email" column="email"/>
+		<result property="name" column="name"/>
+		<result property="passwd" column="passwd"/>
+		<result property="enabled" column="enabled"/>
+		<result property="authority" column="authority"/>
+		<result property="phone" column="phone"/>
+		<result property="address" column="address"/>
+		<result property="birth" column="birth"/>
+		<result property="aemail" column="aemail"/>
+		<result property="grp" column="grp"/>
+		<result property="pos" column="pos"/>
+	</resultMap>
+
+<select id="showAll" resultMap="badminMap">
+	select bu.email, bu.name, ba.grp, ba.pos from buser bu join badmin ba on bu.email = ba.aemail
+</select>
+
+<delete id="deleteBadmin1" parameterType="String">
+	delete from badmin where aemail = #{email}
+</delete>
+
+<delete id="deleteBadmin2" parameterType="String">
+	delete from buser where email = #{email}
+</delete>
+
+<insert id="insertBadmin1" parameterType="com.mylibrary.book.admin.vo.BadminVO">
+insert into buser (email,name,passwd,enabled,authority,phone,address,birth) values(#{ email },#{ name },#{ passwd },1,'ROLE_ADMIN',#{ phone },#{ address },#{ birth })
+</insert>
+
+<insert id="insertBadmin2" parameterType="com.mylibrary.book.admin.vo.BadminVO">
+insert into badmin (aemail,grp,pos) values(#{ email },#{ grp },#{ pos })
+</insert> 
+
+<select id="getBadmin" parameterType="String" resultMap="badminMap">
+	select bu.email, bu.name, bu.passwd, bu.phone, bu.address, bu.birth, ba.grp, ba.pos from buser bu join badmin ba on bu.email = ba.aemail
+</select>
+
+
+<update id="updateBadmin1" parameterType="com.mylibrary.book.admin.vo.BadminVO">
+	update badmin set grp = #{grp}, pos = #{pos} where aemail=#{email}
+</update>
+
+<update id="updateBadmin2" parameterType="com.mylibrary.book.admin.vo.BadminVO">
+	update buser set name = #{name}, passwd = #{passwd}, phone = #{phone}, address= #{address}, birth=#{birth} where email=#{email}
+</update>
+
+</mapper>

@@ -10,7 +10,7 @@
 			<!--logo start -->
 			<div class="ttr-logo-box">
 				<div>
-					<a href="index.html" class="ttr-logo">
+					<a href="index" class="ttr-logo">
 						<img alt="" class="ttr-logo-mobile" src="${pageContext.request.contextPath}/assets/images/logo-mobile.png" width="30" height="30">
 						<img alt="" class="ttr-logo-desktop" src="${pageContext.request.contextPath}/assets/images/logo-white.png" width="160" height="27">
 					</a>
@@ -21,25 +21,25 @@
 				<!-- header left menu start -->
 				<ul class="ttr-header-navigation">
 					<li>
-						<a href="../index.html" class="ttr-material-button ttr-submenu-toggle">HOME</a>
+						<a href="index" class="ttr-material-button ttr-submenu-toggle">HOME</a>
 					</li>
 					<li>
 						<a href="#" class="ttr-material-button ttr-submenu-toggle"> Quick menu <i class="fa fa-angle-down"></i></a>
 						<div class="ttr-header-submenu">
 							<ul>
 								<li><a href="index">Dashboard</a></li>
-								<li><a href="book-lending.html">Add a book</a></li>
-                                <li><a href="book-hope.html">Borrowed a book</a></li>
-								<li><a href="management-admin.html">Reserve a book</a></li>
+								<li><a href="booklistMain">BookList</a></li>
+                                <li><a href="borrowedMain">Borrowed book</a></li>
+								<li><a href="reservedMain">Reserved book</a></li>
                                 <li><a href="management-user.html">Renewed a book</a></li>
-                                <li><a href="book-recommend.html">Requested books</a></li>
-                                <li><a href="book-poplular.html">Add User</a></li>
-                                <li><a href="cash-input.html">Add Admin</a></li>
-                                <li><a href="cash-ouput.html">Add Employee</a></li>
-                                <li><a href="cash-balance.html">Balance</a></li>
-								<li><a href="cash-balance.html">Orders</a></li>
-								<li><a href="cash-balance.html">Income</a></li>
-								<li><a href="cash-balance.html">Reports</a></li>
+                                <li><a href="bhMain">Requested books</a></li>
+                                <li><a href="genMain">User</a></li>
+                                <li><a href="badminMain">Admin</a></li>
+                                <li><a href="hrMain">Employee</a></li>
+                                <li><a href="balance">Balance</a></li>
+								<li><a href="ordersMain">Orders</a></li>
+								<li><a href="incomeMain">Income</a></li>
+								<li><a href="noticeMain">Notice</a></li>
 							</ul>
 						</div>
 					</li>
@@ -54,7 +54,7 @@
 						<a href="#" class="ttr-material-button ttr-submenu-toggle"><span class="ttr-icon"><i class="ti-user"></i></span></a>
 						<div class="ttr-header-submenu">
 							<ul>
-								<li><a href="user-profile.html">My profile</a></li>
+								<li><a href="userProf">My profile</a></li>
 								<li><a href="../login.html">Logout</a></li>
 							</ul>
 						</div>

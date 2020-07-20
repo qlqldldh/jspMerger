@@ -49,3 +49,7 @@
 <!-- Custom Scripts -->
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/main.js"></script>
 
+<!-- Google Map API -->
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/google.map.js"></script>
+
+

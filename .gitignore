@@ -2,4 +2,4 @@
 
 target/
 
-context-datasource.xml
+*.DS_Store

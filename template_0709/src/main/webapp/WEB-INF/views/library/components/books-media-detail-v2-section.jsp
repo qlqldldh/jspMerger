@@ -4,9 +4,10 @@
                 <main id="main" class="site-main">
                     <div class="booksmedia-detail-main">
                         <div class="container">
-                            <div class="row">
+                            <!-- <div class="row"> -->
+                            <%-- <jsp:include page="search-section.jsp" flush="false"/> --%>
                                 <!-- Start: Search Section -->
-                                <section class="search-filters">
+                                <!-- <section class="search-filters">
                                     <div class="container">
                                         <div class="filter-box">
                                             <h3>What are you looking for at the library?</h3>
@@ -49,30 +50,36 @@
                                             </form>
                                         </div>
                                     </div>
-                                </section>
+                                </section> -->
                                 <!-- End: Search Section -->
-                            </div>
+                            <!-- </div> -->
+                            <br><br>
                             <div class="booksmedia-detail-box">
                                 <div class="detailed-box">
                                     <div class="col-xs-12 col-sm-5 col-md-3">
                                         <div class="post-thumbnail">
-                                            <div class="book-list-icon blue-icon"></div>
+                                            <div class="book-list-icon green-icon"></div>
                                             <img src="${pageContext.request.contextPath}/images/books-media/detail-page/detail-page-image.jpg" alt="Book Image">
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-7 col-md-6">
                                         <div class="post-center-content">
                                             <h2>The Great Gatsby</h2>
+                                            <hr>
+                                            <p>&nbsp;</p>
                                             <p><strong>Author:</strong> F. Scott Fitzgerald</p>
+                                            
+                                            <p>&nbsp;</p>
+                                            <p>&nbsp;</p>
                                             <p><strong>ISBN:</strong> 9781581573268, 9780062419385</p>
-                                            <p><strong>Rating:</strong> </p>
+                                            <!-- <p><strong>Rating:</strong> </p> -->
                                             <p><strong>Edition:</strong> First edition</p>
                                             <p><strong>Publisher:</strong> New York : Shaye Areheart Books, c2008</p>
-                                            <p><strong>Length:</strong> 518 pages.</p>
-                                            <p><strong>Format:</strong> DVD</p>
-                                            <p><strong>Language Note:</strong> Icelandic dialogue; English subtitles.</p>
+                                            <!-- <p><strong>Length:</strong> 518 pages.</p> -->
+                                            <p><strong>Format:</strong>Book</p>
+                                            <!-- <p><strong>Language Note:</strong> Icelandic dialogue; English subtitles.</p> -->
                                             <p><strong>Genre :</strong> Feature films, Fiction films, Drama</p>
-                                            <p><strong>Topics:</strong> Friendship, Bullies, Pranks, School</p>
+                                            <!-- <p><strong>Topics:</strong> Friendship, Bullies, Pranks, School</p> -->
                                             <div class="actions">
                                                 <ul>
                                                     <li>
@@ -119,14 +126,14 @@
                                             <p><strong>Call #:</strong> 747 STRUTT C</p>
                                             <a href="#." class="available-location">Availability by Location <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                                             <a href="#." class="btn btn-dark-gray">Place a Hold</a> 
-                                            <a href="#." class="btn btn-dark-gray">View sample</a> 
+                                            <!-- <a href="#." class="btn btn-dark-gray">View sample</a>  -->
                                             <a href="#." class="btn btn-dark-gray">Find Similar Titles</a>
                                         </div>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="clearfix"></div>
-                                <p><strong>Summary:</strong> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. </p>
+                                <p><strong>Description :</strong> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. </p>
 
                                 <div class="table-tabs" id="responsiveTabs">
                                     <ul class="nav nav-tabs">
@@ -233,7 +240,7 @@
             </div>
         </div>
         <!-- End: Products Section -->
-        <div class="booksmedia-fullwidth">
+        <%-- <div class="booksmedia-fullwidth">
             <div class="container">
                 <h2 class="section-title text-center">Popular Items</h2>
                     <span class="underline center"></span>
@@ -523,4 +530,4 @@
                             </li>
                         </ul>
             </div>
-        </div>
+        </div> --%>

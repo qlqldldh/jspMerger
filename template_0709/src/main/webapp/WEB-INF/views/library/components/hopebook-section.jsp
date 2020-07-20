@@ -12,7 +12,7 @@
                                                 <div class="col-md-12">
                                                     <div class="company-detail new-account bg-light margin-right">
                                                         <div class="new-user-head">
-                                                            <h2> 희망도서신청</h2>
+                                                            <h2>희망도서신청</h2>
                                                             <br></br>
                                                         </div>
                                                         <div class="widget-inner">
@@ -116,6 +116,7 @@
                                                                     </div>
                                                                 </div>
                                                             </form>
+                                                            </div>
                                                     </div>
                                                 </div>
                                             </div>

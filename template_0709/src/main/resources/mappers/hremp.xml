@@ -13,8 +13,20 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</resultMap>
 	
 	<select id="selectAll" resultMap="hrempMap">
-		select * from hremp	
+		select * from hremp
 	</select>
+	
+	<insert id="insertHR" parameterType="com.mylibrary.book.admin.vo.HrempVO">
+		insert into hremp values(#{name},#{tel},#{pay},#{position},#{dname})
+	</insert>
+	
+	<delete id="deleteHR" parameterType="java.lang.String">
+		delete from hremp where tel=#{tel}
+	</delete>
+	
+	<update id="updateHR" parameterType="map">
+		update hremp set name=#{name},tel=#{tel},pay=#{pay},position=#{position},dname=#{dname} where tel=#{ptel}
+	</update>
 
 </mapper>
 
