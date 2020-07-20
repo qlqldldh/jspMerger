@@ -33,9 +33,16 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "signin";
+		return "home";
 	}
 	
-//	whatever
-	
+//	@RequestMapping("lib/index")
+//	public String libindex(Model model) {
+//		return "library/index";
+//	}
+//	
+//	@RequestMapping("admin/index")
+//	public String adindex(Model model) {
+//		return "admin/index";
+//	}
 }

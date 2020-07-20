@@ -4,6 +4,44 @@
 			<main id="main" class="site-main">
 				<div class="services-main">
 					<div class="services-pg">
+					<section class="who-we-are">
+							<div class="company-info">
+								<div class="container">
+									<div class="row">
+										<div class="col-sm-8 border">
+											<div class="row">
+												<div class="col-sm-11">
+													<div class="company-detail">
+														<h3 class="section-title">Who we are</h3>
+														<span class="underline left"></span>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing
+															elit. Curabitur nec mauris a neque tincidunt iaculis. Sed
+															tristique luctus sapien. Vestibulum arcu magna,
+															ullamcorper quis porta ac, venenatis non ante.
+															Pellentesque habitant morbi tristique senectus et netus
+															et malesuada fames ac turpis egestas. Cras commodo
+															sollicitudin felis vel porttitor. Quisque vitae egestas
+															sapien. Ut et neque posuere, interdum purus nec, lobortis
+															eros. Fusce blandit, libero consectetur hendrerit
+															tristique, erat sapien convallis nibh, quis eleifend arcu
+															nisi vitae urna.</p>
+														<p>Praesent ultrices urna in arcu facilisis tempus.
+															Sed facilisis, nisl et tincidunt pharetra, nisi mauris
+															malesuada quam, non imperdiet odio lacus quis elit.
+															Vestibulum arcu magna, ullamcorper quis porta ac,
+															venenatis non ante. Fusce sed justo at orci fermentum
+															varius. Nulla vestibulum luctus ex porta pharetra.
+															Vivamus at varius risus. Etiam eget ligula pharetra,
+															varius mi id, ullamcorper nibh.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="company-image"></div>
+							</div>
+						</section>
 						<section class="services-offering">
 							<div class="container">
 								<div class="center-content">
@@ -211,7 +249,7 @@
 								</div>
 							</div>
 						</section>
-						<section class="who-we-are">
+						<!-- <section class="who-we-are">
 							<div class="company-info">
 								<div class="container">
 									<div class="row">
@@ -248,8 +286,8 @@
 								</div>
 								<div class="company-image"></div>
 							</div>
-						</section>
-						<div class="fun-stuff">
+						</section> -->
+						<%-- <div class="fun-stuff">
 							<div class="container">
 								<div class="facts-counter">
 									<ul>
@@ -614,7 +652,7 @@
 								<div class="clearfix"></div>
 							</div>
 						</section>
-						<!-- Start: Category Filter -->
+						<!-- Start: Category Filter --> --%>
 					</div>
 				</div>
 			</main>

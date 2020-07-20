@@ -59,7 +59,7 @@
 														<td>${itm.name }</td>
 														<td>${itm.grp }</td>
 														<td>${itm.pos }</td>
-														<td>< <button type="button" class="btn-secondry m-r5" onclick="location.href='badminUpdate?email=${itm.email}'">Update</button>&nbsp;
+														<td><button type="button" class="btn-secondry m-r5" onclick="location.href='badminUpdate?email=${itm.email}'">Update</button>&nbsp;
 														<button type="button" class="btn-secondry m-r5" onclick="location.href='badminDelete?email=${itm.email}'">Delete</button></td>
 													</tr>
 													</c:forEach>

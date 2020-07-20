@@ -15,7 +15,7 @@
 				<div class="col-lg-12 m-b30">
 					<div class="widget-box">
 						<div class="wc-title">
-							<h4>List of Book Orders</h4>
+							<h4>List of Ordered Books</h4>
 						</div>
 						<div class="widget-inner"></div>
 						<br />
@@ -74,7 +74,7 @@
 												 		<%-- <td>${itm.ordernum }</td> --%>
 														<td>${itm.odate }</td>
 														<td>${itm.txnum }</td>
-														<td>${itm.title }</td>
+														<td><a href="ordersDetail?ordernum=${itm.ordernum }">${itm.title }</a></td>
 													<%-- 	<td>${itm.isbn }</td> --%>
 														<td>${itm.price }</td>
 														<td>${itm.unit }</td>

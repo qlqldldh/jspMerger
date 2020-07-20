@@ -8,8 +8,8 @@
 						<div class="navbar-header">
 							<div class="navbar-brand">
 								<h1>
-									<a href="index.html"> <img
-										src="images/libraria-logo-v1.png" alt="LIBRARIA" />
+									<a href="index"> <img
+										src="${pageContext.request.contextPath}/images/libraria-logo-v1.png" alt="LIBRARIA" />
 									</a>
 								</h1>
 							</div>
@@ -28,7 +28,7 @@
 								</div>
 								<div class="col-sm-6">
 									<div class="topbar-links">
-										<a href="signin.html"><i class="fa fa-lock"></i>Login /
+										<a href="login"><i class="fa fa-lock"></i>Login /
 											Register</a> <span>|</span>
 										<div class="header-cart dropdown">
 											<a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -37,7 +37,7 @@
 											<div class="dropdown-menu cart-dropdown">
 												<ul>
 													<li class="clearfix"><img
-														src="images/header-cart-image-01.jpg" alt="cart item" />
+														src="${pageContext.request.contextPath}/images/header-cart-image-01.jpg" alt="cart item" />
 														<div class="item-info">
 															<div class="name">
 																<a href="#">The Great Gatsby</a>
@@ -49,7 +49,7 @@
 														</div> <a class="remove" href="#"><i class="fa fa-trash-o"></i></a>
 													</li>
 													<li class="clearfix"><img
-														src="images/header-cart-image-02.jpg" alt="cart item" />
+														src="${pageContext.request.contextPath}/images/header-cart-image-02.jpg" alt="cart item" />
 														<div class="item-info">
 															<div class="name">
 																<a href="#">The Great Gatsby</a>
@@ -61,7 +61,7 @@
 														</div> <a class="remove" href="#"><i class="fa fa-trash-o"></i></a>
 													</li>
 													<li class="clearfix"><img
-														src="images/header-cart-image-03.jpg" alt="cart item" />
+														src="${pageContext.request.contextPath}/images/header-cart-image-03.jpg" alt="cart item" />
 														<div class="item-info">
 															<div class="name">
 																<a href="#">The Great Gatsby</a>
@@ -90,15 +90,15 @@
 						<div class="navbar-collapse hidden-sm hidden-xs">
 							<ul class="nav navbar-nav">
 								<li class="dropdown active"><a data-toggle="dropdown"
-									class="dropdown-toggle disabled" href="index.html">Home</a></li>
+									class="dropdown-toggle disabled" href="index">Home</a></li>
 								<li class="dropdown"><a data-toggle="dropdown"
 									class="dropdown-toggle disabled"
-									href="books-media-list-view.html">Books &amp; Media</a></li>
+									href="bookList">Books &amp; Media</a></li>
 								<li class="dropdown"><a data-toggle="dropdown"
 									class="dropdown-toggle disabled"
-									href="news-events-list-view.html">News &amp; Events</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="contact.html">Contact</a></li>
+									href="eventList">News &amp; Events</a></li>
+								<li><a href="about">About us</a></li>
+								<li><a href="contact">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -111,15 +111,15 @@
 							<li class="mobile-title">
 								<h4>Navigation</h4> <a href="#" class="close"></a>
 							</li>
-							<li><a href="index-2.html">Home</a>
-								<ul>
+							<li><a href="index">Home</a>
+								<!-- <ul>
 									<li><a href="index-2.html">Home V1</a></li>
 									<li><a href="home-v2.html">Home V2</a></li>
 									<li><a href="home-v3.html">Home V3</a></li>
-								</ul></li>
-							<li><a href="books-media-list-view.html">Books &amp;
+								</ul> --></li>
+							<li><a href="bookList">Books &amp;
 									Media</a>
-								<ul>
+								<!-- <ul>
 									<li><a href="books-media-list-view.html">Books &amp;
 											Media List View</a></li>
 									<li><a href="books-media-gird-view-v1.html">Books
@@ -130,16 +130,16 @@
 											Media Detail V1</a></li>
 									<li><a href="books-media-detail-v2.html">Books &amp;
 											Media Detail V2</a></li>
-								</ul></li>
-							<li><a href="news-events-list-view.html">News &amp;
+								</ul> --></li>
+							<li><a href="eventList">News &amp;
 									Events</a>
-								<ul>
+								<!-- <ul>
 									<li><a href="news-events-list-view.html">News &amp;
 											Events List View</a></li>
 									<li><a href="news-events-detail.html">News &amp;
 											Events Detail</a></li>
-								</ul></li>
-							<li><a href="#">Pages</a>
+								</ul> --></li>
+							<!-- <li><a href="#">Pages</a>
 								<ul>
 									<li><a href="cart.html">Cart</a></li>
 									<li><a href="checkout.html">Checkout</a></li>
@@ -150,9 +150,9 @@
 								<ul>
 									<li><a href="blog.html">Blog Grid View</a></li>
 									<li><a href="blog-detail.html">Blog Detail</a></li>
-								</ul></li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="contact.html">Contact</a></li>
+								</ul></li> -->
+							<li><a href="about">About us</a></li>
+							<li><a href="contact">Contact</a></li>
 						</ul>
 					</div>
 				</div>

@@ -41,9 +41,8 @@
 					<ul>
 						<li><a href="borrowedMain" class="ttr-material-button"><span
 								class="ttr-label">Borrowed</span></a></li>
-						<li><a href="reservedMain"
-							class="ttr-material-button"><span class="ttr-label">Reserved</span></a>
-						</li>
+						<li><a href="reservedMain" class="ttr-material-button"><span
+								class="ttr-label">Reserved</span></a></li>
 						<li><a href="management-user.html"
 							class="ttr-material-button"><span class="ttr-label">Renewed</span></a>
 						</li>
@@ -90,26 +89,41 @@
 							class="fa fa-angle-down"></i></span>
 				</a>
 					<ul>
-						<li><a href="ordersMain" class="ttr-material-button"><span
-								class="ttr-label">Orders</span></a></li>
+						<li><a href="#" class="ttr-material-button"> <span
+								class="ttr-label">Orders</span> <span class="ttr-arrow-icon"><i
+									class="fa fa-angle-down"></i></span></a>
+							<ul>
+								<li><a href="ordersMain" class="ttr-material-button"><span
+										class="ttr-label">Orders List</span></a></li>
+								<li><a href="ordersInsert" class="ttr-material-button"><span
+										class="ttr-label">+ Add Order</span></a></li>
+							</ul></li>
+								
 
 						<li><a href="#" class="ttr-material-button"> <span
 								class="ttr-label">Income</span> <span class="ttr-arrow-icon"><i
 									class="fa fa-angle-down"></i></span></a>
-						<ul>
-							<li><a href="incomeMain" class="ttr-material-button"><span
-									class="ttr-label">Income List</span></a></li>
-							<li><a href="insertIncome" class="ttr-material-button"><span
-									class="ttr-label">+ Add Income</span></a></li>
-						</ul>
-						</li>
+							<ul>
+								<li><a href="incomeMain" class="ttr-material-button"><span
+										class="ttr-label">Income List</span></a></li>
+								<li><a href="incomeInsert" class="ttr-material-button"><span
+										class="ttr-label">+ Add Income</span></a></li>
+							</ul></li>
 					</ul></li>
 
 
-				<li><a href="noticeMain" class="ttr-material-button"> <span
+				<li><a href="#" class="ttr-material-button"><span
 						class="ttr-icon"><i class="ti-comments"></i></span> <span
-						class="ttr-label">Notice</span>
-				</a></li>
+						class="ttr-label">Notice</span> <span class="ttr-arrow-icon"><i
+							class="fa fa-angle-down"></i></span></a>
+					<ul>
+						<li><a href="noticeMain" class="ttr-material-button"><span
+								class="ttr-label">Notice List</span></a></li>
+						<li><a href="noticeInsert" class="ttr-material-button"><span
+								class="ttr-label">+ Add Notice</span></a></li>
+					</ul></li>
+
+
 				<li class="ttr-seperate"></li>
 			</ul>
 			<!-- sidebar menu end -->

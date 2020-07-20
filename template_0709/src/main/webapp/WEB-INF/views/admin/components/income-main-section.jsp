@@ -3,11 +3,11 @@
 <main class="ttr-wrapper">
 	<div class="container-fluid">
 		<div class="db-breadcrumb">
-			<h4 class="breadcrumb-title">Income List</h4>
+			<h4 class="breadcrumb-title">Income Information</h4>
 			<ul class="db-breadcrumb-list">
-				<li><a href="#">
+				<li><a href="/admin/index">
 						<!-- <i class="fa fa-home"> -->
-						</i>Menu
+						Menu
 				</a></li>
 				<li>Balance</li>
 				<li>Income</li>
@@ -19,7 +19,7 @@
 			<div class="col-lg-12 m-b30">
 				<div class="widget-box">
 					<div class="wc-title">
-						<h4>Income-Main</h4>
+						<h4>All Incomes</h4>
 					</div>
 					<div class="widget-inner"></div>
 					<br />
@@ -40,21 +40,21 @@
 											width="100%" cellspacing="0">
 											<thead>
 												<tr>
-													<th>incomenum</th>
-													<th>Idate</th>
-													<th>Price</th>
-													<th>Itype</th>
-													<th>Option</th>
+													<th>Income ID</th>
+													<th>Income Date</th>
+													<th>$</th>
+													<th>Form</th>
+													<th></th>
 													<!-- <th>Update</th> -->
 												</tr>
 											</thead>
 											<tfoot style="border-color: white;">
 												<tr>
-													<th>incomenum</th>
+												<!-- 	<th>incomenum</th>
 													<th>Idate</th>
 													<th>Price</th>
 													<th>Itype</th>
-													<th>Option</th>
+													<th>Option</th> -->
 													<!-- <th>Update</th> -->
 
 												</tr>

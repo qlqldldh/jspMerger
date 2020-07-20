@@ -17,7 +17,6 @@
 							<h4>Order Information</h4>
 						</div>
 						<div class="widget-inner">
-							<form class="edit-profile m-b30" action="ordersUpdatedo" method="GET">
 								<div class="">
 									<!-- <div class="form-group row">
 										<div class="col-sm-10  ml-auto">
@@ -27,68 +26,67 @@
 	
 									<div class="form-group row">
 									<div class="col-sm-7">
-										<input class="form-control" type="hidden" value="${itm.ordernum}" name="ordernum">
 									</div>
 								</div>
 									
 									<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Odate</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.odate }" name="odate">
+										<input class="form-control" type="text" value="${itm.odate }" name="odate" readonly="readonly">
 									</div>
 								</div>
 								
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Txnum</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.txnum }" name="txnum">
+										<input class="form-control" type="text" value="${itm.txnum }" name="txnum" readonly="readonly">
 									</div>
 								</div>
 								
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Title</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.title }" name="title">
+										<input class="form-control" type="text" value="${itm.title }" name="title" readonly="readonly">
 									</div>
 								</div>
 								
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">ISBN</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.isbn }" name="isbn">
+										<input class="form-control" type="text" value="${itm.isbn }" name="isbn" readonly="readonly">
 									</div>
 								</div>
 								
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Price</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.price }" name="price">
+										<input class="form-control" type="text" value="${itm.price }" name="price" readonly="readonly">
 									</div>
 								</div>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Unit</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.unit }" name="unit">
+										<input class="form-control" type="text" value="${itm.unit }" name="unit" readonly="readonly">
 									</div>
 								</div>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">ExtraCost</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.extracost }" name="extracost">
+										<input class="form-control" type="text" value="${itm.extracost }" name="extracost" readonly="readonly">
 									</div>
 								</div>
 								
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Descript</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.descript }" name="descript">
+										<input class="form-control" type="text" value="${itm.descript }" name="descript" readonly="readonly">
 									</div>
 								</div>
 								
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">TotalCost</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" value="${itm.totalcost }" name="totalcost">
+										<input class="form-control" type="text" value="${itm.totalcost }" name="totalcost" readonly="readonly">
 									</div>
 								</div>
 									
@@ -102,13 +100,13 @@
 											<div class="col-sm-2">
 											</div>
 											<div class="col-sm-7">
-												<input type="submit" class="btn" value="Update">
-												<input type="reset" class="btn-secondry" value="Cancel">
+												<button type="button" class="btn-secondry m-r5" onclick="location.href='ordersUpdate?ordernum=${itm.ordernum}'">Update</button>
+												<button type="button" class="btn-secondry m-r5" onclick="location.href='ordersDeletedo?ordernum=${itm.ordernum}'">Delete</button>
+												<button type="button" class="btn-secondry m-r5" onclick="location.href='ordersMain'">Go Back</button>
 											</div>
 										</div>
 									</div>
 								</div>
-							</form>
 						</div>
 					</div>
 				</div>

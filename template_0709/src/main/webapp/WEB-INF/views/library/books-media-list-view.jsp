@@ -13,7 +13,7 @@
 
 	<jsp:include page="components/book-media-secion.jsp" flush="false" />
 
-	<jsp:include page="common-components/social-network.jsp" flush="false" />
+	<%-- <jsp:include page="common-components/social-network.jsp" flush="false" /> --%>
 
 	<jsp:include page="common-components/footer.jsp" flush="false" />
 

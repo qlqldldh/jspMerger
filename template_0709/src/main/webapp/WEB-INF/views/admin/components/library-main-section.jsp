@@ -36,7 +36,6 @@
 											width="100%" cellspacing="0">
 										<thead>
 												<tr>
-													<th>ID</th>
 													<th>Title</th>
 													<th>Author</th>
 													<th>Publisher</th>
@@ -79,8 +78,7 @@
 									<tbody>
 												<c:forEach var="book" items="${booklist }">
 													<tr>
-														<td><a href="booklistDetail?bid=${book.bid }">${book.bid}</a></td>
-														<td>${book.title}</td>
+														<td><a href="booklistDetail?bid=${book.bid }">${book.title}</a></td>
 														<td>${book.author}</td>
 														<td>${book.publisher}</td>
 														<td>${book.pubdate}</td>

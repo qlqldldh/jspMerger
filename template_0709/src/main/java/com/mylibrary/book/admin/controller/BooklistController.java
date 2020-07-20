@@ -14,8 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.mylibrary.book.admin.service.booklist.BooklistService;
 import com.mylibrary.book.admin.vo.BooklistVO;
 
-
-
 @Controller
 @RequestMapping("/admin")
 public class BooklistController {

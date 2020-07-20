@@ -57,6 +57,13 @@ public class OrdersController {
 		ordersService.deleteOrders(vo);
 		return "redirect:ordersMain";
 	}
+	
+	@RequestMapping("/ordersDetail")
+	public String ordersDetail(@RequestParam int ordernum, Model model) {
+		OrdersVO vo = ordersService.getOrders(ordernum);		
+		model.addAttribute("itm", vo);	
+		return "admin/orders-detail";
+	}
 
 //	@RequestMapping("/ordersInsertdo")
 //	public String ordersInsertdo() {

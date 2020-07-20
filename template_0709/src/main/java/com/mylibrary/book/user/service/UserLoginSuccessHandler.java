@@ -24,7 +24,7 @@ public class UserLoginSuccessHandler
 					throws IOException, ServletException {
 		System.out.println("success");
 		HttpSession session = request.getSession(true);// true : 세션이 없을경우 생성, false : 세션이 없을경우 생성안함
-		session.setMaxInactiveInterval(60); //1분간 유지 (default : 30분)
+		session.setMaxInactiveInterval(600000); //1분간 유지 (default : 30분)
 		if(session !=null) session.setAttribute("email", auth.getName()); // key : name, value : 홍길동
 		response.sendRedirect("index");
 		

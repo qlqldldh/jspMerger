@@ -14,7 +14,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</resultMap>
 	
 	<select id="selectAll" resultMap="bgenMap">
-		select * from buser
+		select * from buser where authority!='ROLE_ADMIN'
 	</select>
 	
 	<update id="updateBgen" parameterType="com.mylibrary.book.admin.vo.BgenVO">
