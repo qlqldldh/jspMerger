@@ -93,10 +93,10 @@
 									class="dropdown-toggle disabled" href="index">Home</a></li>
 								<li class="dropdown"><a data-toggle="dropdown"
 									class="dropdown-toggle disabled"
-									href="bookList">Books &amp; Media</a></li>
+									href="BbooklistMain">Books &amp; Media</a></li>
 								<li class="dropdown"><a data-toggle="dropdown"
 									class="dropdown-toggle disabled"
-									href="eventList">News &amp; Events</a></li>
+									href="userNoticeMain">News &amp; Events</a></li>
 								<li><a href="about">About us</a></li>
 								<li><a href="contact">Contact</a></li>
 							</ul>
@@ -131,7 +131,7 @@
 									<li><a href="books-media-detail-v2.html">Books &amp;
 											Media Detail V2</a></li>
 								</ul> --></li>
-							<li><a href="eventList">News &amp;
+							<li><a href="userNoticeMain">News &amp;
 									Events</a>
 								<!-- <ul>
 									<li><a href="news-events-list-view.html">News &amp;

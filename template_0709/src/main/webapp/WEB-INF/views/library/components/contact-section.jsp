@@ -93,9 +93,16 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="row">
-                                    <div class="contact-area">
+                                    <div class="contact-area text-center">
+                                    		 <h1 style="color:black">Location</h1>
+                                    		 <span class="underline center"></span>
+                                    		 <p class="lead">Shinhan Innoplex 2nd floor<br>Geumcheon-gu, Seoul</p>
                                         <div class="container">
-                                            <div class="col-md-5 col-md-offset-1 border-gray-left">
+                                        		<div class="contact-map">
+                                        			<div class="company-map" id="map"></div>
+                                        		</div>
+                                        		
+                                            <!-- <div class="col-md-5 col-md-offset-1 border-gray-left">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="contact-map bg-light margin-left">
@@ -103,8 +110,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-5 border-gray-right">
+                                            </div> -->
+                                            <!-- <div class="col-md-5 border-gray-right">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="contact-form bg-light margin-right">
@@ -157,7 +164,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -168,3 +175,64 @@
             </div>
         </div>
         <!-- End: Contact Us Section -->
+        <script type="text/javascript">
+        function initMap() {
+ 
+            //지도 스타일
+            var map = new google.maps.Map(document.getElementById('map'), {
+                
+                //처음 중심 좌표
+                center: {
+                    lat: 37.479047,
+                    lng: 126.881510
+                },
+                //처음 줌 값. 숫자가 작을수록 낮은 배율
+                zoom: 13
+            });
+            //마커 정보
+            var locations = [
+              
+                //이노플렉스
+                ['<a target="_blank" href="https://cdg.go.kr/"></a>', 37.478998, 126.881163]]
+            //마커 이미지
+            var customicon = 'http://drive.google.com/uc?export=view&id=1tZgPtboj4mwBYT6cZlcY36kYaQDR2bRM'
+ 
+            //인포윈도우
+            var infowindow = new google.maps.InfoWindow();
+ 
+            //마커 생성
+            var marker, i;
+            for (i = 0; i < locations.length; i++) {
+                marker = new google.maps.Marker({
+                    
+                    //마커의 위치
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    
+                    //마커 아이콘
+                    icon: customicon,
+                    
+                    //마커를 표시할 지도
+                    map: map
+                });
+                google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                    return function() {
+                        //html로 표시될 인포 윈도우의 내용
+                        infowindow.setContent(locations[i][0]);
+                        //인포윈도우가 표시될 위치
+                        infowindow.open(map, marker);
+                    }
+                })(marker, i));
+                if (marker) {
+                    marker.addListener('click', function() {
+                        //중심 위치를 클릭된 마커의 위치로 변경
+                        map.setCenter(this.getPosition());
+                        //마커 클릭 시의 줌 변화
+                        map.setZoom(14);
+                    });
+                }
+            }
+        }
+    </script>
+    <!-- key= 뒤에 API 키 입력 -->
+    <script src="https://maps.google.com/maps/api/js?key=&callback=initMap" type="text/javascript" async defer></script>
+    

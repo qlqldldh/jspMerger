@@ -10,14 +10,23 @@ public class BooklistVO {
     private String author;
     private String publisher;
     private String pubdate;
-    private int isbn;
+    private String isbn;
     private String bcategory;
     private String blocation;
     private int bcount;
     private String descrip;
     private int bpages;
     private int willdel;
-    public String getBid() {
+    private String img;
+    
+    
+    public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
+	}
+	public String getBid() {
         return bid;
     }
     public void setBid(String bid) {
@@ -47,10 +56,10 @@ public class BooklistVO {
     public void setPubdate(String pubdate) {
         this.pubdate = pubdate;
     }
-    public int getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
-    public void setIsbn(int isbn) {
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
     public String getBcategory() {

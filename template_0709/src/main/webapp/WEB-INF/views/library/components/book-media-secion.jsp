@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!-- Start: Book & Media Section -->
     <div id="content" class="site-content">
         <div id="primary" class="content-area">
@@ -33,605 +34,57 @@
                                         </div> -->
                                     </div>
                                 </div>
-                                <div class="books-list">
+                                
+                                <c:forEach var="itm" items="${bbooklist }">
+                                <div class="books-list">                                
                                     <article>
                                         <div class="single-book-box">
                                             <div class="post-thumbnail">
-                                                <div class="book-list-icon yellow-icon"></div>
-                                                <a href="bookDetail"><img alt="Book"
-                                                        src="${pageContext.request.contextPath}/images/books-media/list-view/book-media-01.jpg" /></a>
+                                                <div class=""></div>
+                                                <a href="bbookDetail?bid=${itm.bid}"><img alt="Book" src="${itm.img }" style="width:233px; height:auto;"/></a>
                                             </div>
                                             <div class="post-detail">
-                                                <!-- <div class="books-social-sharing">
-                                                    <ul>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-facebook"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-google-plus"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a>
-                                                        </li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-linkedin"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="optional-links">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Add TO CART">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Like">
-                                                                <i class="fa fa-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Mail"><i
-                                                                    class="fa fa-envelope"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Search">
-                                                                <i class="fa fa-search"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Print">
-                                                                <i class="fa fa-print"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div> -->
                                                 <header class="entry-header">
                                                     <div class="row">
                                                         <div class="col-sm-6">
                                                             <h3 class="entry-title">
-                                                                <a href="bookDetail">The Great
-                                                                    Gatsby</a>
+                                                                <a href="bbookDetail?bid=${itm.bid}">${itm.title }
+                                                                    </a>
                                                             </h3>
                                                             <ul>
-                                                                <li><strong>Author:</strong> F. Scott Fitzgerald</li>
-                                                                <li><strong>ISBN:</strong> 9781581573268</li>
+                                                                <li><strong>Author:</strong> ${itm.author }</li>
+                                                                <li><strong>ISBN:</strong> ${itm.isbn }</li>
                                                             </ul>
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <ul>
-                                                                <li><strong>Edition:</strong> First editio</li>
-                                                                <li><strong>Local Availability:</strong> 0 (of 1)</li>
-                                                                <!-- <li>
-                                                                    <div class="rating">
-                                                                        <strong>Rating: </strong>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                    </div>
-                                                                </li> -->
+                                                                <li><strong>Publisher:</strong> ${itm.publisher }</li>
+                                                                <li><strong>Category:</strong> ${itm.bcategory }</li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </header>
                                                 <div class="entry-content">
-                                                    <p>There are many variations of passages of Lorem Ipsum available,
-                                                        but the majority have suffered alteration in some form, by
-                                                        injected humour, or randomised words which don't look even
-                                                        slightly believable.</p>
+                                                    <p>${itm.descrip }</p>
                                                 </div>
                                                 <footer class="entry-footer">
-                                                    <a class="btn btn-dark-gray" href="bookDetail">Read
+                                                    <a class="btn btn-dark-gray" href="bbookDetail?bid=${itm.bid}">Read
                                                         More</a>
                                                 </footer>
                                             </div>
                                             <div class="clear"></div>
                                         </div>
                                     </article>
-                                    <article>
-                                        <div class="single-book-box">
-                                            <div class="post-thumbnail">
-                                                <div class="book-list-icon light-green-icon"></div>
-                                                <a href="books-media-detail-v2.html"><img alt="Book"
-                                                        src="${pageContext.request.contextPath}/images/books-media/list-view/book-media-02.jpg" /></a>
-                                            </div>
-                                            <div class="post-detail">
-                                                <div class="books-social-sharing">
-                                                    <ul>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-facebook"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-google-plus"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a>
-                                                        </li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-linkedin"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="optional-links">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Add TO CART">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Like">
-                                                                <i class="fa fa-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Mail"><i
-                                                                    class="fa fa-envelope"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Search">
-                                                                <i class="fa fa-search"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Print">
-                                                                <i class="fa fa-print"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <header class="entry-header">
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <h3 class="entry-title"><a
-                                                                    href="books-media-detail-v1.html">The Great
-                                                                    Gatsby</a></h3>
-                                                            <ul>
-                                                                <li><strong>Author:</strong> F. Scott Fitzgerald</li>
-                                                                <li><strong>ISBN:</strong> 9781581573268</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <ul>
-                                                                <li><strong>Edition:</strong> First editio</li>
-                                                                <li><strong>Local Availability:</strong> 0 (of 1)</li>
-                                                                <li>
-                                                                    <div class="rating">
-                                                                        <strong>Rating: </strong>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </header>
-                                                <div class="entry-content">
-                                                    <p>There are many variations of passages of Lorem Ipsum available,
-                                                        but the majority have suffered alteration in some form, by
-                                                        injected humour, or randomised words which don't look even
-                                                        slightly believable.</p>
-                                                </div>
-                                                <footer class="entry-footer">
-                                                    <a class="btn btn-dark-gray" href="books-media-detail-v2.html">Read
-                                                        More</a>
-                                                </footer>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article>
-                                        <div class="single-book-box">
-                                            <div class="post-thumbnail">
-                                                <div class="book-list-icon blue-icon"></div>
-                                                <a href="books-media-detail-v2.html"><img alt="Book"
-                                                        src="${pageContext.request.contextPath}/images/books-media/list-view/book-media-03.jpg" /></a>
-                                            </div>
-                                            <div class="post-detail">
-                                                <div class="books-social-sharing">
-                                                    <ul>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-facebook"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-google-plus"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a>
-                                                        </li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-linkedin"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="optional-links">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Add TO CART">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Like">
-                                                                <i class="fa fa-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Mail"><i
-                                                                    class="fa fa-envelope"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Search">
-                                                                <i class="fa fa-search"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Print">
-                                                                <i class="fa fa-print"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <header class="entry-header">
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <h3 class="entry-title"><a
-                                                                    href="books-media-detail-v1.html">The Great
-                                                                    Gatsby</a></h3>
-                                                            <ul>
-                                                                <li><strong>Author:</strong> F. Scott Fitzgerald</li>
-                                                                <li><strong>ISBN:</strong> 9781581573268</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <ul>
-                                                                <li><strong>Edition:</strong> First editio</li>
-                                                                <li><strong>Local Availability:</strong> 0 (of 1)</li>
-                                                                <li>
-                                                                    <div class="rating">
-                                                                        <strong>Rating: </strong>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </header>
-                                                <div class="entry-content">
-                                                    <p>There are many variations of passages of Lorem Ipsum available,
-                                                        but the majority have suffered alteration in some form, by
-                                                        injected humour, or randomised words which don't look even
-                                                        slightly believable.</p>
-                                                </div>
-                                                <footer class="entry-footer">
-                                                    <a class="btn btn-dark-gray" href="books-media-detail-v1.html">Read
-                                                        More</a>
-                                                </footer>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article>
-                                        <div class="single-book-box">
-                                            <div class="post-thumbnail">
-                                                <div class="book-list-icon red-icon"></div>
-                                                <a href="books-media-detail-v1.html"><img alt="Book"
-                                                        src="${pageContext.request.contextPath}/images/books-media/list-view/book-media-04.jpg" /></a>
-                                            </div>
-                                            <div class="post-detail">
-                                                <div class="books-social-sharing">
-                                                    <ul>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-facebook"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-google-plus"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a>
-                                                        </li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-linkedin"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="optional-links">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Add TO CART">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Like">
-                                                                <i class="fa fa-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Mail"><i
-                                                                    class="fa fa-envelope"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Search">
-                                                                <i class="fa fa-search"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Print">
-                                                                <i class="fa fa-print"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <header class="entry-header">
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <h3 class="entry-title"><a
-                                                                    href="books-media-detail-v1.html">The Great
-                                                                    Gatsby</a></h3>
-                                                            <ul>
-                                                                <li><strong>Author:</strong> F. Scott Fitzgerald</li>
-                                                                <li><strong>ISBN:</strong> 9781581573268</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <ul>
-                                                                <li><strong>Edition:</strong> First editio</li>
-                                                                <li><strong>Local Availability:</strong> 0 (of 1)</li>
-                                                                <li>
-                                                                    <div class="rating">
-                                                                        <strong>Rating: </strong>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </header>
-                                                <div class="entry-content">
-                                                    <p>There are many variations of passages of Lorem Ipsum available,
-                                                        but the majority have suffered alteration in some form, by
-                                                        injected humour, or randomised words which don't look even
-                                                        slightly believable.</p>
-                                                </div>
-                                                <footer class="entry-footer">
-                                                    <a class="btn btn-dark-gray" href="books-media-detail-v1.html">Read
-                                                        More</a>
-                                                </footer>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article>
-                                        <div class="single-book-box">
-                                            <div class="post-thumbnail">
-                                                <div class="book-list-icon red-icon"></div>
-                                                <a href="books-media-detail-v1.html"><img alt="Book"
-                                                        src="${pageContext.request.contextPath}/images/books-media/list-view/book-media-05.jpg" /></a>
-                                            </div>
-                                            <div class="post-detail">
-                                                <div class="books-social-sharing">
-                                                    <ul>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-facebook"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-google-plus"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a>
-                                                        </li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-linkedin"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="optional-links">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Add TO CART">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Like">
-                                                                <i class="fa fa-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Mail"><i
-                                                                    class="fa fa-envelope"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Search">
-                                                                <i class="fa fa-search"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Print">
-                                                                <i class="fa fa-print"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <header class="entry-header">
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <h3 class="entry-title"><a
-                                                                    href="books-media-detail-v1.html">The Great
-                                                                    Gatsby</a></h3>
-                                                            <ul>
-                                                                <li><strong>Author:</strong> F. Scott Fitzgerald</li>
-                                                                <li><strong>ISBN:</strong> 9781581573268</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <ul>
-                                                                <li><strong>Edition:</strong> First editio</li>
-                                                                <li><strong>Local Availability:</strong> 0 (of 1)</li>
-                                                                <li>
-                                                                    <div class="rating">
-                                                                        <strong>Rating: </strong>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </header>
-                                                <div class="entry-content">
-                                                    <p>There are many variations of passages of Lorem Ipsum available,
-                                                        but the majority have suffered alteration in some form, by
-                                                        injected humour, or randomised words which don't look even
-                                                        slightly believable.</p>
-                                                </div>
-                                                <footer class="entry-footer">
-                                                    <a class="btn btn-dark-gray" href="books-media-detail-v1.html">Read
-                                                        More</a>
-                                                </footer>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article>
-                                        <div class="single-book-box">
-                                            <div class="post-thumbnail">
-                                                <div class="book-list-icon green-icon"></div>
-                                                <a href="books-media-detail-v1.html"><img alt="Book"
-                                                        src="${pageContext.request.contextPath}/images/books-media/list-view/book-media-06.jpg" /></a>
-                                            </div>
-                                            <div class="post-detail">
-                                                <div class="books-social-sharing">
-                                                    <ul>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-facebook"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-google-plus"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a>
-                                                        </li>
-                                                        <li><a href="#" target="_blank"><i
-                                                                    class="fa fa-linkedin"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="optional-links">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Add TO CART">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Like">
-                                                                <i class="fa fa-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Mail"><i
-                                                                    class="fa fa-envelope"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Search">
-                                                                <i class="fa fa-search"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Print">
-                                                                <i class="fa fa-print"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <header class="entry-header">
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <h3 class="entry-title"><a
-                                                                    href="books-media-detail-v1.html">The Great
-                                                                    Gatsby</a></h3>
-                                                            <ul>
-                                                                <li><strong>Author:</strong> F. Scott Fitzgerald</li>
-                                                                <li><strong>ISBN:</strong> 9781581573268</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <ul>
-                                                                <li><strong>Edition:</strong> First editio</li>
-                                                                <li><strong>Local Availability:</strong> 0 (of 1)</li>
-                                                                <li>
-                                                                    <div class="rating">
-                                                                        <strong>Rating: </strong>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </header>
-                                                <div class="entry-content">
-                                                    <p>There are many variations of passages of Lorem Ipsum available,
-                                                        but the majority have suffered alteration in some form, by
-                                                        injected humour, or randomised words which don't look even
-                                                        slightly believable.</p>
-                                                </div>
-                                                <footer class="entry-footer">
-                                                    <a class="btn btn-dark-gray" href="books-media-detail-v1.html">Read
-                                                        More</a>
-                                                </footer>
-                                            </div>
-                                        </div>
-                                    </article>
                                 </div>
+                                </c:forEach> 
+                                
                                 <nav class="navigation pagination text-center">
                                     <h2 class="screen-reader-text">Posts navigation</h2>
                                     <div class="nav-links">
                                         <a class="prev page-numbers" href="#."><i class="fa fa-long-arrow-left"></i>
                                             Previous</a>
                                         <a class="page-numbers" href="#.">1</a>
-                                        <span class="page-numbers current">2</span>
+                                        <a class="page-numbers" href="#.">2</a>
                                         <a class="page-numbers" href="#.">3</a>
                                         <a class="page-numbers" href="#.">4</a>
                                         <a class="next page-numbers" href="#.">Next <i
@@ -639,6 +92,8 @@
                                     </div>
                                 </nav>
                             </div>
+                            
+                            <!-- side menu list -->
                             <div class="col-md-3 col-md-pull-9">
                                 <aside id="secondary" class="sidebar widget-area" data-accordion-group>
                                     <div class="widget widget_related_search open" data-accordion>

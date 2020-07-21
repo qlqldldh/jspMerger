@@ -58,29 +58,25 @@
                                 <div class="detailed-box">
                                     <div class="col-xs-12 col-sm-5 col-md-3">
                                         <div class="post-thumbnail">
-                                            <div class="book-list-icon green-icon"></div>
-                                            <img src="${pageContext.request.contextPath}/images/books-media/detail-page/detail-page-image.jpg" alt="Book Image">
+                                            <img src="${booklist.img}" alt="Book Image" style="width:286px; height:auto;">
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-7 col-md-6">
                                         <div class="post-center-content">
-                                            <h2>The Great Gatsby</h2>
+                                            <h2>${booklist.title}</h2>
                                             <hr>
                                             <p>&nbsp;</p>
-                                            <p><strong>Author:</strong> F. Scott Fitzgerald</p>
+                                            <p><strong>Author:</strong> ${booklist.author}</p>
                                             
                                             <p>&nbsp;</p>
                                             <p>&nbsp;</p>
-                                            <p><strong>ISBN:</strong> 9781581573268, 9780062419385</p>
-                                            <!-- <p><strong>Rating:</strong> </p> -->
-                                            <p><strong>Edition:</strong> First edition</p>
-                                            <p><strong>Publisher:</strong> New York : Shaye Areheart Books, c2008</p>
-                                            <!-- <p><strong>Length:</strong> 518 pages.</p> -->
+                                            <p><strong>ISBN:</strong> ${booklist.isbn}</p>
+                                            <p><strong>Publisher:</strong> ${booklist.publisher}</p>
                                             <p><strong>Format:</strong>Book</p>
-                                            <!-- <p><strong>Language Note:</strong> Icelandic dialogue; English subtitles.</p> -->
-                                            <p><strong>Genre :</strong> Feature films, Fiction films, Drama</p>
-                                            <!-- <p><strong>Topics:</strong> Friendship, Bullies, Pranks, School</p> -->
-                                            <div class="actions">
+                                            <p><strong>Category :</strong> ${booklist.bcategory}</p>
+                                            <p><strong>Location:</strong> ${booklist.blocation}</p>
+ <%--                                            <p><strong>Description:</strong> ${booklist.descrip}</p> --%>
+                                            <!-- <div class="actions">
                                                 <ul>
                                                     <li>
                                                         <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top" title="" data-original-title="Add To Cart">
@@ -113,16 +109,16 @@
                                                         </a>
                                                     </li>
                                                 </ul>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-3 ">
                                         <div class="post-right-content">
                                             <h4>Available now</h4>
-                                            <p><strong>Total Copies:</strong> 01</p>
-                                            <p><strong>Available:</strong> 019780062419385</p>
+                                            <p><strong>Total Copies:</strong> ${booklist.bcount}</p>
+                                            <p><strong>Available:</strong> 01</p>
                                             <p><strong>Holds:</strong>  01</p>
-                                            <p><strong>On the shelves now at:</strong> Lawrence Public Library</p>
+                                            <p><strong>On the shelves now at:</strong> ${booklist.blocation}</p>
                                             <p><strong>Call #:</strong> 747 STRUTT C</p>
                                             <a href="#." class="available-location">Availability by Location <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                                             <a href="#." class="btn btn-dark-gray">Place a Hold</a> 
@@ -133,7 +129,7 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="clearfix"></div>
-                                <p><strong>Description :</strong> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. </p>
+                                <p><strong>Description :</strong> ${booklist.descrip} </p>
 
                                 <div class="table-tabs" id="responsiveTabs">
                                     <ul class="nav nav-tabs">

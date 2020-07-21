@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- Start: Products Section -->
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
@@ -118,7 +119,8 @@
                             <div class="row">
                             
                                 <!-- <div class="col-md-9 col-md-push-3 news-events-list-view"> -->
-                                    <div class="news-list-box">
+                                  <%-- 
+                                   <div class="news-list-box">
                                         <div class="single-news-list">
                                             <div class="social-content">
                                                 <div class="social-share">
@@ -346,12 +348,82 @@
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>
+                                    --%>
+                                   
+                                   <!-- Your Profile Views Chart -->
+			<div class="col-lg-12 m-b30">
+				<div class="widget-box">
+					<div class="wc-title text-center">
+						<h1 style="color:black">Notice</h1>
+                        <span class="underline center"></span>
+                        <p class="lead">Check notices of our library</p>
+					</div>
+					<div class="widget-inner"></div>
+					<br />
+					<main>
+						<div class="container-fluid">
+							<div class="card mb-4">
+								<!-- <div class="card-header">
+									<i class="fas fa-table mr-1"></i> notice-Main
+								</div> -->
+								<div class="card-body">
+									<div class="table-responsive">
+										<table class="table table-bordered" id="dataTable"
+											width="100%" cellspacing="0">
+											<thead>
+												<tr>
+													<!-- <th>Notice ID</th> -->
+													<th>Date</th>
+													<th>Title</th>
+													<th>Contents</th>
+													<!-- <th></th> -->
+												</tr>
+											</thead>
+											<tfoot style="border-color: white;">
+												<tr>
+													<!-- <th>Notice ID</th>
+													<th>Upload Date</th>
+													<th>Contents</th>
+													<th></th> -->
+
+												</tr>
+											</tfoot>
+											<tbody>
+												<c:forEach var="itm" items="${usernoticelist}">
+													<tr>
+														<%-- <td>${itm.nid}</td> --%>
+														<td><a href="userNoticeDetail?nid=${itm.nid}">${itm.uldate}</a></td>
+														<td><a href="userNoticeDetail?nid=${itm.nid}">${itm.title}</a></td>
+														<td><a href="userNoticeDetail?nid=${itm.nid}">${itm.ncontents}</a></td>
+														<%-- <td><button type="button" class="btn-secondry m-r5"
+																onclick="location.href='noticeUpdate?nid=${itm.nid}'">Update</button>&nbsp;
+															<button type="button" class="btn-secondry m-r5"
+																onclick="location.href='noticeDelete?nid=${itm.nid}'">Delete</button></td> --%>
+													</tr>
+												</c:forEach>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</main>
+				</div>
+			</div>
+		</div>
+		<!-- Your Profile Views Chart END-->
+                                   
+                                   
+                                   
+                                   
+                                   
+                                   
                                     <nav class="navigation pagination text-center">
                                         <h2 class="screen-reader-text">Posts navigation</h2>
                                         <div class="nav-links">
                                             <a class="prev page-numbers" href="#."><i class="fa fa-long-arrow-left"></i> Previous</a>
-                                            <a class="page-numbers" href="#.">1</a>
-                                            <span class="page-numbers current">2</span>
+                                            <a class="page-numbers current" href="#.">1</a>
+                                            <a class="page-numbers">2</a>
                                             <a class="page-numbers" href="#.">3</a>
                                             <a class="page-numbers" href="#.">4</a>
                                             <a class="next page-numbers" href="#.">Next <i class="fa fa-long-arrow-right"></i></a>

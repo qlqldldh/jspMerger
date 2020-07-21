@@ -52,4 +52,5 @@
 <!-- Google Map API -->
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/google.map.js"></script>
 
-
+<!-- Google Map (Custom Style) -->
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/google.map.js"></script>
