@@ -54,3 +54,7 @@
 
 <!-- Google Map (Custom Style) -->
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/google.map.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+<script src="${pageContext.request.contextPath}/assets/demo/datatables-demo.js"></script>
