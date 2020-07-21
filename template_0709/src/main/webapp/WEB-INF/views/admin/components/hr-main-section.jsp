@@ -5,7 +5,7 @@
 			<div class="db-breadcrumb">
 				<h4 class="breadcrumb-title">Employee List</h4>
 				<ul class="db-breadcrumb-list">
-					<li><a href="#"></i>Menu</a></li>
+					<li><a href="#">Menu</a></li>
 					<li>Human Resources</li>
 					<li>Employee List</li>
 				</ul>
@@ -78,7 +78,6 @@
 				</div>
 			</div>
 			<!-- Your Profile Views Chart END-->
-		</div>
 		</div>
 	</main>
 	<div class="ttr-overlay"></div>
