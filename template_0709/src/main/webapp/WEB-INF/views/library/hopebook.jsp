@@ -34,15 +34,15 @@
 																	<h4>Insert Book Information</h4>
 																</div> -->
 													<div class="widget-inner">
-														<form action="bookhopeInsert" class="edit-profile m-b30"
+														<form action="bookhopeInsertdo" class="edit-profile m-b30"
 															method="get">
 															<div class="">
-																<div class="form-group row">
+																<!-- <div class="form-group row">
 																	<label class="col-sm-2 col-form-label">Email</label>
 																	<div class="col-sm-7">
 																		<input class="form-control" name="uemail" type="text">
 																	</div>
-																</div>
+																</div> -->
 																<div class="form-group row">
 																	<label class="col-sm-2 col-form-label">Title</label>
 																	<div class="col-sm-7">
