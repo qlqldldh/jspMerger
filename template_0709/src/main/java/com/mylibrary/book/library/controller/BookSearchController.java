@@ -44,9 +44,9 @@ public class BookSearchController {
 		ret.add(listVO.get(i));
 	    }
 	}
-	mav.addObject("booksearchlist", ret);
+	mav.addObject("bbooklist", ret);
 	System.out.println("List of searched books completed!");
-	mav.setViewName("library/booksearch-media-list-view");
+	mav.setViewName("library/books-media-list-view");
 	return mav;
     }
     

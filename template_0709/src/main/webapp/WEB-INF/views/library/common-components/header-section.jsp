@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- Start: Header Section -->
 <header id="header-v1" class="navbar-wrapper inner-navbar-wrapper">
 	<div class="container">
@@ -28,8 +30,15 @@
 								</div>
 								<div class="col-sm-6">
 									<div class="topbar-links">
-										<a href="login"><i class="fa fa-lock"></i>Login /
-											Register</a> <span>|</span>
+										<c:choose>
+											<c:when test="${sessionScope.email != null }">
+											<a href="logout"><i class="fa fa-lock"></i>Logout</a>
+											</c:when>
+											<c:when test="${sessionScope.email == null }">
+											<a href="login"><i class="fa fa-lock"></i>Login / Register</a>
+											</c:when>
+										</c:choose>
+										<span>|</span>
 										<div class="header-cart dropdown">
 											<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 												<i class="fa fa-shopping-cart"></i> <small>0</small>

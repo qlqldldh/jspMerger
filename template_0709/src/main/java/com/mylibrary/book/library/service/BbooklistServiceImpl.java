@@ -6,8 +6,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mylibrary.book.library.mapper.BbooklistMapper;
 import com.mylibrary.book.admin.vo.BooklistVO;
+import com.mylibrary.book.library.mapper.BbooklistMapper;
+import com.mylibrary.book.library.vo.PagingVO;
 
 @Service
 public class BbooklistServiceImpl implements BbooklistService {
@@ -21,10 +22,24 @@ public class BbooklistServiceImpl implements BbooklistService {
 		return booklistMapper.bshowList();
 	}
 
+
 	@Override
 	public BooklistVO getBooklist(String bid) {
 		BbooklistMapper booklistMapper = sqlSession.getMapper(BbooklistMapper.class);
 		return booklistMapper.getBooklist(bid);
 	}
 
+	
+	@Override
+	public int countBoard() {
+		BbooklistMapper booklistMapper = sqlSession.getMapper(BbooklistMapper.class);
+		return booklistMapper.countBoard();
+	}
+
+
+	@Override
+	public List<BooklistVO> selectBoard(PagingVO vo) {
+		BbooklistMapper booklistMapper = sqlSession.getMapper(BbooklistMapper.class);
+		return booklistMapper.selectBoard(vo);
+	}
 }
