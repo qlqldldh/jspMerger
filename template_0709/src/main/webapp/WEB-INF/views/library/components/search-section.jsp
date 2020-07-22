@@ -3,16 +3,16 @@
 	<div class="container">
 		<div class="filter-box">
 			<h3>What are you looking for at the library?</h3>
-			<form action="http://libraria.demo.presstigers.com/index.html"
+			<form action="searchBook"
 				method="get">
 				
 				<div class="col-md-3 col-sm-6"></div>
 				
 				<div class="col-md-4 col-sm-6">
 					<div class="form-group">
-						<label class="sr-only" for="keywords">Search by Keyword</label> <input
-							class="form-control" placeholder="Search by Keyword"
-							id="keywords" name="keywords" type="text">
+						<label class="sr-only" for="title">Search by Title</label> <input
+							class="form-control" placeholder="Search by Title"
+							id="title" name="title" type="text">
 					</div>
 				</div>
 				<!-- <div class="col-md-3 col-sm-6">

@@ -18,17 +18,26 @@ public class BookSearchServiceImpl implements BookSearchService {
 	private SqlSession sqlSession;
 	
 	@Override
+	public List<BookSearchVO> searchBook(String title) {
+	    BookSearchMapper bookSearchMapper = sqlSession.getMapper( BookSearchMapper.class);
+		return bookSearchMapper.searchBook(title);
+	}
+
+	@Override
 	public List<BookSearchVO> showList() {
 	    BookSearchMapper bookSearchMapper = sqlSession.getMapper( BookSearchMapper.class);
 		return bookSearchMapper.showList();
 	}
 
-	@Override
-	public BookSearchVO getBooklist(String title) {
-	    BookSearchMapper bookSearchMapper = sqlSession.getMapper( BookSearchMapper.class);
-		return bookSearchMapper.getBooklist(title);
+
 	}
+
+//	@Override
+//	public BookSearchVO getBooklist(String title) {
+//	    BookSearchMapper bookSearchMapper = sqlSession.getMapper( BookSearchMapper.class);
+//		return bookSearchMapper.getBooklist(title);
+//	}
 
 	
 
-}
+

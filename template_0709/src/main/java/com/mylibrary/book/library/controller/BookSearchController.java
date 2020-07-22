@@ -1,5 +1,6 @@
 package com.mylibrary.book.library.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,27 +26,36 @@ public class BookSearchController {
 //	ModelAndView mav = new ModelAndView();
 //	System.out.println("title search list");
 //	
-//	mav.addObject("usernoticelist", userNoticeService.showList());
-//	mav.setViewName("library/news-events-list-view");
+//	mav.addObject("booksearchlist", bookSearchService.showList());
+//	mav.setViewName("library/booksearch-media-list-view");
 //	return mav;
 //    }
     
     // ===================================SEARCH BOOK===================================
     @RequestMapping("/searchBook")
     public ModelAndView searchBook(@RequestParam String title, Model model) {
+	
 	List<BookSearchVO> listVO = bookSearchService.showList();
-
+	ArrayList<BookSearchVO> ret = new ArrayList<BookSearchVO>();
 	ModelAndView mav = new ModelAndView();
 
 	for (int i = 0; i < listVO.size(); i++) {
-	    if (listVO.get(i).getTitle().equals(title)) {
-		mav.addObject("booklist", listVO.get(i));
-		break;
+	    if (listVO.get(i).getTitle().contains(title)) {
+		ret.add(listVO.get(i));
 	    }
 	}
+	mav.addObject("booksearchlist", ret);
 	System.out.println("List of searched books completed!");
-	mav.setViewName("library/news-events-detail");
+	mav.setViewName("library/booksearch-media-list-view");
 	return mav;
     }
+    
+//    @RequestMapping("/searchBook")
+//    public String searchBook(@RequestParam("title") String title, Model model) {
+//	System.out.println("stopping by controller....");
+//	System.out.println(bookSearchService.searchBook(title).get(0).getBcategory());
+//	model.addAttribute("booksearchlist", bookSearchService.searchBook(title));
+//	return "redirect:/library/booksearch-media-list-view";
+//    }
     
 }
