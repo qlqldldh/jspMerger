@@ -12,18 +12,17 @@
 										<div class="col-md-12">
 											<div class="company-detail bg-dark margin-left">
 												<div class="signin-head">
-													<h2>Sign in</h2>
+													<h2>LOG IN</h2>
 													<span class="underline left"></span>
 												</div>
 												<form class="login" action="login_check" method="post">
 													<p class="form-row form-row-first input-required">
-														<label> <span class="first-letter">Barcode
-																or Username</span> <span class="second-letter">*</span>
+														<label> <span class="first-letter">Email</span> <span class="second-letter">*</span>
 														</label> <input type="text" id="email" name="email"
 															class="input-text">
 													</p>
 													<p class="form-row form-row-last input-required">
-														<label> <span class="first-letter">Pin</span> <span
+														<label> <span class="first-letter">Password</span> <span
 															class="second-letter">*</span>
 														</label> <input type="password" id="passwd" name="passwd"
 															class="input-text">
@@ -32,13 +31,13 @@
 													<div class="password-form-row">
 														<span style="color:red;">${errMsg}</span>
 														<p class="lost_password">
-															<a href="email">Lost your Pin?</a>
+															<a href="email">Don't you remember your password?</a>
 														</p>
 													</div>
 													<br/>
 													<input type="submit" value="Login" name="login"
 														class="button btn btn-default">&nbsp;
-														<a class="btn btn-dark-gray" href="join">Register</a>
+														<a class="btn btn-dark-gray" href="join">Sign Up</a>
 													<div class="clear"></div>
 												</form>
 											</div>
