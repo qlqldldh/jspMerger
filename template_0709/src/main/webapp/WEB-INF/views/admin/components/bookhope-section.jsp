@@ -64,7 +64,7 @@
 														<td>${bh.bpublisher }</td>
 													<%-- 	<td>${bh.comments }</td> --%>
 														<td><button type="button" class="btn-secondry m-r5" onclick="location.href='bhDel?bhid=${bh.bhid}'">Deny</button>&nbsp;
-														<button type="button" class="btn-secondry m-r5" onclick="location.href='bhInsert?bhid=${bh.bhid}'">Accept</button></td>
+														<button type="button" class="btn-secondry m-r5" onclick="location.href='bhInsert?btitle=${bh.btitle}&bauthor=${bh.bauthor}&bpublisher=${bh.bpublisher}&bhid=${bh.bhid}'">Accept</button></td>
 													</tr>
 													</c:forEach>
 												</tbody>
