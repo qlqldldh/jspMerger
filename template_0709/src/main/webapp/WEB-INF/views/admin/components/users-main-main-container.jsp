@@ -43,10 +43,10 @@
 												</thead>
 												<tfoot style="border-color:white;">
 													<tr>
-														<th>Email</th>
+														<!-- <th>Email</th>
 														<th>Name</th>
 														<th>Phone</th>
-														<th>Option</th>
+														<th>Option</th> -->
 														<!-- <th>Update</th> -->
 														
 													</tr>
