@@ -136,7 +136,7 @@
 				</div>
 				<br> <br>
 				<div style="text-align: right">
-					<a class="btn btn-dark-gray" href="bookhopeInsert">Request a wished
+					<a class="btn btn-dark-gray" href="bookhopeInsert">Request a
 						book</a>
 				</div>
 			</div>
