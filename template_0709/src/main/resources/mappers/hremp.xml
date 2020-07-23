@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mylibrary.book.admin.mapper.HrempMapper">
+	<resultMap id="hrempMap" type="com.mylibrary.book.admin.vo.HrempVO">
+		<result property="name" column="name"/>
+		<result property="tel" column="tel"/>
+		<result property="pay" column="pay"/>
+		<result property="position" column="position"/>
+		<result property="dname" column="dname"/>
+	</resultMap>
+	
+	<select id="selectAll" resultMap="hrempMap">
+		select * from hremp
+	</select>
+	
+	<insert id="insertHR" parameterType="com.mylibrary.book.admin.vo.HrempVO">
+		insert into hremp values(#{name},#{tel},#{pay},#{position},#{dname})
+	</insert>
+	
+	<delete id="deleteHR" parameterType="java.lang.String">
+		delete from hremp where tel=#{tel}
+	</delete>
+	
+	<update id="updateHR" parameterType="map">
+		update hremp set name=#{name},tel=#{tel},pay=#{pay},position=#{position},dname=#{dname} where tel=#{ptel}
+	</update>
+
+</mapper>
+
