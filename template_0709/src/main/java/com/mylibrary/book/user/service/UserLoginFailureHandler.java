@@ -21,7 +21,7 @@ public class UserLoginFailureHandler
 		System.out.println("fail");
 		//request 영역에 변수 저장
 		request.setAttribute("errMsg",
-				"아이디 또는 비밀번호가 일치하지 않습니다.");
+				"The Email and/or Password inserted is not correct.");
 		//forward
 		request.getRequestDispatcher(
 				"/WEB-INF/views/library/signin.jsp")

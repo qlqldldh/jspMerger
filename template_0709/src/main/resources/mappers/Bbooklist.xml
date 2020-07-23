@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mylibrary.book.library.mapper.BbooklistMapper">
+<resultMap type="com.mylibrary.book.admin.vo.BooklistVO" id="bbooklistMap">
+	<result property="bid" column="bid" />
+		<result property="title" column="title"/>
+		<result property="author" column="author"/>
+		<result property="publisher" column="publisher"/>
+		<result property="isbn" column="isbn"/>
+		<result property="bcategory" column="bcategory"/>
+		<result property="blocation" column="blocation"/>
+		<result property="bcount" column="bcount"/>
+		<result property="descrip" column="descrip"/>
+		<result property="willdel" column="willdel"/>
+		<result property="img" column="img"/>
+</resultMap>
+
+	<select id="bshowList" resultMap="bbooklistMap">
+		SELECT * FROM booklist
+	</select>
+
+	<select id="countBoard" resultType="int">
+		SELECT COUNT(*) FROM booklist
+	</select>
+
+	<!-- 페이징 처리 후 게시글 조회 -->
+	<select id="selectBoard" resultType="com.mylibrary.book.admin.vo.BooklistVO">	
+		select * from (select rownum rn, a.* from (select * from booklist order by bid desc) a) where rn between #{start} and #{end}	
+	</select>	
+	
+</mapper>

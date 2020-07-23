@@ -45,8 +45,10 @@ public class UserRestController {
 		String status = "";
 		
 		if ((!passwd.equals(passwdre)) || (passwd.equals("") && passwdre.equals(""))) {
-			System.out.println("패스워드를 잘 못 입력하셨습니다.");
-			status = "비밀번호를 잘 못 입력하셨습니다.";
+//			System.out.println("패스워드를 잘 못 입력하셨습니다.");
+			System.out.println("Wrong password");
+//			status = "비밀번호를 잘 못 입력하셨습니다.";
+			status = "Wrong password!";
 		} else if (passwd.equals(passwdre)) {
 			hashPassword = shaEncoder.saltEncoding(passwd, (String) session.getAttribute("email"));
 			System.out.println("패스워드 잘 입력함." + hashPassword);
@@ -56,9 +58,11 @@ public class UserRestController {
 			// affected rows, 영향을 받은 행의 수가 리턴됨
 			int result = userDao.updatePassword(map);
 			System.out.println(result + "개 계정의 비밀번호가 변경되었습니다.");
-			status = "비밀번호가 변경되었습니다.";
+//			status = "비밀번호가 변경되었습니다.";
+			status = "Your password has been changed successfully!";
 		} else {
-			status = "비밀번호 수정 오류";
+//			status = "비밀번호 수정 오류";
+			status = "There was an error changing your password. Try again!";
 		}
 		System.out.println(status);
 		return new ResponseEntity<String>(status, HttpStatus.OK);
@@ -72,7 +76,8 @@ public class UserRestController {
 		
 		if ((name.equals("") || birth.equals("") || phone.equals("") || address.equals(""))) {
 			System.out.println("데이터를 잘 못 입력하셨습니다.");
-			status = "데이터를 잘 못 입력하셨습니다.";
+//			status = "데이터를 잘 못 입력하셨습니다.";
+			status = "Please insert all the information!";
 		} else {
 			System.out.println("데이터 잘 입력함");
 			Map<String, String> map = new HashMap<String, String>();
@@ -84,7 +89,8 @@ public class UserRestController {
 			// affected rows, 영향을 받은 행의 수가 리턴됨
 			int result = userDao.updateUser(map);
 			System.out.println(result + "개 계정의 정보가 변경되었습니다.");
-			status = "정보가 변경되었습니다.";
+//			status = "정보가 변경되었습니다.";
+			status = "Your information has been updated correctly!";
 		}
 		return new ResponseEntity<String>(status, HttpStatus.OK);
 	}
@@ -94,9 +100,10 @@ public class UserRestController {
 	@RequestMapping(value="/mailSending", method = RequestMethod.POST, produces="text/plain;charset=UTF-8")
 	public ResponseEntity<String> mailSending(@RequestParam String email) {
 		System.out.println(email);
-		String setfrom = "3team200th@gmail.com";
+		String setfrom = "libraria@libraria";
 		String tomail = email; // 받는 사람 이메일
-		String title = "임시 비밀번호입니다."; // 제목
+//		String title = "임시 비밀번호입니다."; // 제목
+		String title = "(Libraria) Your temporary password"; // 제목
 		String content = ""; // 내용
 		String resetPassword = "";
 		String hashPassword = "";
@@ -111,7 +118,13 @@ public class UserRestController {
 				else
 					resetPassword += (int)(dValue * 10);
 			}
-			content = "임시비밀번호는 "+resetPassword+" 입니다.";
+//			content = "임시비밀번호는 "+resetPassword+" 입니다.";
+			content = "This is your temporary password:  "+resetPassword+"."
+				+ "\nMake sure to change your password in Settings in your profile page once you log in! "
+				+ "\nIf you are still having problems, send us an email to libreria@libreria! We are happy to help! "
+				+ "\nThank you! "
+				+ ""
+				+ "\n\nLibreria Customer Service Team";
 			hashPassword = shaEncoder.saltEncoding(resetPassword, email);
 			System.out.println("패스워드 잘 입력함." + hashPassword);
 			Map<String, String> map = new HashMap<String, String>();
@@ -130,7 +143,8 @@ public class UserRestController {
 				messageHelper.setText(content); // 메일 내용
 
 				mailSender.send(message);
-				status = result+"개 아이디 비밀번호 초기화 했습니다.";
+//				status = result+"개 아이디 비밀번호 초기화 했습니다.";
+				status = "Check your email! We've sent you a temporary password!";
 			} catch (Exception e) {
 				System.out.println(e);
 				status = e.getMessage();
@@ -139,7 +153,8 @@ public class UserRestController {
 			}
 		} else {
 			System.out.println("존재하지 않는 이메일입니다.");
-			status = "존재하지 않는 이메일입니다.";
+//			status = "존재하지 않는 이메일입니다.";
+			status = "This email is not registered! Please try again!";
 		}
 		return new ResponseEntity<String>(status, HttpStatus.OK);
 	}

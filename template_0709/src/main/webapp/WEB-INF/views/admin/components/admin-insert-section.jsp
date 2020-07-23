@@ -27,54 +27,54 @@
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Email</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" placeholder="Email" name="email">
+										<input class="form-control" type="text" placeholder="Email" name="email" id="email">
 									</div>
 								</div>
 								
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Name</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" placeholder="Name" name="name">
+										<input class="form-control" type="text" placeholder="Name" name="name" id="name">
 									</div>
 								</div>
 								
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Passwd</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" placeholder="Passwd" name="passwd">
+										<input class="form-control" type="text" placeholder="Passwd" name="passwd" id="passwd">
 									</div>
 								</div>
 								
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Phone</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" placeholder="Phone" name="phone">
+										<input class="form-control" type="text" placeholder="Phone" name="phone" id="phone">
 									</div>
 								</div>
 								
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Address</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" placeholder="Address" name="address">
+										<input class="form-control" type="text" placeholder="Address" name="address" id="address">
 									</div>
 								</div>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Birth</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" placeholder="Birth" name="birth">
+										<input class="form-control" type="text" placeholder="Birth" name="birth" id="birth">
 									</div>
 								</div>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Department</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" placeholder="Department" name="grp">
+										<input class="form-control" type="text" placeholder="Department" name="grp" id="grp">
 									</div>
 								</div>
 								
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Position</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" placeholder="Position" name="pos">
+										<input class="form-control" type="text" placeholder="Position" name="pos" id="pos">
 									</div>
 								</div>
 																									
@@ -87,8 +87,56 @@
 									<div class="row">
 										<div class="col-sm-2"></div>
 										<div class="col-sm-7">
-											<input type="submit" class="btn" value="Insert">
+											<input type="submit" class="btn" value="Insert" id="insert">
 											<input type="reset" class="btn-secondry" value="Cancel">
+											<script>
+											$(document).ready(function(){
+												$('#insert').click(function(){
+													if($('#email').val()==""){
+														alert("Please insert E-mail");
+														$('#email').focus();
+														return false;
+														}
+													else if($('#name').val()==""){
+														alert("Please insert Your Name");
+														$('#name').focus();
+														return false;
+														}
+													else if($('#passwd').val()==""){
+														alert("Please insert Password");
+														$('#passwd').focus();
+														return false;
+														}
+													else if($('#phone').val()==""){
+														alert("Please insert phone");
+														$('#department').focus();
+														return false;
+														}
+													else if($('#department').val()==""){
+														alert("Please insert Department");
+														$('#department').focus();
+														return false;
+														}
+													else if($('#pos').val()==""){
+														alert("Please insert Position.");
+														$('#pos').focus();
+														return false;
+														}
+													else{
+														if($('#phone').val()!=""){
+															var regnum = /^[0-9]*$/;
+															var phoneVal = $('#phone').val();
+															if(!regnum.test(phoneVal)){
+																alert("Please insert ONLY NUMBERS.");
+																$('#phone').focus();
+																return false;
+															}
+														}
+														$('#insert').submit();
+														}
+													});
+												});
+											</script>
 										</div>
 									</div>
 								</div>

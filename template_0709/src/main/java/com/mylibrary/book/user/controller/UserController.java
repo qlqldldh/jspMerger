@@ -113,7 +113,9 @@ public class UserController {
 			@RequestParam String address, @RequestParam String authority) {
 		// 비밀번호 암호화
 		if (!(passwd.equals(passwdre)) || (userDao.selectUser(email) != null)) {
-			System.out.println("password가 다르거나 이미 존재하는 이메일입니다.");
+//			System.out.println("password가 다르거나 이미 존재하는 이메일입니다.");
+		System.out.println("This email is already register, or your password does not match! Please try again!");
+		
 			return "redirect:join";
 		}
 		String dbpw = shaEncoder.saltEncoding(passwd, email);

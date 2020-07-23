@@ -12,11 +12,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </resultMap>
 
 <select id="showAll" resultMap="reservedMap">
-	SELECT * FROM RESINFO1
+	SELECT * FROM RESINFO
 </select>
 
 <delete id="deleteReserved" parameterType="java.lang.String">
-	delete from resinfo1 where resid=#{resid}
+	delete from resinfo where resid=#{resid}
 </delete>
 
 

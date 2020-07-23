@@ -27,19 +27,19 @@
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Full Name</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" placeholder="Name" name="name">
+										<input class="form-control" type="text" placeholder="Name" name="name" id="name">
 									</div>
 								</div>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Tel</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" placeholder="Telephone" name="tel">
+										<input class="form-control" type="text" placeholder="Telephone" name="tel" id="tel">
 									</div>
 								</div>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Pay</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" placeholder="Pay" name="pay">
+										<input class="form-control" type="text" placeholder="Pay" name="pay" id="pay">
 										<!-- <span class="help">If you want your invoices addressed
 											to a company. Leave blank to use your full name.</span> -->
 									</div>
@@ -48,7 +48,7 @@
 									<label class="col-sm-2 col-form-label">Position</label>
 									<div class="col-sm-7">
 										<input class="form-control" type="text"
-											placeholder="Position" name="position">
+											placeholder="Position" name="position" id="position">
 									</div>
 								</div>
 								
@@ -56,7 +56,7 @@
 									<label class="col-sm-2 col-form-label">Department</label>
 									<div class="col-sm-7">
 										<input class="form-control" type="text"
-											placeholder="Department" name="dname">
+											placeholder="Department" name="dname" id="dname">
 									</div>
 								</div>
 								
@@ -68,8 +68,51 @@
 									<div class="row">
 										<div class="col-sm-2"></div>
 										<div class="col-sm-7">
-											<input type="submit" class="btn" value="Add">
+											<input type="submit" class="btn" value="Add" id="insert">
 											<input type="reset" class="btn-secondry" value="Cancel">
+											<script>
+											$(document).ready(function(){
+												$('#insert').click(function(){
+													if($('#name').val()==""){
+														alert("Please insert Full name.");
+														$('#name').focus();
+														return false;
+														}
+													else if($('#tel').val()==""){
+														alert("Please insert Telephone Number.");
+														$('#tel').focus();
+														return false;
+														}
+													else if($('#pay').val()==""){
+														alert("No Pay, No Work.");
+														$('#pay').focus();
+														return false;
+														}
+													else if($('#position').val()==""){
+														alert("Please insert Position");
+														$('#phone').focus();
+														return false;
+														}
+													else if($('#dname').val()==""){
+														alert("Please insert Department");
+														$('#dname').focus();
+														return false;
+														}
+													else{
+														if($('#tel').val()!=""){
+															var regnum = /^[0-9]*$/;
+															var phoneVal = $('#tel').val();
+															if(!regnum.test(phoneVal)){
+																alert("Please insert ONLY NUMBERS.");
+																$('#tel').focus();
+																return false;
+															}
+														}
+														$('#insert').submit();
+														}
+													});
+												});
+											</script>
 										</div>
 									</div>
 								</div>
