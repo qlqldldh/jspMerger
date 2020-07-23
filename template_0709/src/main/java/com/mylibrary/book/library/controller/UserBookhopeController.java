@@ -2,7 +2,6 @@ package com.mylibrary.book.library.controller;
 
 import java.io.IOException;
 
-import javax.mail.Session;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -12,15 +11,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 import com.mylibrary.book.admin.vo.BookhopeVO;
 import com.mylibrary.book.library.service.UserBookhopeService;
 
 @Controller
 @RequestMapping("/user")
-//@SessionAttributes({ "email" })
 public class UserBookhopeController {
 
     @Autowired
@@ -29,7 +26,7 @@ public class UserBookhopeController {
 //================================INSERT=======================================
 
     @RequestMapping("/bookhopeInsert")
-    public String bookhopeInsert(@ModelAttribute BookhopeVO vo, Model model, HttpServletRequest request,
+    public String bookhopeInsert(Model model, HttpServletRequest request,
 	    HttpServletResponse response) throws IOException {
 
 	HttpSession session = request.getSession();
@@ -44,11 +41,10 @@ public class UserBookhopeController {
     }
 
     @RequestMapping("/bookhopeInsertdo")
-    public String bookhopeInsertdo(@ModelAttribute BookhopeVO vo, Model model, HttpServletRequest request,
+    public String bookhopeInsertdo(@SessionAttribute String email, @ModelAttribute BookhopeVO vo, Model model, HttpServletRequest request,
 	    HttpServletResponse response) throws IOException {
 
-	HttpSession session = request.getSession();
-	vo.setUemail((String)session.getAttribute("email"));
+	vo.setUemail(email);
 	userBookhopeService.bookhopeInsert(vo);
 	System.out.println("inserted successfully!");
 	return "redirect:BbooklistMain";

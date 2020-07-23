@@ -7,7 +7,7 @@
 			<ul class="db-breadcrumb-list">
 				<li><a href="#">
 						<!-- <i class="fa fa-home"> -->
-						</i>Menu
+						Menu
 				</a></li>
 				<li><a href="booklistMain">Library</a></li>
 				<li>+ Add Book</li>
@@ -53,12 +53,12 @@
 										<input class="form-control" name="publisher" type="text">
 									</div>
 								</div>
-								<div class="form-group row">
+								<!-- <div class="form-group row">
 									<label class="col-sm-2 col-form-label">Publication Date</label>
 									<div class="col-sm-7">
 										<input class="form-control" name="pubdate" type="text">
 									</div>
-								</div>
+								</div> -->
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">ISBN</label>
 									<div class="col-sm-7">
@@ -67,12 +67,12 @@
 									</div>
 								</div>
 							</div>
-							<div class="form-group row">
+							<!-- <div class="form-group row">
 								<label class="col-sm-2 col-form-label">Number of Pages</label>
 								<div class="col-sm-7">
 									<input class="form-control" name="bpages" type="text">
 								</div>
-							</div>
+							</div> -->
 							<div class="form-group row">
 								<label class="col-sm-2 col-form-label">Category</label>
 								<div class="col-sm-7">
@@ -80,20 +80,18 @@
 								</div>
 							</div>
 							<div class="form-group row">
-								<label class="col-sm-2 col-form-label">Place of
-									Publication</label>
+								<label class="col-sm-2 col-form-label">Location of Book</label>
 								<div class="col-sm-7">
-									<input class="form-control" name="blocation" type="text"><span
-										class="help">City, Country.</span>
+									<input class="form-control" name="blocation" type="text">
 								</div>
 							</div>
-							<div class="form-group row">
+							<!-- <div class="form-group row">
 								<label class="col-sm-2 col-form-label">Number of Printed
 									Copies</label>
 								<div class="col-sm-7">
 									<input class="form-control" name="bcount" type="text">
 								</div>
-							</div>
+							</div> -->
 							<div class="form-group row">
 								<label class="col-sm-2 col-form-label">Description</label>
 								<div class="col-sm-7">

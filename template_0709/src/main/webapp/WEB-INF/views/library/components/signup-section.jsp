@@ -67,10 +67,48 @@
 														</select>
 													</p>
 													<div class="clear"></div>
-													<input type="submit" value="Signup" name="signup"
+													<input type="submit" value="Signup" name="signup" id="signup"
 														class="button btn btn-default">
 													<div class="clear"></div>
 												</form>
+												<script>
+											$(document).ready(function(){
+												$('#signup').click(function(){
+													if($('#email').val()==""){
+														alert("Please insert E-mail.");
+														$('#email').focus();
+														return false;
+														}
+													else if($('#passwd').val()==""){
+														alert("Please insert password.");
+														$('#passwd').focus();
+														return false;
+														}
+													else if($('#passwdre').val()=="" || $('#passwdre').val!=$('#passwd').val()){
+														alert("password and repeated password do not accord. try again!");
+														$('#passwdre').focus();
+														return false;
+														}
+													else if($('#phone').val()==""){
+														alert("Please insert Your phone number.");
+														$('#phone').focus();
+														return false;
+														}
+													else{
+														if($('#phone').val()!=""){
+															var regnum = /^[0-9]*$/;
+															var phoneVal = $('#phone').val();
+															if(!regnum.test(phoneVal)){
+																alert("Please insert ONLY NUMBERS.");
+																$('#phone').focus();
+																return false;
+															}
+														}
+														$('#send').submit();
+														}
+													});
+												});
+											</script>
 											</div>
 										</div>
 									</div>

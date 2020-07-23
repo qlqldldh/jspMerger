@@ -1,11 +1,9 @@
 package com.mylibrary.book.admin.service.bookhope;
 
 import java.util.List;
-
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.mylibrary.book.admin.mapper.BookhopeMapper;
 import com.mylibrary.book.admin.vo.BookhopeVO;
 
@@ -26,8 +24,9 @@ public class BookhopeServiceImpl implements BookhopeService {
 		BookhopeMapper bookhopeMapper = sqlSession.getMapper(BookhopeMapper.class);
 		bookhopeMapper.deletebh(bhid);
 	}
-	/*
-	 * @Override public void bhinsert(String bhid) { BookhopeMapper bookhopeMapper =
-	 * sqlSession.getMapper(BookhopeMapper.class); bookhopeMapper.bhinsert(bhid); }
-	 */
+	@Override
+	public void insertbh(String btitle, String bauthor, String bpublisher, String bhid) throws Exception{
+		System.out.println("insertbh로 북호프 서비스 임플 옴");
+		AladinOpenAPI.addtolist(btitle, bauthor, bpublisher);
+	}
 }

@@ -35,8 +35,8 @@
 												<thead>
 													<tr>
 														<!-- <th>OrderID</th> -->
-														<th>Transaction ID</th>
 														<th>Order Date</th>
+														<th>Transaction ID</th>
 														<th>Title</th>
 														<!-- <th>ISBN</th> -->
 														<th>Price</th>

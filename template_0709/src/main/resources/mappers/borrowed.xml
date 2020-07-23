@@ -16,11 +16,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</resultMap>
 	
 	<select id="selectAll" resultMap="borrowedMap">
-		select * from rentinfo1
+		select * from rentinfo
 	</select>
 	
 	<delete id="borrowedDelete" parameterType="com.mylibrary.book.admin.vo.BorrowedVO">
-		delete from rentinfo1 where rentid=#{rentid}
+		delete from rentinfo where rentid=#{rentid}
 	</delete>
 
 

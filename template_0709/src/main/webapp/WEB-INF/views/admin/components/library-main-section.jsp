@@ -39,10 +39,10 @@
 													<th>Title</th>
 													<th>Author</th>
 													<th>Publisher</th>
-													<th>Publication Date</th>
+													<!-- <th>Publication Date</th> -->
 													<th>ISBN</th>
 													<th>Category</th>
-													<th>Place of Publication</th>
+													<th>Location of Book</th>
 													<!-- <th># Printed Copies</th>
 													<th>Description</th>
 													<th># Pages</th>
@@ -81,7 +81,7 @@
 														<td><a href="booklistDetail?bid=${book.bid }">${book.title}</a></td>
 														<td>${book.author}</td>
 														<td>${book.publisher}</td>
-														<td>${book.pubdate}</td>
+														<%-- <td>${book.pubdate}</td> --%>
 														<td>${book.isbn}</td>
 														<td>${book.bcategory}</td>
 														<td>${book.blocation}</td>

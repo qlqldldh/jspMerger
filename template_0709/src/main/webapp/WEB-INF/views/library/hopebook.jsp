@@ -25,6 +25,9 @@
 													class="company-detail new-account bg-light margin-right">
 													<div class="new-user-head">
 														<h2>Book Information­</h2>
+														<br>
+														<span class="help" style="color:red">&nbsp;&nbsp;You should enter datas exactly.
+														If you don't, we can't bring a book you want</span>
 														<br></br>
 													</div>
 													<!-- <div class="widget-inner">
