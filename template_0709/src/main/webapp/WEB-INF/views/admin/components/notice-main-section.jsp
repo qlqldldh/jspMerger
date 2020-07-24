@@ -38,10 +38,10 @@
 											</thead>
 											<tfoot style="border-color: white;">
 												<tr>
-													<th>Notice ID</th>
+													<!-- <th>Notice ID</th>
 													<th>Upload Date</th>
 													<th>Contents</th>
-													<th></th>
+													<th></th> -->
 
 												</tr>
 											</tfoot>
