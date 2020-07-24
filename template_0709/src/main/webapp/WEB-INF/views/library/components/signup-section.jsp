@@ -84,7 +84,7 @@
 														$('#passwd').focus();
 														return false;
 														}
-													else if($('#passwdre').val()=="" || $('#passwdre').val!=$('#passwd').val()){
+													else if($('#passwdre').val()=="" || $('#passwdre').val()!=$('#passwd').val()){
 														alert("password and repeated password do not accord. try again!");
 														$('#passwdre').focus();
 														return false;

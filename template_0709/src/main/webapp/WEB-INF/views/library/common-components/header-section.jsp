@@ -32,7 +32,7 @@
 									<div class="topbar-links">
 										<c:choose>
 											<c:when test="${sessionScope.email != null }">
-											<a href="logout"><i class="fa fa-lock"></i>Logout</a>
+											<a href="logout"><i class="fa fa-lock"></i>${email }</a>
 											</c:when>
 											<c:when test="${sessionScope.email == null }">
 											<a href="login"><i class="fa fa-lock"></i>Login / Register</a>
