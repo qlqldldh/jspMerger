@@ -16,6 +16,11 @@ public class BadminVO {
 	private String grp;
 	private String pos;
 	
+	public BadminVO() {}
+	
+	public BadminVO(String email) {
+		this.email=email;
+	}
 	
 	
 	public String getEmail() {
@@ -73,5 +78,20 @@ public class BadminVO {
 	public void setPos(String pos) {
 		this.pos = pos;
 	}
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof BadminVO) {
+			BadminVO temp = (BadminVO) obj;
+			return this.email.equals(temp.getEmail());
+		}
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return email.hashCode();
+	}
+	
 	
 }

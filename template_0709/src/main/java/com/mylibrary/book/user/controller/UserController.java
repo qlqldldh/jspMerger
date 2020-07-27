@@ -12,6 +12,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.mylibrary.book.admin.dao.badmin.BadminDAO;
+import com.mylibrary.book.admin.vo.BadminVO;
 import com.mylibrary.book.user.dao.UserDAO;
 import com.mylibrary.book.user.service.ShaEncoder;
 
@@ -24,10 +26,20 @@ public class UserController {
 
 	@Inject
 	UserDAO userDao;
+	
+	@Inject
+	BadminDAO badminDAO;
 
 	// index 페이지로 이동
 	@RequestMapping("/index")
-	public String home(Model model) {
+	public String home(HttpServletRequest request, Model model) {
+		HttpSession session = request.getSession();
+		if(session.getAttribute("email")!=null) {
+			if(badminDAO.showAll().contains(new BadminVO((String)session.getAttribute("email"))))
+				session.setAttribute("role", "admin");
+			else session.setAttribute("role", "gen");
+		}
+		
 		return "library/index"; // home.jsp로 이동
 	}
 
@@ -110,7 +122,7 @@ public class UserController {
 	@RequestMapping("/insertUser")
 	public String insertUser(@RequestParam String email, @RequestParam String passwd, @RequestParam String passwdre,
 			@RequestParam String name, @RequestParam String birth, @RequestParam String phone,
-			@RequestParam String address, @RequestParam String authority) {
+			@RequestParam String address) {
 		// 비밀번호 암호화
 		if (!(passwd.equals(passwdre)) || (userDao.selectUser(email) != null)) {
 //			System.out.println("password가 다르거나 이미 존재하는 이메일입니다.");
@@ -126,7 +138,7 @@ public class UserController {
 		map.put("birth", birth);
 		map.put("phone", phone);
 		map.put("address", address);
-		map.put("authority", authority);
+		map.put("authority", "ROLE_USER");
 		// affected rows, 영향을 받은 행의 수가 리턴됨
 		int result = userDao.insertUser(map);
 		

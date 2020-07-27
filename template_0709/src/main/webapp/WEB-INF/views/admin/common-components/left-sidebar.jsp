@@ -3,7 +3,7 @@
 	<div class="ttr-sidebar-wrapper content-scroll">
 		<!-- side menu logo start -->
 		<div class="ttr-sidebar-logo">
-			<a href="#"><img alt=""
+			<a href=""><img alt=""
 				src="${pageContext.request.contextPath}/assets/images/logo.png"
 				width="122" height="27"></a>
 			<!-- <div class="ttr-sidebar-pin-button" title="Pin/Unpin Menu">

@@ -57,7 +57,7 @@
 												<tbody>
 													<c:forEach var="bh" items="${bookhopelist }">
 													<tr>
-														<td>${bh.bhid }</td>
+														<td><a href="bhDetail?bhid=${bh.bhid }">${bh.bhid }</a></td>
 														<td>${bh.uemail }</td>
 														<td>${bh.btitle }</td>
 														<td>${bh.bauthor }</td>

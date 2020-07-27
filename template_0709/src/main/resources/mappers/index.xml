@@ -10,7 +10,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</resultMap>
 	
 	<select id="selectAll" resultMap="indexMap">
-		select * from rental_statistics
+		select * from rental_statistics order by currentdate asc
 	</select>
 
 </mapper>

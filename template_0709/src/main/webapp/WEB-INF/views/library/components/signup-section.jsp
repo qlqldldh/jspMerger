@@ -60,12 +60,12 @@
 														</label> <input type="text" id="address" name="address"
 															class="input-text">
 													</p>
-													<p>
+													<!-- <p>
 														<select name="authority">
 															<option value="ROLE_USER">ROLE_USER</option>
 															<option value="ROLE_ADMIN">ROLE_ADMIN</option>
 														</select>
-													</p>
+													</p> -->
 													<div class="clear"></div>
 													<input type="submit" value="Signup" name="signup" id="signup"
 														class="button btn btn-default">
