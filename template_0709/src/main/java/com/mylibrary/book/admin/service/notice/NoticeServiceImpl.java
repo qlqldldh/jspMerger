@@ -37,7 +37,6 @@ public class NoticeServiceImpl implements NoticeService {
 
     }
 
-
     @Override
     public void updateNotice(Map<String, String> map) {
 	NoticeMapper noticeMapper= sqlSession.getMapper(NoticeMapper.class);

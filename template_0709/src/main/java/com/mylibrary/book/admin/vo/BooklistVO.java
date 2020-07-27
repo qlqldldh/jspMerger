@@ -9,15 +9,24 @@ public class BooklistVO {
     private String title;
     private String author;
     private String publisher;
-    private String pubdate;
-    private int isbn;
+	/* private String pubdate; */
+    private String isbn;
     private String bcategory;
     private String blocation;
     private int bcount;
     private String descrip;
-    private int bpages;
+	/* private int bpages; */
     private int willdel;
-    public String getBid() {
+    private String img;
+    
+    
+    public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
+	}
+	public String getBid() {
         return bid;
     }
     public void setBid(String bid) {
@@ -41,16 +50,16 @@ public class BooklistVO {
     public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
-    public String getPubdate() {
-        return pubdate;
-    }
-    public void setPubdate(String pubdate) {
-        this.pubdate = pubdate;
-    }
-    public int getIsbn() {
+//    public String getPubdate() {
+//        return pubdate;
+//    }
+//    public void setPubdate(String pubdate) {
+//        this.pubdate = pubdate;
+//    }
+    public String getIsbn() {
         return isbn;
     }
-    public void setIsbn(int isbn) {
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
     public String getBcategory() {
@@ -77,24 +86,24 @@ public class BooklistVO {
     public void setDescrip(String descrip) {
         this.descrip = descrip;
     }
-    public int getBpages() {
-        return bpages;
-    }
-    public void setBpages(int bpages) {
-        this.bpages = bpages;
-    }
+//    public int getBpages() {
+//        return bpages;
+//    }
+//    public void setBpages(int bpages) {
+//        this.bpages = bpages;
+//    }
     public int getWilldel() {
         return willdel;
     }
     public void setWilldel(int willdel) {
         this.willdel = willdel;
     }
-    @Override
-    public String toString() {
-	return "BooklistVO [bid=" + bid + ", title=" + title + ", author=" + author + ", publisher=" + publisher
-		+ ", pubdate=" + pubdate + ", isbn=" + isbn + ", bcategory=" + bcategory + ", blocation=" + blocation
-		+ ", bcount=" + bcount + ", descrip=" + descrip + ", bpages=" + bpages + ", willdel=" + willdel + "]";
-    }
-
+	@Override
+	public String toString() {
+		return "BooklistVO [bid=" + bid + ", title=" + title + ", author=" + author + ", publisher=" + publisher
+				+ ", isbn=" + isbn + ", bcategory=" + bcategory + ", blocation=" + blocation + ", bcount=" + bcount
+				+ ", descrip=" + descrip + ", willdel=" + willdel + ", img=" + img + "]";
+	}
+    
   
 }

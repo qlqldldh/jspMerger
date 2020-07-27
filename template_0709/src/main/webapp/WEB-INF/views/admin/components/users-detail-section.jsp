@@ -34,13 +34,13 @@
 										<input class="form-control" type="text" value=${bgen.name } name="name" readonly="readonly">
 									</div>
 								</div>
-								<div class="form-group row">
+								<%-- <div class="form-group row">
 									<label class="col-sm-2 col-form-label">Password</label>
 									<div class="col-sm-7">
 										<input class="form-control" type="text" value=${bgen.passwd } name="passwd" readonly="readonly">
 										
 									</div>
-								</div>
+								</div> --%>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Phone</label>
 									<div class="col-sm-7">

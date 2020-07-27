@@ -55,13 +55,13 @@
 											value="${item.publisher}">
 									</div>
 								</div>
-								<div class="form-group row">
+								<%-- <div class="form-group row">
 									<label class="col-sm-2 col-form-label">Publication Date</label>
 									<div class="col-sm-7">
 										<input class="form-control" name="pubdate" type="text"
 											value="${item.pubdate}">
 									</div>
-								</div>
+								</div> --%>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">ISBN</label>
 									<div class="col-sm-7">
@@ -71,13 +71,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="form-group row">
+							<%-- <div class="form-group row">
 								<label class="col-sm-2 col-form-label">Number of Pages</label>
 								<div class="col-sm-7">
 									<input class="form-control" name="bpages" type="text"
 										value="${item.bpages}">
 								</div>
-							</div>
+							</div> --%>
 							<div class="form-group row">
 								<label class="col-sm-2 col-form-label">Category</label>
 								<div class="col-sm-7">
@@ -86,22 +86,20 @@
 								</div>
 							</div>
 							<div class="form-group row">
-								<label class="col-sm-2 col-form-label">Place of
-									Publication</label>
+								<label class="col-sm-2 col-form-label">Location of Book</label>
 								<div class="col-sm-7">
 									<input class="form-control" name="blocation" type="text"
-										value="${item.blocation}"><span class="help">City,
-										Country.</span>
+										value="${item.blocation}">
 								</div>
 							</div>
-							<div class="form-group row">
+							<%-- <div class="form-group row">
 								<label class="col-sm-2 col-form-label">Number of Printed
 									Copies</label>
 								<div class="col-sm-7">
 									<input class="form-control" name="bcount" type="text"
-										value="${item.bcount}">
+										value="${item.bcount}" readonly="readonly">
 								</div>
-							</div>
+							</div> --%>
 							<div class="form-group row">
 								<label class="col-sm-2 col-form-label">Description</label>
 								<div class="col-sm-7">

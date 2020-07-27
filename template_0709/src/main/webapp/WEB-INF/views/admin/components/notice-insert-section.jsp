@@ -5,7 +5,7 @@
 		<div class="db-breadcrumb">
 			<h4 class="breadcrumb-title">+ Add Notice</h4>
 			<ul class="db-breadcrumb-list">
-				<li><a href="/book/admin/index"><!-- <i class="fa fa-home"> --></i>Menu</a></li>
+				<li><a href="/book/admin/index"><!-- <i class="fa fa-home"> -->Menu</a></li>
 				<li>+Add Notice</li>
 				
 			</ul>
@@ -39,12 +39,17 @@
 									</div>
 								</div>
 								<div class="form-group row">
+									<label class="col-sm-2 col-form-label">Title</label>
+									<div class="col-sm-7">
+										<input class="form-control" type="text" placeholder="title" name="title">
+									</div>
+								</div>
+								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Contents</label>
 									<div class="col-sm-7">
 										<input class="form-control" type="text" placeholder="Contents" name="ncontents">
 									</div>
 								</div>
-
 								<div class="seperator"></div>
 
 								<div class="form-group row">

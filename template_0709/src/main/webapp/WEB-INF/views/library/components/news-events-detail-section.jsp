@@ -145,16 +145,13 @@
                                                     <div class="member-info">
                                                         <div class="content_meta_category">
                                                             <span class="arrow-right"></span>
-                                                            <a href="#." rel="category tag">EVENT</a>
+                                                            <a href="#." rel="category tag">NEWS</a>
                                                         </div>
                                                         <ul class="news-event-info">
                                                             <li>
-                                                                <a href="#" target="_blank">
-                                                                    <i class="fa fa-calendar"></i>
-                                                                    July 25, 2016
-                                                                </a>
+                                                                    ${itm.uldate}
                                                             </li>
-                                                            <li>
+                                                           <!--  <li>
                                                                 <a href="#" target="_blank">
                                                                     <i class="fa fa-clock-o"></i>
                                                                     10:15 AM - 10:15 PM 
@@ -165,16 +162,21 @@
                                                                     <i class="fa fa-map-marker"></i>
                                                                     New York, USA
                                                                 </a>
-                                                            </li>
+                                                            </li> -->
                                                         </ul>
-                                                        <h2>Curabitur leo elit, interdum nec pretium eu, convallis ut erat. Curabitur sagittis feugiat tortor eget vehicula.</h2>
-                                                        <p>Proin tincidunt molestie urna, non fringilla est pretium et. Proin dignissim porttitor quam, eget gravida ante accumsan et. Cras quis commodo massa. Nullam id mauris vel arcu ultricies hendrerit. Praesent hendrerit posuere risus, quis iaculis erat auctor non. Fusce bibendum in lorem ac pharetra. Mauris bibendum placerat massa non pellentesque. Maecenas interdum, nisl quis molestie gravida, sapien dui dictum urna, at pretium odio massa ut nibh. Nam sit amet eros ultricies leo ultrices sodales nec vel dui. Mauris imperdiet turpis sit amet lobortis efficitur. Mauris commodo nunc non risus auctor finibus. Ut egestas urna quis elit egestas, ac bibendum orci maximus. Maecenas risus magna, mollis et purus sit amet, pellentesque tempor lacus. Quisque dictum tortor ac est auctor, ut dapibus risus rutrum. Quisque porttitor turpis in sagittis porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean egestas consequat porttitor. </p>
-                                                        <p>Praesent lorem felis, fringilla in feugiat a, pretium in erat. Mauris ultricies rhoncus justo, quis sollicitudin risus rutrum sed. Cras sit amet odio eget felis dignissim elementum sit amet a justo. Suspendisse sodales sem et fermentum luctus. Phasellus quis sapien tellus. Aenean sit amet est purus. Vestibulum justo risus, pharetra in sem eu, bibendum iaculis nisl. Aliquam pulvinar tellus vel ornare ultrices. Nam cursus varius egestas. Cras sed varius nulla, non volutpat diam. Sed ultricies dolor purus, vitae consectetur dolor imperdiet non. </p>
+                                                        <h2>${itm.title}</h2>
+                                                        <p>${itm.ncontents}</p>
+                                                        
                                                     </div>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
                                         </div>
+                                        <div class="col-sm-7">
+											<%-- 	<button type="button" class="btn-secondry m-r5" onclick="location.href='badminUpdate?email=${itm.email}'">Update</button>
+												<button type="button" class="btn-secondry m-r5" onclick="location.href='badminDelete?email=${itm.email}'">Delete</button> --%>
+												<button type="button" class="btn-secondry m-r5" onclick="location.href='userNoticeMain'">Go Back</button>
+											</div>
                                         <%-- <div class="row">
                                             <div class="col-xs-12 col-sm-5">
                                                 <div class="contact-info">

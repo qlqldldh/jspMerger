@@ -57,6 +57,23 @@ public class NoticeController {
 	return "redirect:noticeMain";
     }
 
+    @RequestMapping("/noticeDetail")
+    public ModelAndView noticeDetail(@RequestParam String nid, Model model) {
+	List<NoticeVO> listVO = noticeService.showList();
+
+	ModelAndView mav = new ModelAndView();
+
+	for (int i = 0; i < listVO.size(); i++) {
+	    if (listVO.get(i).getNid().equals(nid)) {
+		mav.addObject("nitem", listVO.get(i));
+		break;
+	    }
+	}
+	System.out.println("Controller: noticeDetail");
+	mav.setViewName("admin/notice-detail");
+	return mav;
+    }
+    
 //================================INSERT=======================================
 
     @RequestMapping("/noticeInsert")

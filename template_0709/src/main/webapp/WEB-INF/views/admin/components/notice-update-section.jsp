@@ -36,7 +36,14 @@
 									<label class="col-sm-2 col-form-label">Upload Date</label>
 									<div class="col-sm-7">
 										<input class="form-control" name="uldate" type="text"
-											value="${nitem.uldate}"> <span class="help">YYYY-MM-DD</span>
+											value="${nitem.uldate}"> <span class="help">YY-MM-DD</span>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-sm-2 col-form-label">Title</label>
+									<div class="col-sm-7">
+										<input class="form-control" name="title" type="text"
+											value="${nitem.title}">
 									</div>
 								</div>
 								<div class="form-group row">

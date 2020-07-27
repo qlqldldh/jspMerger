@@ -32,7 +32,7 @@
 												<tr>
 													<th>Notice ID</th>
 													<th>Upload Date</th>
-													<th>Contents</th>
+													<th>Title</th>
 													<th></th>
 												</tr>
 											</thead>
@@ -40,7 +40,7 @@
 												<tr>
 													<th>Notice ID</th>
 													<th>Upload Date</th>
-													<th>Contents</th>
+													<th>Title</th>
 													<th></th>
 
 												</tr>
@@ -48,9 +48,9 @@
 											<tbody>
 												<c:forEach var="itm" items="${noticelist }">
 													<tr>
-														<td>${itm.nid}</td>
+														<td><a href="noticeDetail?nid=${itm.nid }">${itm.nid}</a></td>
 														<td>${itm.uldate}</td>
-														<td>${itm.ncontents}</td>
+														<td>${itm.title}</td>
 														<td><button type="button" class="btn-secondry m-r5"
 																onclick="location.href='noticeUpdate?nid=${itm.nid}'">Update</button>&nbsp;
 															<button type="button" class="btn-secondry m-r5"

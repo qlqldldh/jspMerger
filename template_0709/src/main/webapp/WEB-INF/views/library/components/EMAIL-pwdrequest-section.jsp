@@ -29,13 +29,14 @@
 										<div class="col-md-12">
 											<div class="company-detail bg-dark margin-left">
 												<div class="signin-head">
-													<h2>E-mail Please!</h2>
+												
+													<h2 style="color:#ff7236;">Don't worry!</h2>
+													<h5 style="color:lightgray;">Give us your email, we'll send you a new password!</h5>
 													<span class="underline left"></span>
 												</div>
 												<form id="mailSending" class="mailSending" method="post">
 													<p class="form-row form-row-last input-required">
-														<label> <span class="first-letter">Your
-																Login Mail please. Can not be Blank.</span> <span
+														<label> <span class="first-letter">Make sure this email is the one you used to register!</span> <span
 															class="second-letter">*</span>
 														</label> <input type="email" id="email" name="email"
 															class="input-text">
