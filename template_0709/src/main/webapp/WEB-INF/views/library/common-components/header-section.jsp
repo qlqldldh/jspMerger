@@ -38,7 +38,7 @@
 											<a href="login"><i class="fa fa-lock"></i>Login / Register</a>
 											</c:when>
 										</c:choose>
-										<span>|</span>
+										
 										<div class="header-cart dropdown">
 											<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 												<i class="fa fa-shopping-cart"></i> <small>0</small>
