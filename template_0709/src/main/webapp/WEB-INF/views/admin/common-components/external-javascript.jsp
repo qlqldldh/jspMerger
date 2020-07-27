@@ -13,7 +13,7 @@
 <script src="${pageContext.request.contextPath}/assets/vendors/owl-carousel/owl.carousel.js"></script>
 <script src='${pageContext.request.contextPath}/assets/vendors/scroll/scrollbar.min.js'></script>
 <script src="${pageContext.request.contextPath}/assets/js/functions.js"></script>
-<script src="${pageContext.request.contextPath}/assets/vendors/chart/chart.min.js"></script>
+<%-- <script src="${pageContext.request.contextPath}/assets/vendors/chart/chart.min.js"></script> --%>
 <script src="${pageContext.request.contextPath}/assets/js/admin.js"></script>
 <script src='${pageContext.request.contextPath}/assets/vendors/switcher/switcher.js'></script>
 
