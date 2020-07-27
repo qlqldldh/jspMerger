@@ -1,6 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- Start: Header Section -->
 <header id="header-v1" class="navbar-wrapper inner-navbar-wrapper">
 	<div class="container">
@@ -31,14 +30,20 @@
 								</div>
 								<div class="col-sm-6">
 									<div class="topbar-links">
+									<c:if test="${role =='admin'}">
+										<a href="../admin/index">Admin Page</a>
+										<span>|</span>
+									</c:if>
+									
 										<c:choose>
 											<c:when test="${sessionScope.email != null }">
-												<a href="logout"><i class="fa fa-lock"></i>Logout
+											<a href="logout"><i class="fa fa-lock"></i>${email }</a>
 											</c:when>
 											<c:when test="${sessionScope.email == null }">
-												<a href="login"><i class="fa fa-lock"></i>Login / Register</a>
+											<a href="login"><i class="fa fa-lock"></i>Login / Register</a>
 											</c:when>
 										</c:choose>
+										<span>|</span>
 										<div class="header-cart dropdown">
 											<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 												<i class="fa fa-shopping-cart"></i> <small>0</small>
@@ -102,17 +107,17 @@
 									class="dropdown-toggle disabled" href="index">Home</a></li>
 								<li class="dropdown"><a data-toggle="dropdown"
 									class="dropdown-toggle disabled"
-									href="bookList">Books &amp; Media</a></li>
+									href="BbooklistMain">Books &amp; Media</a></li>
 								<li class="dropdown"><a data-toggle="dropdown"
 									class="dropdown-toggle disabled"
-									href="eventList">News &amp; Events</a></li>
+									href="userNoticeMain">News &amp; Events</a></li>
 								<li><a href="about">About us</a></li>
 								<li><a href="contact">Contact</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
-				<!-- ëª¨ë°ì¼ -->
+				<!-- 모바일 -->
 				<div class="mobile-menu hidden-lg hidden-md">
 					<a href="#mobile-menu"><i class="fa fa-navicon"></i></a>
 					<div id="mobile-menu">
@@ -140,7 +145,7 @@
 									<li><a href="books-media-detail-v2.html">Books &amp;
 											Media Detail V2</a></li>
 								</ul> --></li>
-							<li><a href="eventList">News &amp;
+							<li><a href="userNoticeMain">News &amp;
 									Events</a>
 								<!-- <ul>
 									<li><a href="news-events-list-view.html">News &amp;
