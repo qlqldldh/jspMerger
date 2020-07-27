@@ -1,59 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<script>
-    /* function passwordReset(){
-        var formData = $("#passwordReset").serialize();
-
-        $.ajax({
-            cache : false,
-            url : "${pageContext.request.contextPath}/user/passwordReset2", // 요기에
-            dataType : "POST",
-            data : formData, 
-            success : function(data) {
-                alert(data);
-            }, // success 
-    
-            error : function() {
-            	alert("error");
-            }
-        }); // $.ajax */
-//    }
-    function udpateInform(){
-        var formData = $("#udpateInform").serialize();
-
-        $.ajax({
-            cache : false,
-            url : "${pageContext.request.contextPath}/user/udpateInform", // 요기에
-            type : "POST", 
-            data : formData, 
-            success : function(data) {
-                alert(data);
-                window.location.reload(true);
-            }, // success 
-    
-            error : function() {
-            	alert("error");
-            }
-        }); // $.ajax */
-    }
-    function passwordReset(){
-        var formData = $("#passwordReset").serialize();
-
-        $.ajax({
-            cache : false,
-            url : "${pageContext.request.contextPath}/user/passwordReset", // 요기에
-            type : "POST", 
-            data : formData, 
-            success : function(data) {
-                alert(data);
-                window.location.reload(true);
-            }, // success 
-    
-            error : function() {
-            	alert("error");
-            }
-        }); // $.ajax */
-    }
-</script>
 <!--Main container start -->
 	<main class="ttr-wrapper">
 		<div class="container-fluid">
@@ -72,17 +16,68 @@
 							<h4>User Profile</h4>
 						</div>
 						<div class="widget-inner">
-							<form id="passwordReset" class="edit-profile m-b30">
+							<form class="edit-profile m-b30">
 								<div class="">
 									<div class="form-group row">
 										<div class="col-sm-10  ml-auto">
-											<h3>Personal Email</h3>
+											<h3>1. Personal Details</h3>
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label"></label>
+										<label class="col-sm-2 col-form-label">Full Name</label>
 										<div class="col-sm-7">
-											<span>${sessionScope.email}</span>
+											<input class="form-control" type="text" value="Mark Andre">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">Occupation</label>
+										<div class="col-sm-7">
+											<input class="form-control" type="text" value="CTO">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">Company Name</label>
+										<div class="col-sm-7">
+											<input class="form-control" type="text" value="EduChamp">
+											<span class="help">If you want your invoices addressed to a company. Leave blank to use your full name.</span>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">Phone No.</label>
+										<div class="col-sm-7">
+											<input class="form-control" type="text" value="+120 012345 6789">
+										</div>
+									</div>
+									
+									<div class="seperator"></div>
+									
+									<div class="form-group row">
+										<div class="col-sm-10 ml-auto">
+											<h3>2. Address</h3>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">Address</label>
+										<div class="col-sm-7">
+											<input class="form-control" type="text" value="5-S2-20 Dummy City, UK">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">City</label>
+										<div class="col-sm-7">
+											<input class="form-control" type="text" value="US">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">State</label>
+										<div class="col-sm-7">
+											<input class="form-control" type="text" value="California">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">Postcode</label>
+										<div class="col-sm-7">
+											<input class="form-control" type="text" value="000702">
 										</div>
 									</div>
 
@@ -90,20 +85,32 @@
 
 									<div class="form-group row">
 										<div class="col-sm-10 ml-auto">
-											<h3 class="m-form__section">Password Reset</h3>
+											<h3 class="m-form__section">3. Social Links</h3>
 										</div>
 									</div>
-								
+
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Password</label>
+										<label class="col-sm-2 col-form-label">Linkedin</label>
 										<div class="col-sm-7">
-											<input id="passwd" name="passwd" class="form-control" type="password">
+											<input class="form-control" type="text" value="www.linkedin.com">
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Password Repeat</label>
+										<label class="col-sm-2 col-form-label">Facebook</label>
 										<div class="col-sm-7">
-											<input id="passwdre" name="passwdre" class="form-control" type="password">
+											<input class="form-control" type="text" value="www.facebook.com">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">Twitter</label>
+										<div class="col-sm-7">
+											<input class="form-control" type="text" value="www.twitter.com">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">Instagram</label>
+										<div class="col-sm-7">
+											<input class="form-control" type="text" value="www.instagram.com">
 										</div>
 									</div>
 								</div>
@@ -113,41 +120,36 @@
 											<div class="col-sm-2">
 											</div>
 											<div class="col-sm-7">
-												<button type="reset" class="btn" onclick="passwordReset(); return false;">Save changes</button>
+												<button type="reset" class="btn">Save changes</button>
+												<button type="reset" class="btn-secondry">Cancel</button>
 											</div>
 										</div>
 									</div>
 								</div>
 							</form>
-							<form id="udpateInform" class="edit-profile">
+							<form class="edit-profile">
 								<div class="">
 									<div class="form-group row">
 										<div class="col-sm-10 ml-auto">
-											<h3>Profile</h3>
+											<h3>4. Password</h3>
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Name</label>
+										<label class="col-sm-2 col-form-label">Current Password</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="text" id="name" name="name" placeholder="${ user.NAME }">
+											<input class="form-control" type="password" value="">
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">BIRTH</label>
+										<label class="col-sm-2 col-form-label">New Password</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="text" id="birth" name="birth" placeholder="${ user.BIRTH }">
+											<input class="form-control" type="password" value="">
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Phone</label>
+										<label class="col-sm-2 col-form-label">Re Type Password</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="text" id="phone" name="phone" placeholder="${ user.PHONE }">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Address</label>
-										<div class="col-sm-7">
-											<input class="form-control"type="text" id="address" name="address" placeholder="${ user.ADDRESS }">
+											<input class="form-control" type="password" value="">
 										</div>
 									</div>
 								</div>
@@ -155,7 +157,8 @@
 									<div class="col-sm-2">
 									</div>
 									<div class="col-sm-7">
-										<button type="reset" class="btn" onclick="udpateInform(); return false;">Save changes</button>
+										<button type="reset" class="btn">Save changes</button>
+										<button type="reset" class="btn-secondry">Cancel</button>
 									</div>
 								</div>
 									

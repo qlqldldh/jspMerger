@@ -12,10 +12,10 @@ public class PageController {
 
 	/* Page-Panning Controller */
 	
-//	@RequestMapping("/index")
-//	public String index(Model model) {
-//		return "admin/index";
-//	}
+	@RequestMapping("/index")
+	public String index(Model model) {
+		return "admin/index";
+	}
 	
 //	@RequestMapping("/adminInsert")
 //	public String adminInsert(Model model) {
@@ -117,10 +117,10 @@ public class PageController {
 //		return "admin/orders-update";
 //	}
 	
-//	@RequestMapping("/userProf")
-//	public String userProf(Model model) {
-//		return "admin/user-profile";
-//	}
+	@RequestMapping("/userProf")
+	public String userProf(Model model) {
+		return "admin/user-profile";
+	}
 	
 //	@RequestMapping("/usersInsert")
 //	public String usersInsert(Model model) {
