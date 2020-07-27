@@ -55,7 +55,7 @@
 						<div class="ttr-header-submenu">
 							<ul>
 								<li><a href="userProf">My profile</a></li>
-								<li><a href="../login.html">Logout</a></li>
+								<li><a href="../user/logout">Logout</a></li>
 							</ul>
 						</div>
 					</li>
