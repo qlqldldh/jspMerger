@@ -34,7 +34,7 @@ public class BadminServiceImpl implements BadminService {
 	
 	@Override
 	public void insertBadmin1(BadminVO vo) {
-		badminDAO.insertBadmin1(vo);		
+		badminDAO.insertBadmin1(vo);
 	}
 
 	@Override

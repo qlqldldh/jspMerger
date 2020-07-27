@@ -30,6 +30,11 @@
 								</div>
 								<div class="col-sm-6">
 									<div class="topbar-links">
+									<c:if test="${role =='admin'}">
+										<a href="../admin/index">Admin Page</a>
+										<span>|</span>
+									</c:if>
+									
 										<c:choose>
 											<c:when test="${sessionScope.email != null }">
 											<a href="logout"><i class="fa fa-lock"></i>${email }</a>

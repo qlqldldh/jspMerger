@@ -8,8 +8,17 @@ public class NoticeVO {
     private String nid;
     private String uldate;
     private String ncontents;
+    private String title;
 
-    public String getNid() {
+    public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getNid() {
 	return nid;
     }
 

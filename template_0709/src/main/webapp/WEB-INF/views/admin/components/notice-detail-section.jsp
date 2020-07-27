@@ -17,8 +17,6 @@
 						<h4>notice-update</h4>
 					</div>
 					<div class="widget-inner">
-						<form action="noticeUpdatedo" class="edit-profile m-b30"
-							method="get">
 							<div class="">
 								<div class="form-group row">
 									<div class="col-sm-10  ml-auto">
@@ -36,21 +34,21 @@
 									<label class="col-sm-2 col-form-label">Upload Date</label>
 									<div class="col-sm-7">
 										<input class="form-control" name="uldate" type="text"
-											value="${nitem.uldate}"> <span class="help">YY-MM-DD</span>
+											value="${nitem.uldate}" readonly="readonly"> <span class="help">YY-MM-DD</span>
 									</div>
 								</div>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Title</label>
 									<div class="col-sm-7">
 										<input class="form-control" name="title" type="text"
-											value="${nitem.title}">
+											value="${nitem.title}" readonly="readonly">
 									</div>
 								</div>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Contents</label>
 									<div class="col-sm-7">
 										<input class="form-control" name="ncontents" type="text"
-											value="${nitem.ncontents}">
+											value="${nitem.ncontents}" readonly="readonly">
 									</div>
 								</div>
 
@@ -64,8 +62,9 @@
 												<div class="row">
 													<div class="col-sm-2"></div>
 													<div class="col-sm-7">
-														<input type="submit" class="btn" value="Update"/> <input
-															type="reset" class="btn-secondry" value="Cancel"/>
+														<button type="button" class="btn-secondry m-r5" onclick="location.href='noticeUpdate?nid=${nitem.nid}'">Update</button>
+														<button type="button" class="btn-secondry m-r5" onclick="location.href='noticeDelete?nid=${nitem.nid}'">Delete</button>
+														<button type="button" class="btn-secondry m-r5" onclick="location.href='noticeMain'">Go Back</button>
 													</div>
 												</div>
 											</div>
@@ -73,10 +72,6 @@
 									</div>
 								</div>
 							</div>
-						</form>
-
-
-
 					</div>
 				</div>
 			</div>

@@ -129,6 +129,7 @@ public class UserController {
 		map.put("authority", authority);
 		// affected rows, 영향을 받은 행의 수가 리턴됨
 		int result = userDao.insertUser(map);
+		
 		return "library/signin"; // login.jsp로 이동
 	}
 }

@@ -1,4 +1,5 @@
 <br><br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <section class="category-filter new-release">
 							<div class="container">
 								<div class="row">
@@ -11,7 +12,7 @@
 								</div>
 							</div>
 							<div id="category-filter">
-								<ul class="category-list">
+								<ul class="category-list" id="newreleaseitems">
 									<li class="category-item">
 										<figure>
 											<img
@@ -156,3 +157,5 @@
 								<div class="clearfix"></div>
 							</div>
 						</section>
+						
+						

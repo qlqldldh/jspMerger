@@ -10,6 +10,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result property="nid" column="nid" />
 		<result property="uldate" column="uldate" />
 		<result property="ncontents" column="ncontents" />
+		<result property="title" column="title" />
 	</resultMap>
 
 
@@ -23,12 +24,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		INSERT INTO BNOTICE VALUES 
 		(#{nid, javaType=String,jdbcType=VARCHAR}, 
 		#{uldate, javaType=String,jdbcType=VARCHAR}, 
-		#{ncontents, javaType=String,jdbcType=VARCHAR})
+		#{ncontents, javaType=String,jdbcType=VARCHAR},
+		#{title, javaType=String,jdbcType=VARCHAR})
 	</insert>
 
 	<update id="updateNotice" parameterType="map">
 		UPDATE BNOTICE SET
 		uldate = #{uldate,
+		javaType=String,jdbcType=VARCHAR},
+		title = #{title,
 		javaType=String,jdbcType=VARCHAR},
 		ncontents=#{ncontents,
 		javaType=String,jdbcType=VARCHAR}

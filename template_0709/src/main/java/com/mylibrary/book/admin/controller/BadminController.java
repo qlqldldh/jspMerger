@@ -1,5 +1,10 @@
 package com.mylibrary.book.admin.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.inject.Inject;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,11 +15,19 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.mylibrary.book.admin.service.badmin.BadminService;
 import com.mylibrary.book.admin.vo.BadminVO;
+import com.mylibrary.book.user.dao.UserDAO;
+import com.mylibrary.book.user.service.ShaEncoder;
 
 @Controller
 @RequestMapping("/admin")
 public class BadminController {
 
+	@Inject
+	ShaEncoder shaEncoder; // 암호화 빈
+	
+	@Inject
+	UserDAO userDao;
+	
 	@Autowired
 	private BadminService badminService;
 	
@@ -42,7 +55,25 @@ public class BadminController {
 	
 	@RequestMapping("/badminInsertdo")
 	public String badminInsertdo(@ModelAttribute BadminVO vo) {
-		badminService.insertBadmin1(vo);
+//		badminService.insertBadmin1(vo);
+		if (userDao.selectUser(vo.getEmail()) != null) {
+//			System.out.println("password가 다르거나 이미 존재하는 이메일입니다.");
+			System.out.println("This email is already register");
+		
+			return "redirect:badminInsert";
+		}
+		String dbpw = shaEncoder.saltEncoding(vo.getPasswd(), vo.getEmail());
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("email", vo.getEmail());
+		map.put("passwd", dbpw);
+		map.put("name", vo.getName());
+		map.put("birth", vo.getBirth());
+		map.put("phone", vo.getPhone());
+		map.put("address", vo.getAddress());
+		map.put("authority", "ROLE_ADMIN");
+		// affected rows, 영향을 받은 행의 수가 리턴됨
+		int result = userDao.insertUser(map);
+		
 		badminService.insertBadmin2(vo);
 		return "redirect:badminMain";
 	}

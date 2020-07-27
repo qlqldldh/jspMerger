@@ -45,12 +45,12 @@
 												</thead>
 												<tfoot style="border-color:white;">
 													<tr>
-														<!-- <th>Name</th>
+														<th>Name</th>
 														<th>Tel</th>
 														<th>Pay</th>
 														<th>Position</th>
 														<th>Department</th>
-														<th>Option</th> -->
+														<th>Option</th>
 														<!-- <th>Update</th> -->
 														
 													</tr>
