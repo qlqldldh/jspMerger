@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mylibrary.book.library.mapper.AdmDirInsMapper">
+<resultMap type="com.mylibrary.book.admin.vo.BooklistVO" id="booklistMap">
+	<result property="bid" column="bid" />
+	<result property="title" column="title"/>
+	<result property="author" column="author"/>
+	<result property="publisher" column="publisher"/>
+	<result property="isbn" column="isbn"/>
+	<result property="bcategory" column="bcategory"/>
+	<result property="blocation" column="blocation"/>
+	<result property="bcount" column="bcount"/>
+	<result property="descrip" column="descrip"/>
+	<result property="willdel" column="willdel"/>
+	<result property="img" column="img"/>
+</resultMap>
+ 	<insert id="AdmDirIns" parameterType="com.mylibrary.book.admin.vo.BooklistVO">	
+		insert into booklist values(#{bid},#{btitle},#{bauthor},#{bpublisher},#{isbn},#{bcategory},#{bloocation},#{descrip},#{willdel},#{img})	
+	</insert>
+</mapper>
