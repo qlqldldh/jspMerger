@@ -10,7 +10,7 @@ class Item {
 	public String Author = "";
 	public String Publisher = "";
 	public String Cover = "";
-	public String Isbn = "";
+	public String Isbn13 = "";
 	public String Description = "";
 	public String CategoryName = "";
 }
@@ -34,7 +34,7 @@ class AladdinOpenAPIItemSearchHandler extends DefaultHandler {
 			tempValue = "";
 		} else if (localName.equals("publisher")) {
 			tempValue = "";
-		} else if (localName.equals("isbn")) {
+		} else if (localName.equals("isbn13")) {
 			tempValue = "";
 		} else if (localName.equals("description")) {
 			tempValue = "";
@@ -61,8 +61,8 @@ class AladdinOpenAPIItemSearchHandler extends DefaultHandler {
 				currentItem.Author = tempValue;
 			} else if (localName.equals("publisher")) {
 				currentItem.Publisher = tempValue;
-			} else if (localName.equals("isbn")) {
-				currentItem.Isbn = tempValue;
+			} else if (localName.equals("isbn13")) {
+				currentItem.Isbn13 = tempValue;
 			} else if (localName.equals("description")) {
 				currentItem.Description = tempValue;
 			} else if (localName.equals("cover")) {

@@ -6,9 +6,9 @@ import org.springframework.stereotype.Service;
 public class AdmDirInsServiceImpl implements AdmDirInsService {
 
 	@Override
-	public boolean AdmDirIns(String title, String author, String publisher, String isbn) throws Exception {
+	public boolean AdmDirIns(String title, String author, String publisher, String isbn13) throws Exception {
 		System.out.println("AdmDirIns왔음");
-		if (AladdinOpenAPI.addtolist(title, author, publisher, isbn) == true) {
+		if (AladdinOpenAPI.addtolist(title, author, publisher, isbn13) == true) {
 			return true;
 		} else {
 			return false;
