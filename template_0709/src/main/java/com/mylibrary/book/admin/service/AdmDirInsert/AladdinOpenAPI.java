@@ -240,7 +240,7 @@ public class AladdinOpenAPI {
 		return BASE_URL + sb.toString();
 	}
 
-	public static boolean addtolist(String title, String author, String publisher, String isbn) throws Exception {
+	public static boolean addtolist(String title, String author, String publisher, String isbn13) throws Exception {
 		String url = GetUrl(title);
 		AladdinOpenAPIItemSearchHandler api = new AladdinOpenAPIItemSearchHandler();
 		api.parseXml(url);
@@ -252,8 +252,8 @@ public class AladdinOpenAPI {
 		for (Item item : api.Items) {
 			if ((item.Author).contains(author)) {
 				if ((item.Publisher).contains(publisher)) {
-					System.out.println(item.Isbn);
-					if ((item.Isbn).equals(isbn)) {
+					System.out.println(item.Isbn13);
+					if ((item.Isbn13).equals(isbn13)) {
 						String sql = "insert into booklist values(?,?,?,?,?,?,?,?,?,?,?)";
 
 						try {
@@ -263,7 +263,7 @@ public class AladdinOpenAPI {
 							pstmt.setString(2, item.Title);
 							pstmt.setString(3, getAuthorName(item.Author));
 							pstmt.setString(4, item.Publisher);
-							pstmt.setString(5, item.Isbn);
+							pstmt.setString(5, item.Isbn13);
 							pstmt.setString(6, item.CategoryName);
 							pstmt.setString(7, getDeciDiv(item));
 							pstmt.setInt(8, 1);

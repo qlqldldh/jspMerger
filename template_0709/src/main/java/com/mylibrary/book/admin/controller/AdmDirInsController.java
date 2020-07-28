@@ -21,7 +21,7 @@ public class AdmDirInsController {
 		System.out.println("AdmDirInsController 왔음.");
 		PrintWriter out = null;
 		
-		if(adis.AdmDirIns(title, author, publisher,isbn)==true) {
+		if(adis.AdmDirIns(title, author, publisher,isbn)==true){
 			out = resp.getWriter();
 			resp.setContentType("text/html; charset=utf-8");
 			out.println("<script language='javascript'>");
@@ -29,7 +29,7 @@ public class AdmDirInsController {
 			out.println("location.href='/book/admin/booklistMain';");
 			out.print("</script>");
 			out.flush();
-		}else {
+		}else{
 			out = resp.getWriter();
 			resp.setContentType("text/html; charset=utf-8");
 			out.println("<script language='javascript'>");
