@@ -26,6 +26,36 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		SELECT * FROM booklist where bid = #{bid}
 	</select>
 
+	<insert id="insertLending" parameterType="java.util.Map">
+		insert into rentinfo(rentid,renemail,renbid,isdate,exdate,retdate,bldate,isExpanded)
+		 values((select nvl(max(rentid),0)+1 from rentinfo),#{renemail},#{renbid},sysdate,sysdate+5,sysdate+10,sysdate+15,0)
+	</insert>
+	
+	<update id="updateOrders" parameterType="com.mylibrary.book.admin.vo.OrdersVO">
+		UPDATE ORDERS SET Odate = #{odate}, TXNUM = #{txnum}, TITLE = #{title}, ISBN = #{isbn},
+		PRICE = #{price}, UNIT = #{unit}, EXTRACOST = #{extracost}, DESCRIPT = #{descript}, TOTALCOST = #{totalcost} WHERE ORDERNUM = #{ordernum}
+	</update>
+	
+	<update id="updatebcount" parameterType="java.util.Map">
+		update booklist set bcount = bcount+1 where bid = #{bid}
+	</update>
+	
+	<update id="exdateupdate" parameterType="java.util.Map">
+		update rentinfo set exdate = to_date(exdate,'yy-mm-dd') + 5 , isExpanded = 1 where renbid = #{renbid} and renemail = #{renemail}
+	</update>
+
+	<delete id="returnDelete" parameterType="java.util.Map">
+		delete from rentinfo where renbid=#{renbid} and renemail=#{renemail}
+	</delete>
+
+	<insert id="reservedInsert" parameterType="java.util.Map">
+		insert into resinfo(resid, resemail,resbid,resdate)
+		 values((select nvl(max(resid),0)+1 from resinfo),#{resemail},#{resbid},sysdate )	
+	</insert>
+
+	<delete id="reservedDelete" parameterType="java.util.Map">
+		delete from resinfo where resbid=#{resbid} and resemail = #{resemail}
+	</delete>
 </mapper>
 
 

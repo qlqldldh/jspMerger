@@ -9,8 +9,8 @@ public class AladinOpenAPI {
 
 	final static String Driver = "oracle.jdbc.driver.OracleDriver";
 	final static String URL = "jdbc:oracle:thin:@localhost:1521:XE";
-	final static String user = "c##stmjdi04";
-	final static String psw = "oracle";
+	final static String user = "ssssuu";
+	final static String psw = "9531";
 	
 	static Connection conn = null;
 	static PreparedStatement pstmt = null;
@@ -51,8 +51,6 @@ public class AladinOpenAPI {
 			result1 = "880";
 		} else if ((item.CategoryName).contains("소설") && (item.CategoryName).contains("기타")) {
 			result1 = "890";
-		} else if ((item.CategoryName).contains("소설") && (item.CategoryName).contains("외국")) {
-			result1 = "800";
 		} else if ((item.CategoryName).contains("형이상학")) {
 			result1 = "110";
 		} else if ((item.CategoryName).contains("인식론") || (item.CategoryName).contains("인과론")||(item.CategoryName).contains("인간학")) {

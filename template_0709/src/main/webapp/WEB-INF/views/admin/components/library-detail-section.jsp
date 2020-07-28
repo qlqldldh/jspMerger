@@ -1,4 +1,17 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
+<script>
+	function confirm_delete() {
+		var x = confirm("Are you sure you want to delete?");
+		var dd = document.getElementById("del").value;
+		if (x)
+			location.href='booklistDelete?bid='+dd;
+		else
+			return false;
+	}
+</script>
 <!--Main container start -->
 <main class="ttr-wrapper">
 	<div class="container-fluid">
@@ -6,8 +19,7 @@
 			<h4 class="breadcrumb-title">Book Information</h4>
 			<ul class="db-breadcrumb-list">
 				<li>
-					<!-- <a href="/book/admin/index"><i class="fa fa-home"> -->
-					</i>Menu</a>
+					<!-- <a href="/book/admin/index"><i class="fa fa-home"> --> </i>Menu</a>
 				</li>
 				<li>Library</li>
 				<li><a href="/book/admin/booklistMain">Catalogue</a></li>
@@ -19,9 +31,7 @@
 			<div class="col-lg-12 m-b30">
 				<div class="widget-box">
 					<div class="wc-title">
-						<h4>
-							#${item.bid}: ${item.title}
-						</h4>
+						<h4>#${item.bid}: ${item.title}</h4>
 					</div>
 					<div class="widget-inner">
 						<div class="">
@@ -139,8 +149,10 @@
 											<div class="col-sm-7">
 												<button type="button" class="btn-secondry m-r5"
 													onclick="location.href='booklistUpdate?bid=${item.bid}'">Update</button>
-												<button type="button" class="btn-secondry m-r5"
-													onclick="location.href='booklistDelete?bid=${item.bid}'">Delete</button>
+												<%-- <button type="button" class="btn-secondry m-r5"
+													onclick="location.href='booklistDelete?bid=${item.bid}'">Delete</button> --%>
+												<button type="button" class="btn-secondry m-r5" id="del"
+													onclick="return confirm_delete();" value="${item.bid }">Delete</button>
 												<button type="button" class="btn-secondry m-r5"
 													onclick="location.href='booklistMain'">Go Back</button>
 											</div>

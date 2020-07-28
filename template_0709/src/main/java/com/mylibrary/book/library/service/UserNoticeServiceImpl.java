@@ -20,4 +20,12 @@ public class UserNoticeServiceImpl implements UserNoticeService {
 	UserNoticeMapper userNoticeMapper=sqlSession.getMapper(UserNoticeMapper.class);
 	return userNoticeMapper.showList();
     }
+
+	@Override
+	public List<UserNoticeVO> boardNotice() {
+		UserNoticeMapper userNoticeMapper=sqlSession.getMapper(UserNoticeMapper.class);
+		return userNoticeMapper.boardNotice();
+	}
+
+
 }

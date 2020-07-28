@@ -6,16 +6,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.mylibrary.book.library.mapper.BbooklistMapper">
 <resultMap type="com.mylibrary.book.admin.vo.BooklistVO" id="bbooklistMap">
 	<result property="bid" column="bid" />
-	<result property="title" column="title"/>
-	<result property="author" column="author"/>
-	<result property="publisher" column="publisher"/>
-	<result property="isbn" column="isbn"/>
-	<result property="bcategory" column="bcategory"/>
-	<result property="blocation" column="blocation"/>
-	<result property="bcount" column="bcount"/>
-	<result property="descrip" column="descrip"/>
-	<result property="willdel" column="willdel"/>
-	<result property="img" column="img"/>
+		<result property="title" column="title"/>
+		<result property="author" column="author"/>
+		<result property="publisher" column="publisher"/>
+		<result property="isbn" column="isbn"/>
+		<result property="bcategory" column="bcategory"/>
+		<result property="blocation" column="blocation"/>
+		<result property="bcount" column="bcount"/>
+		<result property="descrip" column="descrip"/>
+		<result property="willdel" column="willdel"/>
+		<result property="img" column="img"/>
 </resultMap>
 
 	<select id="bshowList" resultMap="bbooklistMap">
@@ -30,5 +30,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="selectBoard" resultType="com.mylibrary.book.admin.vo.BooklistVO">	
 		select * from (select rownum rn, a.* from (select * from booklist order by bid desc) a) where rn between #{start} and #{end}	
 	</select>	
+	
+	<select id="selectCount" resultMap="bbooklistMap">
+	<![CDATA[ select * from (select * from booklist order by bcount desc) where rownum <= 4 ]]>
+	</select>
 	
 </mapper>

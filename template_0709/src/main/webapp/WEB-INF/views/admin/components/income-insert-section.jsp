@@ -10,7 +10,7 @@
 				</a></li>
 				<li>Balance</li>
 				<li>Income</li>
-				<li><a href="book/admin/incomeMain"/>Income List</li>
+				<li><a href="book/admin/incomeMain">Income List</a></li>
 				<li>+ Add Income</li>
 				</ul>
 			</div>	
@@ -32,19 +32,21 @@
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">Date of Income</label>
 										<div class="col-sm-7">
-											<input class="form-control" name="idate" id="idate" type="text" placeholder="Idate">
+											<input class="form-control" name="idate" id="idate" type="text" >
+												<span class="help">YY-MM-DD</span>
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Quantity</label>
+										<label class="col-sm-2 col-form-label">$$</label>
 										<div class="col-sm-7">
-											<input class="form-control" name="price" id="price" type="text" placeholder="Price">
+											<input class="form-control" name="price" id="price" type="text" >
 										</div>
 									</div>
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">Form</label>
 										<div class="col-sm-7">
-											<input class="form-control" name="itype" id="itype" type="text" placeholder="Itype">
+											<input class="form-control" name="itype" id="itype" type="text" >
+												<span class="help">Cash or Card</span>
 										</div>
 									</div>
 								

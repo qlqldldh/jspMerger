@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.mylibrary.book.admin.mapper.BooklistMapper;
 import com.mylibrary.book.admin.vo.BooklistVO;
 import com.mylibrary.book.library.mapper.BbooklistMapper;
 import com.mylibrary.book.library.vo.PagingVO;
@@ -42,4 +43,13 @@ public class BbooklistServiceImpl implements BbooklistService {
 		BbooklistMapper booklistMapper = sqlSession.getMapper(BbooklistMapper.class);
 		return booklistMapper.selectBoard(vo);
 	}
+
+
+	@Override
+	public List<BooklistVO> selectCount() {
+		BbooklistMapper booklistMapper = sqlSession.getMapper(BbooklistMapper.class);
+		return booklistMapper.selectCount();
+	}
+	
+	
 }

@@ -6,6 +6,7 @@
 			<h4 class="breadcrumb-title">+ Add Notice</h4>
 			<ul class="db-breadcrumb-list">
 				<li><a href="/book/admin/index"><!-- <i class="fa fa-home"> -->Menu</a></li>
+				<li><a href="/book/admin/noticeMain">Notice</a></li>
 				<li>+Add Notice</li>
 				
 			</ul>
@@ -28,26 +29,26 @@
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Notice ID</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" placeholder="NoticeID" name="nid">
+										<input class="form-control" type="text" name="nid">
 									</div>
 								</div>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Upload Date</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" placeholder="YYYY-MM-DD" name="uldate">
-										<span class="help">Please follow the format</span>
+										<input class="form-control" type="text"  name="uldate">
+										<span class="help">YY-MM-DD</span>
 									</div>
 								</div>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Title</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" placeholder="title" name="title">
+										<input class="form-control" type="text"  name="title">
 									</div>
 								</div>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Contents</label>
 									<div class="col-sm-7">
-										<input class="form-control" type="text" placeholder="Contents" name="ncontents">
+										<input class="form-control" type="text"  name="ncontents">
 									</div>
 								</div>
 								<div class="seperator"></div>

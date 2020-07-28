@@ -29,12 +29,12 @@
 										<h3>Book Information</h3>
 									</div>
 								</div> -->
-								<div class="form-group row">
+								<!-- <div class="form-group row">
 									<label class="col-sm-2 col-form-label">Book ID</label>
 									<div class="col-sm-7">
 										<input class="form-control" name="bid" type="text">
 									</div>
-								</div>
+								</div> -->
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Title</label>
 									<div class="col-sm-7">
@@ -63,7 +63,7 @@
 									<label class="col-sm-2 col-form-label">ISBN</label>
 									<div class="col-sm-7">
 										<input class="form-control" name="isbn" type="text" id="isbn">
-										<span class="help">Just numbers. Without lines.</span>
+										<span class="help">13 numbers. Without lines.</span>
 									</div>
 								</div>
 							</div>
@@ -73,7 +73,7 @@
 									<input class="form-control" name="bpages" type="text">
 								</div>
 							</div> -->
-							<div class="form-group row">
+							<!-- <div class="form-group row">
 								<label class="col-sm-2 col-form-label">Category</label>
 								<div class="col-sm-7">
 									<input class="form-control" name="bcategory" type="text">
@@ -84,7 +84,7 @@
 								<div class="col-sm-7">
 									<input class="form-control" name="blocation" type="text">
 								</div>
-							</div>
+							</div> -->
 							<!-- <div class="form-group row">
 								<label class="col-sm-2 col-form-label">Number of Printed
 									Copies</label>
@@ -92,7 +92,7 @@
 									<input class="form-control" name="bcount" type="text">
 								</div>
 							</div> -->
-							<div class="form-group row">
+							<!-- <div class="form-group row">
 								<label class="col-sm-2 col-form-label">Description</label>
 								<div class="col-sm-7">
 									<input class="form-control" name="descrip" type="text">
@@ -103,7 +103,7 @@
 								<div class="col-sm-7">
 									<input class="form-control" name="willdel" type="text"><span
 										class="help"> "0"= NO, "1"= YES</span>
-									<!-- <div class="col-sm-7">
+									<div class="col-sm-7">
 									<p>
 										<input type="radio" name="willdel">
 										Yes</input>
@@ -111,9 +111,9 @@
 									<p>
 										<input type="radio" name="willdel" />
 										No</input>
-									</p> -->
+									</p>
 								</div>
-							</div>
+							</div> -->
 
 							<div class="seperator"></div>
 

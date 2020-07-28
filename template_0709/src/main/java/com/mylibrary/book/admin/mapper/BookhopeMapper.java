@@ -6,4 +6,5 @@ import com.mylibrary.book.admin.vo.BookhopeVO;
 public interface BookhopeMapper {
 	public List<BookhopeVO> selectAll();
 	public void deletebh(String bhid);
+	//public void bhinsert(String bhid);
 }

@@ -1,11 +1,24 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+
+<script>
+	function confirm_delete() {
+		var x = confirm("Are you sure you want to delete?");
+		var dd = document.getElementById("del").value;
+		if (x)
+			location.href='booklistDelete?bid='+dd;
+		else
+			return false;
+	}
+</script>
 <!--Main container start -->
 <main class="ttr-wrapper">
 	<div class="container-fluid">
 		<div class="db-breadcrumb">
 			<h4 class="breadcrumb-title">Catalogue</h4>
 			<ul class="db-breadcrumb-list">
-				<li><!-- <a href="/book/admin/index"><i class="fa fa-home"> --></i>Menu</a></li>
+				<li><a href="/book/admin/index">Menu</a></li>
 				<li>Library</li>
 				<li>Catalogue</li>
 			</ul>
@@ -25,7 +38,7 @@
 								<!-- <div class="card-header">
 									<i class="fas fa-table mr-1"></i> Catalgoue
 								</div> -->
-							<!-- 	<div
+								<!-- 	<div
 									style="text-align: right; padding-right: 20px; padding-top: 20px;">
 									<button type="button" class="btn-secondry m-r5"
 										onclick="location.href='booklistInsert'">Insert</button>
@@ -34,7 +47,7 @@
 									<div class="table-responsive">
 										<table class="table table-bordered" id="dataTable"
 											width="100%" cellspacing="0">
-										<thead>
+											<thead>
 												<tr>
 													<th>Title</th>
 													<th>Author</th>
@@ -50,7 +63,7 @@
 													<th>
 												</tr>
 											</thead>
-										<tfoot style="border-color: white;">
+											<tfoot style="border-color: white;">
 												<!-- <tr>
 													<th>Book ID</th>
 													<th>Title</th>
@@ -64,7 +77,7 @@
 													<th>Description</th>
 													<th>Number of Pages</th>
 													<th>Discontinue -->
-													 <!-- <p>
+												<!-- <p>
 										<input type="radio" >
 										Yes</input>
 									</p>
@@ -72,10 +85,10 @@
 										<input type="radio" />
 										No</input>
 									</p> -->
-													<!-- <th>
+												<!-- <th>
 												</tr> -->
 											</tfoot>
-									<tbody>
+											<tbody>
 												<c:forEach var="book" items="${booklist }">
 													<tr>
 														<td><a href="booklistDetail?bid=${book.bid }">${book.title}</a></td>
@@ -85,15 +98,18 @@
 														<td>${book.isbn}</td>
 														<td>${book.bcategory}</td>
 														<td>${book.blocation}</td>
-													<%-- 	<td>${book.bcount}</td>
+														<%-- 	<td>${book.bcount}</td>
 														<td>${book.descrip}</td>
 														<td>${book.bpages}</td>
 														<td>${book.willdel}</td> --%>
 
 														<td><button type="button" class="btn-secondry m-r5"
 																onclick="location.href='booklistUpdate?bid=${book.bid}'">Update</button>&nbsp;
-															<button type="button" class="btn-secondry m-r5"
-																onclick="location.href='booklistDelete?bid=${book.bid}'">Delete</button></td>
+															<%-- button type="button" class="btn-secondry m-r5"
+															onclick="location.href='booklistDelete?bid=${book.bid}'">Delete</button>
+															--%>
+															<button type="button" class="btn-secondry m-r5" id="del"
+																onclick="return confirm_delete();" value="${book.bid }">Delete</button></td>
 													</tr>
 												</c:forEach>
 											</tbody>
@@ -110,4 +126,4 @@
 	</div>
 	</div>
 </main>
-<div class="ttr-overlay"></div> 
+<div class="ttr-overlay"></div>

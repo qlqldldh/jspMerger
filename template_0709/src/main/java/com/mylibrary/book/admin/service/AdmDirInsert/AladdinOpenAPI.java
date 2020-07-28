@@ -16,8 +16,8 @@ public class AladdinOpenAPI {
 	
 	final static String Driver = "oracle.jdbc.driver.OracleDriver";
 	final static String URL = "jdbc:oracle:thin:@localhost:1521:XE";
-	final static String user = "c##stmjdi04";
-	final static String psw = "oracle";
+	final static String user = "ssssuu";
+	final static String psw = "9531";
 	
 	static Connection conn = null;
 	static PreparedStatement pstmt = null;

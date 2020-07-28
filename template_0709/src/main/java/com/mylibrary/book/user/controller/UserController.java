@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mylibrary.book.admin.dao.badmin.BadminDAO;
 import com.mylibrary.book.admin.vo.BadminVO;
+import com.mylibrary.book.library.service.BbooklistService;
+import com.mylibrary.book.library.service.UserNoticeService;
 import com.mylibrary.book.user.dao.UserDAO;
 import com.mylibrary.book.user.service.ShaEncoder;
 
@@ -28,11 +30,18 @@ public class UserController {
 	UserDAO userDao;
 	
 	@Inject
+	BbooklistService bbooklistService;
+	
+	@Inject
+	UserNoticeService userNoticeService;
+	
+	@Inject
 	BadminDAO badminDAO;
 
 	// index 페이지로 이동
 	@RequestMapping("/index")
 	public String home(HttpServletRequest request, Model model) {
+		
 		HttpSession session = request.getSession();
 		if(session.getAttribute("email")!=null) {
 			if(badminDAO.showAll().contains(new BadminVO((String)session.getAttribute("email"))))
@@ -40,9 +49,14 @@ public class UserController {
 			else session.setAttribute("role", "gen");
 		}
 		
+		model.addAttribute("bbooklist", bbooklistService.selectCount());
+		model.addAttribute("bnotice", userNoticeService.boardNotice());
+		System.out.println(userNoticeService.boardNotice().size());
+		
 		return "library/index"; // home.jsp로 이동
-	}
-
+		
+ 	}
+	
 	// 에러 페이지로 이동
 	@RequestMapping("/error") // 시작 페이지
 	public String error(Model model) {
@@ -122,7 +136,7 @@ public class UserController {
 	@RequestMapping("/insertUser")
 	public String insertUser(@RequestParam String email, @RequestParam String passwd, @RequestParam String passwdre,
 			@RequestParam String name, @RequestParam String birth, @RequestParam String phone,
-			@RequestParam String address) {
+			@RequestParam String address, @RequestParam String authority) {
 		// 비밀번호 암호화
 		if (!(passwd.equals(passwdre)) || (userDao.selectUser(email) != null)) {
 //			System.out.println("password가 다르거나 이미 존재하는 이메일입니다.");
@@ -138,7 +152,7 @@ public class UserController {
 		map.put("birth", birth);
 		map.put("phone", phone);
 		map.put("address", address);
-		map.put("authority", "ROLE_USER");
+		map.put("authority", authority);
 		// affected rows, 영향을 받은 행의 수가 리턴됨
 		int result = userDao.insertUser(map);
 		

@@ -1,11 +1,24 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+
+<script>
+	function confirm_delete() {
+		var x = confirm("Are you sure you want to delete?");
+		var dd = document.getElementById("del").value;
+		if (x)
+			location.href = 'genDelete?email=' + dd;
+		else
+			return false;
+	}
+</script>
 <!--Main container start -->
 	<main class="ttr-wrapper">
 		<div class="container-fluid">
 			<div class="db-breadcrumb">
 				<h4 class="breadcrumb-title">User List</h4>
 				<ul class="db-breadcrumb-list">
-					<li><a href="#">Menu</a></li>
+					<li><a href="/book/admin/index">Menu</a></li>
 					<li>Users</li>
 					<li>User List</li>
 				</ul>
@@ -37,16 +50,16 @@
 														<th>Email</th>
 														<th>Name</th>
 														<th>Phone</th>
-														<th>Option</th>
+														<th></th>
 														<!-- <th>Update</th> -->
 													</tr>
 												</thead>
 												<tfoot style="border-color:white;">
 													<tr>
-														<th>Email</th>
+													<!-- 	<th>Email</th>
 														<th>Name</th>
 														<th>Phone</th>
-														<th>Option</th>
+														<th>Option</th> -->
 														<!-- <th>Update</th> -->
 														
 													</tr>
@@ -58,7 +71,11 @@
 														<td>${itm.name }</td>
 														<td>${itm.phone }</td>
 														<td>
-														<button type="button" class="btn-secondry m-r5" onclick="location.href='genDelete?email=${itm.email}'">Delete</button></td>
+														<%-- <button type="button" class="btn-secondry m-r5" onclick="location.href='genDelete?email=${itm.email}'">Delete</button> --%>
+														
+														<button type="button" class="btn-secondry m-r5" id="del"
+																onclick="return confirm_delete();" value="${itm.email}">Delete</button>
+														</td>
 													</tr>
 													</c:forEach>
 												</tbody>

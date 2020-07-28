@@ -7,5 +7,7 @@ import com.mylibrary.book.library.vo.UserNoticeVO;
 public interface UserNoticeService {
 
     List<UserNoticeVO> showList();
+    
+    public List<UserNoticeVO> boardNotice();
 
 }

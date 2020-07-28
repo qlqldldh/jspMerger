@@ -1,12 +1,26 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+
+<script>
+	function confirm_delete() {
+		var x = confirm("Are you sure you want to delete?");
+		var dd = document.getElementById("del").value;
+		if (x)
+			location.href = 'noticeDelete?nid=' + dd;
+		else
+			return false;
+	}
+</script>
 <!--Main container start -->
 <main class="ttr-wrapper">
 	<div class="container-fluid">
 		<div class="db-breadcrumb">
 			<h4 class="breadcrumb-title">Notice</h4>
 			<ul class="db-breadcrumb-list">
-				<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-				<li>notice-Main</li>
+				<li><a href="/book/admin/index">Menu</a></li>
+				<li>Notice</li>
+				<li>Notices List</li>
 			</ul>
 		</div>
 		<div class="row">
@@ -14,7 +28,7 @@
 			<div class="col-lg-12 m-b30">
 				<div class="widget-box">
 					<div class="wc-title">
-						<h4>Notice</h4>
+						<h4>All Notices</h4>
 					</div>
 					<div class="widget-inner"></div>
 					<br />
@@ -38,10 +52,10 @@
 											</thead>
 											<tfoot style="border-color: white;">
 												<tr>
-													<th>Notice ID</th>
+													<!-- <th>Notice ID</th>
 													<th>Upload Date</th>
 													<th>Title</th>
-													<th></th>
+													<th></th> -->
 
 												</tr>
 											</tfoot>
@@ -53,8 +67,10 @@
 														<td>${itm.title}</td>
 														<td><button type="button" class="btn-secondry m-r5"
 																onclick="location.href='noticeUpdate?nid=${itm.nid}'">Update</button>&nbsp;
-															<button type="button" class="btn-secondry m-r5"
-																onclick="location.href='noticeDelete?nid=${itm.nid}'">Delete</button></td>
+															<%-- <button type="button" class="btn-secondry m-r5"
+																onclick="location.href='noticeDelete?nid=${itm.nid}'">Delete</button> --%>
+															<button type="button" class="btn-secondry m-r5" id="del"
+																onclick="return confirm_delete();" value="${itm.nid}">Delete</button></td>
 													</tr>
 												</c:forEach>
 											</tbody>
@@ -71,4 +87,4 @@
 	</div>
 	</div>
 </main>
-<div class="ttr-overlay"></div> 
+<div class="ttr-overlay"></div>

@@ -8,6 +8,8 @@ import com.mylibrary.book.library.vo.UserNoticeVO;
 public interface UserNoticeMapper {
 
     public List<UserNoticeVO> showList();
+    
+    public List<UserNoticeVO> boardNotice();
 
    
 

@@ -1,12 +1,24 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+
+<script>
+	function confirm_delete() {
+		var x = confirm("Are you sure you want to delete?");
+		var dd = document.getElementById("del").value;
+		if (x)
+			location.href = 'incomeDelete?incomenum=' + dd;
+		else
+			return false;
+	}
+</script>
 <!--Main container start -->
 <main class="ttr-wrapper">
 	<div class="container-fluid">
 		<div class="db-breadcrumb">
 			<h4 class="breadcrumb-title">Income Information</h4>
 			<ul class="db-breadcrumb-list">
-				<li><a href="/admin/index">
-						<!-- <i class="fa fa-home"> -->
+				<li><a href="/admin/index"> <!-- <i class="fa fa-home"> -->
 						Menu
 				</a></li>
 				<li>Balance</li>
@@ -50,7 +62,7 @@
 											</thead>
 											<tfoot style="border-color: white;">
 												<tr>
-												<!-- 	<th>incomenum</th>
+													<!-- 	<th>incomenum</th>
 													<th>Idate</th>
 													<th>Price</th>
 													<th>Itype</th>
@@ -69,8 +81,11 @@
 
 														<td><button type="button" class="btn-secondry m-r5"
 																onclick="location.href='incomeUpdate?incomenum=${icl.incomenum}'">Update</button>&nbsp;
-															<button type="button" class="btn-secondry m-r5"
-																onclick="location.href='incomeDelete?incomenum=${icl.incomenum}'">Delete</button></td>
+															<%-- 	<button type="button" class="btn-secondry m-r5"
+																onclick="location.href='incomeDelete?incomenum=${icl.incomenum}'">Delete</button> --%>
+															<button type="button" class="btn-secondry m-r5" id="del"
+																onclick="return confirm_delete();"
+																value="${icl.incomenum}">Delete</button></td>
 													</tr>
 												</c:forEach>
 											</tbody>

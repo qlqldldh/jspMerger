@@ -21,7 +21,6 @@ public class BookhopeServiceImpl implements BookhopeService {
 	}
 	@Override
 	public void deletebh(String bhid){
-		System.out.println("삭제하러 왔음.");
 		BookhopeMapper bookhopeMapper = sqlSession.getMapper(BookhopeMapper.class);
 		bookhopeMapper.deletebh(bhid);
 	}

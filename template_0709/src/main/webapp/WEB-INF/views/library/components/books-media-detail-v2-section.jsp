@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- Start: Products Section -->
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
@@ -28,7 +29,7 @@
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-3 ">
-                                        <div class="post-right-content">
+                                        <%-- <div class="post-right-content">
                                             <h4>Available now</h4>
                                             <p><strong>Total Copies:</strong> ${booklist.bcount}</p>
                                             <p><strong>Available:</strong> 01</p>
@@ -39,6 +40,68 @@
                                             <a href="#." class="btn btn-dark-gray">Place a Hold</a> 
                                             <!-- <a href="#." class="btn btn-dark-gray">View sample</a>  -->
                                             <a href="#." class="btn btn-dark-gray">Find Similar Titles</a>
+                                        </div>
+                                    </div> --%>
+                                    <div class="post-right-content">
+                                            <h4>Available now</h4>
+                                            <p><strong>Total Copies:</strong> ${booklist.bcount}</p>
+                                            <p><strong>Available:</strong> 01</p>
+                                            <p><strong>Holds:</strong>  01</p>
+                                            <p><strong>On the shelves now at:</strong> ${booklist.blocation}</p>
+                                            <c:choose>
+												<c:when test="${in == 'lending'}">
+													<a href="${pageContext.request.contextPath}/user/lendinginsertdo?bid=${booklist.bid }" class="btn btn-dark-gray"></i>Lending</a>
+												</c:when>
+											
+												<c:when test="${in == 'return'}">
+													<a href="${pageContext.request.contextPath}/user/returndeletedo?bid=${booklist.bid }" class="btn btn-dark-gray"></i>Return</a>
+													<a href="${pageContext.request.contextPath}/user/exdateupdatedo?bid=${booklist.bid }" class="btn btn-dark-gray"></i>Expanded</a>
+												</c:when>
+												
+												<c:when test="${in == 'expanded'}">
+													<a href="${pageContext.request.contextPath}/user/returndeletedo?bid=${booklist.bid }" class="btn btn-dark-gray"></i>Return</a>
+												</c:when>
+																								
+												<c:when test="${in == 'reserved'}">
+													<a href="${pageContext.request.contextPath}/user/reservedinsertdo?bid=${booklist.bid }" class="btn btn-dark-gray"></i>Reserved</a>
+												</c:when>
+												
+												<c:when test="${in == 'reserved cancel'}">
+													<a href="${pageContext.request.contextPath}/user/reserveddeletedo?bid=${booklist.bid }" class="btn btn-dark-gray"></i>Reserved Cancel</a>
+												</c:when>
+												
+												<c:when test="${out == 'lending'}">
+													<a href="login" class="btn btn-dark-gray"></i>Lending</a>
+												</c:when>
+												
+												<c:when test="${out == 'reserved'}"><a href="login">
+													<a href="login" class="btn btn-dark-gray"></i>Reserved</a>
+												</c:when>
+												
+												
+											<%-- 	<c:when test="${}">
+													<a href="${pageContext.request.contextPath}/user/resinsertdo?bid=${booklist.bid }" class="btn btn-dark-gray"></i>Reserved</a>
+												</c:when>
+												
+																								
+												<c:when test="${}">
+													<a href="${pageContext.request.contextPath}/user/login" class="btn btn-dark-gray"></i>Lending</a>
+												</c:when>
+												
+												
+												<c:when test="${}">
+													<a href="${pageContext.request.contextPath}/user/login" class="btn btn-dark-gray"></i>Reserved</a>
+												</c:when>
+												 --%>
+												
+												
+											</c:choose>
+                                            
+                                            <!-- <a href="#." class="btn btn-dark-gray">LENDING</a> --> 
+                                           <!--  <a href="#." class="available-location">Availability by Location <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                                            <a href="#." class="btn btn-dark-gray">Place a Hold</a> 
+                                            <a href="#." class="btn btn-dark-gray">View sample</a> 
+                                            <a href="#." class="btn btn-dark-gray">Find Similar Titles</a> -->
                                         </div>
                                     </div>
                                   <!--  <div class="clearfix"></div> --> <!-- clearfix 주석처리하여 이미지 라인부 배경 색깔 제거 -->
@@ -150,4 +213,3 @@
                 </main>
             </div>
         </div>
-        

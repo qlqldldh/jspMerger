@@ -5,7 +5,7 @@
 		<div class="db-breadcrumb">
 			<h4 class="breadcrumb-title">Edit Book</h4>
 			<ul class="db-breadcrumb-list">
-				<li><!-- <a href="/book/admin/index"><i class="fa fa-home"> --></i>Menu</a></li>
+				<li><a href="/book/admin/index">Menu</a></li>
 				<li>Library</li>
 				<li>Catalogue</li>
 				<li>Edit Book</li>
@@ -110,7 +110,7 @@
 							<div class="form-group row">
 								<label class="col-sm-2 col-form-label">Discontinue book</label>
 								<div class="col-sm-7">
-								<input class="form-control" name="willdel" type="text"
+									<input class="form-control" name="willdel" type="text"
 										value="${item.willdel}">
 									<%-- <p>
 										<input type="radio" name="willdel" value="${item.willdel }=0">
@@ -136,16 +136,17 @@
 												<div class="col-sm-7">
 													<input type="submit" class="btn" value="Update" /> <input
 														type="reset" class="btn-secondry" value="Reset" />
-														<button type="button" class="btn-secondry m-r5" onclick="location.href='booklistMain'">Cancel</button>
+													<button type="button" class="btn-secondry m-r5"
+														onclick="location.href='booklistMain'">Cancel</button>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-					
-					</form>
-				</div>
+
+						</form>
+					</div>
 
 
 				</div>
