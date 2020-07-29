@@ -23,7 +23,7 @@ public class AladinOpenAPI {
 	}
 	
 	static int findBid() throws Exception{
-		pstmt=conn.prepareStatement("select count(*) from booklist");
+		pstmt=conn.prepareStatement("select max(to_number(bid)) from booklist");
 		int ret = 0;
 		rs=pstmt.executeQuery();
 		while(rs.next()) ret=rs.getInt(1);

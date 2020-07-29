@@ -1,9 +1,11 @@
 package com.mylibrary.book.admin.vo;
 
+import java.io.Serializable;
+
 import org.springframework.stereotype.Component;
 
 @Component
-public class OrdersVO {
+public class OrdersVO implements Serializable{
 
 	private int ordernum;
 	private String odate;
@@ -82,7 +84,17 @@ public class OrdersVO {
 				+ ", isbn=" + isbn + ", price=" + price + ", unit=" + unit + ", extracost=" + extracost + ", descript="
 				+ descript + ", totalcost=" + totalcost + "]";
 	}
-	
-	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof OrdersVO) {
+			OrdersVO temp = (OrdersVO) obj;
+			return this.ordernum==temp.getOrdernum();
+		}
+		return false;
+	}
+	@Override
+	public int hashCode() {
+		return ordernum + odate.hashCode();
+	}
 	
 }

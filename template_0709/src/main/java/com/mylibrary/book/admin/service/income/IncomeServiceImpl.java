@@ -6,6 +6,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.google.code.ssm.api.ReadThroughAssignCache;
+import com.google.code.ssm.api.ReturnDataUpdateContent;
+import com.google.code.ssm.api.UpdateAssignCache;
 import com.mylibrary.book.admin.mapper.IncomeMapper;
 import com.mylibrary.book.admin.vo.IncomeVO;
 
@@ -16,15 +19,19 @@ public class IncomeServiceImpl implements IncomeService {
 	private SqlSession sqlSession;
 	
 	@Override
+	@ReadThroughAssignCache(namespace="admin", assignedKey="incomelist")
 	public List<IncomeVO> showAll() {
 		IncomeMapper incomeMapper = sqlSession.getMapper(IncomeMapper.class);
 		return incomeMapper.selectAll();
 	}
 
 	@Override
-	public void incomeInsert(IncomeVO vo) {
+	@ReturnDataUpdateContent
+	@UpdateAssignCache(namespace="admin")
+	public List<IncomeVO> incomeInsert(IncomeVO vo) {
 		IncomeMapper incomeMapper = sqlSession.getMapper(IncomeMapper.class);
 		incomeMapper.incomeInsert(vo);
+		return incomeMapper.selectAll();
 	}
 
 	@Override

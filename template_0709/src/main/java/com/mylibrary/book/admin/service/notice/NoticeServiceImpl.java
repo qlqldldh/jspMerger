@@ -1,6 +1,5 @@
 package com.mylibrary.book.admin.service.notice;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -8,6 +7,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.google.code.ssm.api.ReadThroughAssignCache;
+import com.google.code.ssm.api.ReturnDataUpdateContent;
+import com.google.code.ssm.api.UpdateAssignCache;
 import com.mylibrary.book.admin.mapper.NoticeMapper;
 import com.mylibrary.book.admin.vo.NoticeVO;
 
@@ -18,16 +20,19 @@ public class NoticeServiceImpl implements NoticeService {
 	private SqlSession sqlSession;
 
 	@Override
+	@ReadThroughAssignCache(namespace="admin", assignedKey="noticelist")
 	public List<NoticeVO> showList() {
 		NoticeMapper noticeMapper = sqlSession.getMapper(NoticeMapper.class);
 		return noticeMapper.showList();
 	}
 
 	@Override
-	public void insertNotice(NoticeVO vo) {
+	@ReturnDataUpdateContent
+	@UpdateAssignCache(namespace="admin", assignedKey="noticelist")
+	public List<NoticeVO> insertNotice(NoticeVO vo) {
 		NoticeMapper noticeMapper = sqlSession.getMapper(NoticeMapper.class);
 		noticeMapper.insertNotice(vo);
-
+		return noticeMapper.showList();
 	}
 
 	@Override

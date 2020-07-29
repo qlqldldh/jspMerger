@@ -1,9 +1,13 @@
 package com.mylibrary.book.admin.vo;
 
+import java.io.Serializable;
+
 import org.springframework.stereotype.Component;
 
+import com.google.code.ssm.api.CacheKeyMethod;
+
 @Component
-public class BooklistVO {
+public class BooklistVO implements Serializable{
 
     private String bid;
     private String title;
@@ -26,6 +30,8 @@ public class BooklistVO {
 	public void setImg(String img) {
 		this.img = img;
 	}
+	
+	@CacheKeyMethod
 	public String getBid() {
         return bid;
     }
@@ -50,12 +56,7 @@ public class BooklistVO {
     public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
-//    public String getPubdate() {
-//        return pubdate;
-//    }
-//    public void setPubdate(String pubdate) {
-//        this.pubdate = pubdate;
-//    }
+
     public String getIsbn() {
         return isbn;
     }
@@ -86,12 +87,7 @@ public class BooklistVO {
     public void setDescrip(String descrip) {
         this.descrip = descrip;
     }
-//    public int getBpages() {
-//        return bpages;
-//    }
-//    public void setBpages(int bpages) {
-//        this.bpages = bpages;
-//    }
+
     public int getWilldel() {
         return willdel;
     }
@@ -104,6 +100,19 @@ public class BooklistVO {
 				+ ", isbn=" + isbn + ", bcategory=" + bcategory + ", blocation=" + blocation + ", bcount=" + bcount
 				+ ", descrip=" + descrip + ", willdel=" + willdel + ", img=" + img + "]";
 	}
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof BooklistVO) {
+			BooklistVO temp = (BooklistVO)obj;
+			return this.bid.equals(temp.getBid());
+		}
+		return false;
+	}
+	@Override
+	public int hashCode() {
+		return bid.hashCode();
+	}
     
+	
   
 }

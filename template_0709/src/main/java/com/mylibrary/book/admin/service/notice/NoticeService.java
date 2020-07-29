@@ -9,7 +9,7 @@ public interface NoticeService {
 
     public List<NoticeVO> showList();
 
-    public void insertNotice(NoticeVO vo);
+    public List<NoticeVO> insertNotice(NoticeVO vo);
 
     public void deleteNotice(String nid);
 

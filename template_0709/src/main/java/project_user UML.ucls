@@ -4,7 +4,7 @@
   <class id="1" language="java" name="com.mylibrary.book.user.controller.UserRestController" project="template_0709" 
     file="/template_0709/src/main/java/com/mylibrary/book/user/controller/UserRestController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="880" y="860"/>    
+    <position height="-1" width="-1" x="879" y="811"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -14,7 +14,7 @@
   <class id="2" language="java" name="com.mylibrary.book.user.controller.UserController" project="template_0709" 
     file="/template_0709/src/main/java/com/mylibrary/book/user/controller/UserController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="912" y="306"/>    
+    <position height="-1" width="-1" x="911" y="257"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -23,7 +23,7 @@
   </class>  
   <interface id="3" language="java" name="com.mylibrary.book.user.dao.UserDAO" project="template_0709" 
     file="/template_0709/src/main/java/com/mylibrary/book/user/dao/UserDAO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="434" y="532"/>    
+    <position height="-1" width="-1" x="433" y="483"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -33,7 +33,7 @@
   <class id="4" language="java" name="com.mylibrary.book.user.dao.UserDAOImpl" project="template_0709" 
     file="/template_0709/src/main/java/com/mylibrary/book/user/dao/UserDAOImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="439" y="222"/>    
+    <position height="-1" width="-1" x="438" y="173"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -43,7 +43,7 @@
   <class id="5" language="java" name="com.mylibrary.book.user.service.UserAuthenticationService" project="template_0709" 
     file="/template_0709/src/main/java/com/mylibrary/book/user/service/UserAuthenticationService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="434" y="804"/>    
+    <position height="-1" width="-1" x="433" y="755"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -53,7 +53,7 @@
   <class id="6" language="java" name="com.mylibrary.book.user.service.UserDeniedHandler" project="template_0709" 
     file="/template_0709/src/main/java/com/mylibrary/book/user/service/UserDeniedHandler.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1391" y="840"/>    
+    <position height="-1" width="-1" x="1390" y="791"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -63,7 +63,7 @@
   <class id="7" language="java" name="com.mylibrary.book.user.service.UserLoginFailureHandler" project="template_0709" 
     file="/template_0709/src/main/java/com/mylibrary/book/user/service/UserLoginFailureHandler.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1468" y="172"/>    
+    <position height="-1" width="-1" x="1467" y="123"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -73,7 +73,7 @@
   <class id="8" language="java" name="com.mylibrary.book.user.service.UserLoginSuccessHandler" project="template_0709" 
     file="/template_0709/src/main/java/com/mylibrary/book/user/service/UserLoginSuccessHandler.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1450" y="317"/>    
+    <position height="-1" width="-1" x="1449" y="268"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -83,7 +83,7 @@
   <class id="9" language="java" name="com.mylibrary.book.user.service.UserLogoutSuccessHandler" project="template_0709" 
     file="/template_0709/src/main/java/com/mylibrary/book/user/service/UserLogoutSuccessHandler.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1432" y="468"/>    
+    <position height="-1" width="-1" x="1431" y="419"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -93,7 +93,7 @@
   <class id="10" language="java" name="com.mylibrary.book.user.service.ShaEncoder" project="template_0709" 
     file="/template_0709/src/main/java/com/mylibrary/book/user/service/ShaEncoder.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1359" y="661"/>    
+    <position height="-1" width="-1" x="1358" y="612"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -102,45 +102,61 @@
   </class>  
   <class id="11" language="java" name="com.mylibrary.book.user.vo.UserDTO" project="template_0709" 
     file="/template_0709/src/main/java/com/mylibrary/book/user/vo/UserDTO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="929" y="621"/>    
+    <position height="-1" width="-1" x="928" y="572"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <realization id="12">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="3"/>  
-  </realization>  
-  <association id="13">    
+  <association id="12">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="14" name="userDao"/>      
-      <multiplicity id="15" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="16">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="17" name="shaEncoder"/>      
-      <multiplicity id="18" minimum="0" maximum="1"/>    
+      <attribute id="13" name="shaEncoder">        
+        <position height="0" width="0" x="-1" y="-49"/>      
+      </attribute>      
+      <multiplicity id="14" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-1" y="-49"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <realization id="15">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <association id="16">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="17" name="userDao">        
+        <position height="0" width="0" x="-1" y="-49"/>      
+      </attribute>      
+      <multiplicity id="18" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-1" y="-49"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <association id="19">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="20" name="userDao"/>      
-      <multiplicity id="21" minimum="0" maximum="1"/>    
+      <attribute id="20" name="userDao">        
+        <position height="0" width="0" x="-1" y="-49"/>      
+      </attribute>      
+      <multiplicity id="21" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-1" y="-49"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="22">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="23" name="shaEncoder"/>      
-      <multiplicity id="24" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="23" name="shaEncoder">        
+        <position height="0" width="0" x="-1" y="-49"/>      
+      </attribute>      
+      <multiplicity id="24" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-1" y="-49"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  

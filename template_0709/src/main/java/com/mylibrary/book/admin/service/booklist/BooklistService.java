@@ -8,7 +8,7 @@ import com.mylibrary.book.admin.vo.BooklistVO;
 public interface BooklistService {
     public List<BooklistVO> showList();
 
-    public void insertBooklist(BooklistVO vo);
+    public List<BooklistVO> insertBooklist(BooklistVO vo);
 
     public void deleteBooklist(String bid);
 
