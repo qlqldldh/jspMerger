@@ -11,6 +11,4 @@ public interface OrdersService {
 	public void insertOrders(OrdersVO vo); //쓰기
 	public int updateOrders(OrdersVO vo);  //수정
 	public int deleteOrders(OrdersVO vo);  //삭제
-
-
 }

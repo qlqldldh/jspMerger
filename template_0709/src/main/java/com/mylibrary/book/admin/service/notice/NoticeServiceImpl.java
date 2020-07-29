@@ -14,36 +14,40 @@ import com.mylibrary.book.admin.vo.NoticeVO;
 @Service
 public class NoticeServiceImpl implements NoticeService {
 
-    @Autowired
-    private SqlSession sqlSession;
+	@Autowired
+	private SqlSession sqlSession;
 
-    @Override
-    public List<NoticeVO> showList() {
-	NoticeMapper noticeMapper=sqlSession.getMapper(NoticeMapper.class);
-	return noticeMapper.showList();
-    }
+	@Override
+	public List<NoticeVO> showList() {
+		NoticeMapper noticeMapper = sqlSession.getMapper(NoticeMapper.class);
+		return noticeMapper.showList();
+	}
 
-    @Override
-    public void insertNotice(NoticeVO vo) {
-	NoticeMapper noticeMapper=sqlSession.getMapper(NoticeMapper.class);
-	noticeMapper.insertNotice(vo);
+	@Override
+	public void insertNotice(NoticeVO vo) {
+		NoticeMapper noticeMapper = sqlSession.getMapper(NoticeMapper.class);
+		noticeMapper.insertNotice(vo);
 
-    }
+	}
 
-    @Override
-    public void deleteNotice(String nid) {
-	NoticeMapper noticeMapper=sqlSession.getMapper(NoticeMapper.class);
-	noticeMapper.deleteNotice(nid);
+	@Override
+	public void deleteNotice(String nid) {
+		NoticeMapper noticeMapper = sqlSession.getMapper(NoticeMapper.class);
+		noticeMapper.deleteNotice(nid);
 
-    }
+	}
 
-    @Override
-    public void updateNotice(Map<String, String> map) {
-	NoticeMapper noticeMapper= sqlSession.getMapper(NoticeMapper.class);
-	noticeMapper.updateNotice(map);
-    }
+	@Override
+	public void updateNotice(Map<String, String> map) {
+		NoticeMapper noticeMapper = sqlSession.getMapper(NoticeMapper.class);
+		noticeMapper.updateNotice(map);
+	}
 
-
-
+	@Override
+	public NoticeVO getNotice(String nid) {
+		List<NoticeVO> temp = showList();
+		for(NoticeVO nv:temp) if(nv.getNid().equals(nid)) return nv;
+		return null;
+	}
 
 }

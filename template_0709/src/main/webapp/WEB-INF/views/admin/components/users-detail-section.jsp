@@ -95,7 +95,7 @@
 											onclick="location.href='genUpdate?email=${bgen.email}'">Update</button>
 										<%-- <button type="button" class="btn-secondry m-r5" onclick="location.href='genDelete?email=${bgen.email}'">Delete</button> --%>
 										<button type="button" class="btn-secondry m-r5" id="del"
-											onclick="return confirm_delete();" value="${bgen.email}">Delete</button>
+											onclick="confirm_delete()" value="${bgen.email}">Delete</button>
 										<button type="button" class="btn-secondry m-r5"
 											onclick="location.href='genMain'">Go Back</button>
 									</div>

@@ -25,6 +25,19 @@ http://maven.apache.org/maven-v4_0_0.xsd">
 		    <version>2.10.0</version>
 		</dependency>
 		
+		<!-- memcache -->
+		<dependency>
+		    <groupId>com.google.code.simple-spring-memcached</groupId>
+		    <artifactId>simple-spring-memcached</artifactId>
+		    <version>4.1.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.google.code.simple-spring-memcached</groupId>
+		    <artifactId>xmemcached-provider</artifactId>
+		    <version>4.1.1</version>
+		</dependency>
+		
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>

@@ -3,9 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <script>
-	function confirm_delete() {
+	function confirm_delete(dd) {
 		var x = confirm("Are you sure you want to delete?");
-		var dd = document.getElementById("del").value;
 		if (x)
 			location.href = 'bhDel?bhid=' + dd;
 		else
@@ -84,7 +83,7 @@
 														<td>
 															<%-- <button type="button" class="btn-secondry m-r5" onclick="location.href='bhDel?bhid=${bh.bhid}'">Deny</button>&nbsp; --%>
 															<button type="button" class="btn-secondry m-r5" id="del"
-																onclick="return confirm_delete();" value="${bh.bhid }">Deny</button>
+																onclick="confirm_delete(${bh.bhid})" value="${bh.bhid }">Deny</button>
 															&nbsp;
 															<button type="button" class="btn-secondry m-r5"
 																onclick="location.href='bhInsert?btitle=${bh.btitle}&bauthor=${bh.bauthor}&bpublisher=${bh.bpublisher}&bhid=${bh.bhid}'">Accept</button>

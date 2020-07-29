@@ -10,4 +10,5 @@ public interface HrempService {
 	public void insertHR(HrempVO hv);
 	public void deleteHR(String tel);
 	public void updateHR(Map<String,String> mp);
+	public HrempVO getHremp(String tel);
 }

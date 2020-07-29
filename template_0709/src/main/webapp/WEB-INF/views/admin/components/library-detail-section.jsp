@@ -152,7 +152,7 @@
 												<%-- <button type="button" class="btn-secondry m-r5"
 													onclick="location.href='booklistDelete?bid=${item.bid}'">Delete</button> --%>
 												<button type="button" class="btn-secondry m-r5" id="del"
-													onclick="return confirm_delete();" value="${item.bid }">Delete</button>
+													onclick="confirm_delete()" value="${item.bid }">Delete</button>
 												<button type="button" class="btn-secondry m-r5"
 													onclick="location.href='booklistMain'">Go Back</button>
 											</div>

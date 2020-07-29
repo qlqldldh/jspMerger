@@ -127,7 +127,7 @@
 										<%-- <button type="button" class="btn-secondry m-r5"
 											onclick="location.href='ordersDeletedo?ordernum=${itm.ordernum}'">Delete</button> --%>
 										<button type="button" class="btn-secondry m-r5" id="del"
-											onclick="return confirm_delete();" value="${itm.ordernum}">Delete</button>
+											onclick="confirm_delete()" value="${itm.ordernum}">Delete</button>
 										<button type="button" class="btn-secondry m-r5"
 											onclick="location.href='ordersMain'">Go Back</button>
 									</div>

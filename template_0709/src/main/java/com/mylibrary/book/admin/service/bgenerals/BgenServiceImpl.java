@@ -6,6 +6,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.google.code.ssm.api.ParameterValueKeyProvider;
+import com.google.code.ssm.api.ReadThroughAssignCache;
+import com.google.code.ssm.api.ReadThroughSingleCache;
 import com.mylibrary.book.admin.mapper.BgenMapper;
 import com.mylibrary.book.admin.vo.BgenVO;
 
@@ -15,13 +18,15 @@ public class BgenServiceImpl implements BgenService{
 	SqlSession sqlSession;
 
 	@Override
+	@ReadThroughAssignCache(namespace="bgen", assignedKey="list")
 	public List<BgenVO> showAll() {
 		BgenMapper bgenMapper = sqlSession.getMapper(BgenMapper.class);
 		return bgenMapper.selectAll();
 	}
 
 	@Override
-	public BgenVO getBgen(String email) {
+	@ReadThroughSingleCache(namespace="bgen")
+	public BgenVO getBgen(@ParameterValueKeyProvider String email) {
 		BgenMapper bgenMapper = sqlSession.getMapper(BgenMapper.class);
 		
 		List<BgenVO> lst = bgenMapper.selectAll();

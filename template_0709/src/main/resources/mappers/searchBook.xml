@@ -23,11 +23,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="showList" resultMap="booklistMap">
 		SELECT * FROM booklist
 	</select>
-	
-	<select id="searchBook" resultMap="booklistMap"
-		parameterType="java.lang.String">
-		select*from booklist where title like '%#{title}%'
-	</select>
 
 
 </mapper>

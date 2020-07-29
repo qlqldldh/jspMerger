@@ -41,8 +41,7 @@ public class OrdersController {
 	
 	@RequestMapping("/ordersUpdate")
 	public String ordersUpdate(@RequestParam int ordernum, Model model) {
-		OrdersVO vo = ordersService.getOrders(ordernum);		
-		model.addAttribute("itm", vo);	
+		model.addAttribute("itm", ordersService.getOrders(ordernum));	
 		return "admin/orders-update";
 	}
 	
@@ -60,13 +59,8 @@ public class OrdersController {
 	
 	@RequestMapping("/ordersDetail")
 	public String ordersDetail(@RequestParam int ordernum, Model model) {
-		OrdersVO vo = ordersService.getOrders(ordernum);		
-		model.addAttribute("itm", vo);	
+		model.addAttribute("itm", ordersService.getOrders(ordernum));	
 		return "admin/orders-detail";
 	}
 
-//	@RequestMapping("/ordersInsertdo")
-//	public String ordersInsertdo() {
-//		
-//	}
 }

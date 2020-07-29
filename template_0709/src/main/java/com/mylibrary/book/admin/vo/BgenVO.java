@@ -1,5 +1,7 @@
 package com.mylibrary.book.admin.vo;
 
+import com.google.code.ssm.api.CacheKeyMethod;
+
 public class BgenVO {
 	private String email;
 	private String name;
@@ -8,6 +10,7 @@ public class BgenVO {
 	private String address;
 	private String birth;
 	
+	@CacheKeyMethod
 	public String getEmail() {
 		return email;
 	}

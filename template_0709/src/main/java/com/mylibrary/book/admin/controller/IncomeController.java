@@ -1,7 +1,5 @@
 package com.mylibrary.book.admin.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -49,14 +47,7 @@ public class IncomeController {
 	
 	@RequestMapping("/incomeUpdate")
 	public String update(@RequestParam int incomenum, Model model) {
-		List<IncomeVO> vos = incomeService.showAll();
-		
-		for(int i=0;i<vos.size();i++) {
-			if(vos.get(i).getIncomenum()==incomenum) {
-				model.addAttribute("icl",vos.get(i));
-				break;
-			}
-		}
+		model.addAttribute("icl",incomeService.getIncome(incomenum));
 		return "admin/income-update";
 	}
 	

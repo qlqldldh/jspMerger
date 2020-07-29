@@ -15,4 +15,5 @@ public interface NoticeService {
 
     public void updateNotice(Map<String, String> map);
 
+    public NoticeVO getNotice(String nid);
 }

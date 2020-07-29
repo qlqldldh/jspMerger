@@ -3,6 +3,7 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
+
 <mapper namespace="com.mylibrary.book.library.mapper.BookdetailMapper">
 	<resultMap id="booklistMap"
 		type="com.mylibrary.book.admin.vo.BooklistVO">
@@ -18,6 +19,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result property="willdel" column="willdel"/>
 		<result property="img" column="img"/>
 	</resultMap>
+
+
 
 	<select id="BshowDetail" resultType="com.mylibrary.book.admin.vo.BooklistVO" parameterType="String">
 		SELECT * FROM booklist where bid = #{bid}

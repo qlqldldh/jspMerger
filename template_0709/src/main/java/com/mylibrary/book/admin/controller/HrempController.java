@@ -32,16 +32,9 @@ public class HrempController {
 	
 	@RequestMapping("/hrUpdate")
 	public ModelAndView hrUpdate(@RequestParam String tel, Model model) {
-		List<HrempVO> lhv = hrempService.showAll();
 		
 		ModelAndView mav = new ModelAndView();
-		for(int i=0;i<lhv.size();i++) {
-			if(lhv.get(i).getTel().equals(tel)) {
-				mav.addObject("hrItem",lhv.get(i));
-				break;
-			}
-		}
-		
+		mav.addObject("hrItem",hrempService.getHremp(tel));
 		mav.setViewName("admin/hr-update");
 		return mav;
 	}

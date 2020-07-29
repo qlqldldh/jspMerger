@@ -36,4 +36,11 @@ public class HrempServiceImpl implements HrempService{
 		HrempMapper hrempMapper = sqlSession.getMapper(HrempMapper.class);
 		hrempMapper.updateHR(mp);
 	}
+	
+	public HrempVO getHremp(String tel) {
+		List<HrempVO> temp = showAll();
+		
+		for(HrempVO hv:temp) if(hv.getTel().equals(tel)) return hv;
+		return null;
+	}
 }

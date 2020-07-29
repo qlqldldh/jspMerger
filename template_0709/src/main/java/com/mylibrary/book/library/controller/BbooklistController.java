@@ -12,7 +12,6 @@ import com.mylibrary.book.library.vo.PagingVO;
 @Controller
 @RequestMapping("/user")
 public class BbooklistController {
-
 	
 	@Autowired
 	BbooklistService Bbooklistservice;

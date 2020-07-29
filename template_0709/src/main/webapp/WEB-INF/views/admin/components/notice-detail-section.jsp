@@ -81,7 +81,7 @@
 														onclick="location.href='noticeUpdate?nid=${nitem.nid}'">Update</button>
 													<%-- <button type="button" class="btn-secondry m-r5" onclick="location.href='noticeDelete?nid=${nitem.nid}'">Delete</button> --%>
 													<button type="button" class="btn-secondry m-r5" id="del"
-														onclick="return confirm_delete();" value="${itm.nid}">Delete</button>
+														onclick="confirm_delete()" value="${itm.nid}">Delete</button>
 													<button type="button" class="btn-secondry m-r5"
 														onclick="location.href='noticeMain'">Go Back</button>
 												</div>

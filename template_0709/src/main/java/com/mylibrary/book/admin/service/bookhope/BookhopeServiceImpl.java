@@ -29,4 +29,10 @@ public class BookhopeServiceImpl implements BookhopeService {
 		System.out.println("insertbh로 북호프 서비스 임플 옴");
 		AladinOpenAPI.addtolist(btitle, bauthor, bpublisher);
 	}
+	
+	public BookhopeVO getWishedBook(String bhid) {
+		List<BookhopeVO> temp = showAll();
+		for(BookhopeVO bhv:temp) if(bhv.getBhid().equals(bhid)) return bhv;
+		return null;
+	}
 }

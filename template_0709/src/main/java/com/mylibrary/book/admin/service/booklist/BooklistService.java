@@ -14,4 +14,5 @@ public interface BooklistService {
 
     public void updateBooklist(Map<String, String> map);
 
+    public BooklistVO getBook(String bid);
 }

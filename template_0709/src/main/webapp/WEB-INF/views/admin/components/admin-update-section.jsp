@@ -37,13 +37,13 @@
 										<input class="form-control" type="text" value="${itm.name }" name="name" id="name">
 									</div>
 								</div>
-								
+								<%-- 
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Passwd</label>
 									<div class="col-sm-7">
 										<input class="form-control" type="text" value="${itm.passwd }" name="passwd" id="passwd">
 									</div>
-								</div>
+								</div> --%>
 								
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">Phone</label>

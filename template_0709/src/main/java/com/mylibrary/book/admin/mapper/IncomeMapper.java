@@ -11,5 +11,4 @@ public interface IncomeMapper {
 	public void incomeUpdate(IncomeVO vo);
 	public IncomeVO getIncome(int incomenum);
 	public void incomeDelete(int incomenum);
-
 }

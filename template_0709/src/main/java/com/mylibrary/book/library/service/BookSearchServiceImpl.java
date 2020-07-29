@@ -1,43 +1,37 @@
 package com.mylibrary.book.library.service;
 
-
-
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mylibrary.book.library.mapper.BookSearchMapper;
-import com.mylibrary.book.library.vo.BookSearchVO;
+import com.mylibrary.book.admin.vo.BooklistVO;
+import com.mylibrary.book.library.mapper.BbooklistMapper;
 
 @Service
 public class BookSearchServiceImpl implements BookSearchService {
 
 	@Autowired
 	private SqlSession sqlSession;
-	
-	@Override
-	public List<BookSearchVO> searchBook(String title) {
-	    BookSearchMapper bookSearchMapper = sqlSession.getMapper( BookSearchMapper.class);
-		return bookSearchMapper.searchBook(title);
-	}
+
 
 	@Override
-	public List<BookSearchVO> showList() {
-	    BookSearchMapper bookSearchMapper = sqlSession.getMapper( BookSearchMapper.class);
-		return bookSearchMapper.showList();
+	public List<BooklistVO> showList() {
+		
+		BbooklistMapper bbooklistMapper = sqlSession.getMapper(BbooklistMapper.class);
+		return bbooklistMapper.bshowList();
 	}
-
-
+	
+	@Override
+	public List<BooklistVO> searchBook(String title) {
+		List<BooklistVO> ret = new ArrayList<BooklistVO>();
+		List<BooklistVO> temp = showList();
+		
+		for(BooklistVO bsv:temp) if(bsv.getTitle().contains(title)) ret.add(bsv);
+		return ret;
 	}
-
-//	@Override
-//	public BookSearchVO getBooklist(String title) {
-//	    BookSearchMapper bookSearchMapper = sqlSession.getMapper( BookSearchMapper.class);
-//		return bookSearchMapper.getBooklist(title);
-//	}
-
 	
 
-
+}

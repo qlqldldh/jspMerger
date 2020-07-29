@@ -10,7 +10,7 @@
 				</a></li>
 				<li>Balance</li>
 				<li>Income</li>
-				<li><a href="incomeMain">Income List</li>
+				<li><a href="incomeMain">Income List</a></li>
 				<li>Income Information</li>
 				</ul>
 			</div>	
@@ -29,12 +29,12 @@
 											<h3>update Details</h3>
 										</div>
 									</div> -->
-									<div class="form-group row">
+									<%-- <div class="form-group row">
 										<label class="col-sm-2 col-form-label">Income ID</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="hidden" name="incomenum"  value=${icl.incomenum }>
+											<input class="form-control" type="text" name="incomenum"  value=${icl.incomenum }>
 										</div>
-									</div>
+									</div> --%>
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">Date of Income</label>
 										<div class="col-sm-7">

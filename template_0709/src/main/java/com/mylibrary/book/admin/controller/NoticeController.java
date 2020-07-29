@@ -1,7 +1,5 @@
 package com.mylibrary.book.admin.controller;
 
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,83 +17,71 @@ import com.mylibrary.book.admin.vo.NoticeVO;
 @RequestMapping("/admin")
 public class NoticeController {
 
-    @Autowired
-    NoticeService noticeService;
+	@Autowired
+	NoticeService noticeService;
 
-    // ================================LIST=======================================
-    @RequestMapping("/noticeMain")
-    public ModelAndView showMain() {
-	ModelAndView mav = new ModelAndView();
-	mav.addObject("noticelist", noticeService.showList());
-	mav.setViewName("admin/notice-main");
-	return mav;
-    }
-
-    // ================================UPDATE=======================================
-
-    @RequestMapping("/noticeUpdate")
-    public ModelAndView noticeUpdate(@RequestParam String nid, Model model) {
-	List<NoticeVO> listVO = noticeService.showList();
-
-	ModelAndView mav = new ModelAndView();
-
-	for (int i = 0; i < listVO.size(); i++) {
-	    if (listVO.get(i).getNid().equals(nid)) {
-		mav.addObject("nitem", listVO.get(i));
-		break;
-	    }
+	// ================================LIST=======================================
+	@RequestMapping("/noticeMain")
+	public ModelAndView showMain() {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("noticelist", noticeService.showList());
+		mav.setViewName("admin/notice-main");
+		return mav;
 	}
-	System.out.println("Controller: noticeUpdate");
-	mav.setViewName("admin/notice-update");
-	return mav;
-    }
 
-    @RequestMapping("/noticeUpdatedo")
-    public String noticeUpdatedo(@RequestParam Map<String, String> map) {
-	noticeService.updateNotice(map);
-	System.out.println("updated successfully!");
-	return "redirect:noticeMain";
-    }
+	// ================================UPDATE=======================================
 
-    @RequestMapping("/noticeDetail")
-    public ModelAndView noticeDetail(@RequestParam String nid, Model model) {
-	List<NoticeVO> listVO = noticeService.showList();
+	@RequestMapping("/noticeUpdate")
+	public ModelAndView noticeUpdate(@RequestParam String nid, Model model) {
 
-	ModelAndView mav = new ModelAndView();
-
-	for (int i = 0; i < listVO.size(); i++) {
-	    if (listVO.get(i).getNid().equals(nid)) {
-		mav.addObject("nitem", listVO.get(i));
-		break;
-	    }
+		ModelAndView mav = new ModelAndView();
+		model.addAttribute("nitem",noticeService.getNotice(nid));
+		
+		System.out.println("Controller: noticeUpdate");
+		mav.setViewName("admin/notice-update");
+		return mav;
 	}
-	System.out.println("Controller: noticeDetail");
-	mav.setViewName("admin/notice-detail");
-	return mav;
-    }
-    
+
+	@RequestMapping("/noticeUpdatedo")
+	public String noticeUpdatedo(@RequestParam Map<String, String> map) {
+		noticeService.updateNotice(map);
+		System.out.println("updated successfully!");
+		return "redirect:noticeMain";
+	}
+
+	@RequestMapping("/noticeDetail")
+	public ModelAndView noticeDetail(@RequestParam String nid, Model model) {
+
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("nitem",noticeService.getNotice(nid));
+		
+		System.out.println("Controller: noticeDetail");
+		mav.setViewName("admin/notice-detail");
+		return mav;
+	}
+
 //================================INSERT=======================================
 
-    @RequestMapping("/noticeInsert")
-    public String noticeInsert() {
-	return "admin/notice-insert";
-    }
+	@RequestMapping("/noticeInsert")
+	public String noticeInsert() {
+		return "admin/notice-insert";
+	}
 
-    @RequestMapping("/noticeInsertdo")
-    public String noticeInsertdo(@ModelAttribute NoticeVO vo) {
-	System.out.println("inserting...controller!");
-	noticeService.insertNotice(vo);
-	System.out.println("inserted successfully!");
-	return "redirect:noticeMain";
-    }
+	@RequestMapping("/noticeInsertdo")
+	public String noticeInsertdo(@ModelAttribute NoticeVO vo) {
+		System.out.println("inserting...controller!");
+		noticeService.insertNotice(vo);
+		System.out.println("inserted successfully!");
+		return "redirect:noticeMain";
+	}
 
-    // ================================DELETE=======================================
+	// ================================DELETE=======================================
 
-    @RequestMapping("/noticeDelete")
-    public String noticeDelete(@RequestParam String nid) {
-	noticeService.deleteNotice(nid);
-	System.out.println("deleted successfully!");
-	return "redirect:noticeMain";
-    }
+	@RequestMapping("/noticeDelete")
+	public String noticeDelete(@RequestParam String nid) {
+		noticeService.deleteNotice(nid);
+		System.out.println("deleted successfully!");
+		return "redirect:noticeMain";
+	}
 
 }

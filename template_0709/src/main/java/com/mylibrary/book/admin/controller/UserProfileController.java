@@ -25,9 +25,7 @@ public class UserProfileController {
 	@RequestMapping("/userProf")
 	public String userProf(HttpServletRequest request) {
 		HttpSession session = request.getSession();
-		Map<String, Object> user = userDao.selectUserNoAs((String) session.getAttribute("email"));
-		System.out.println(user);
-		request.setAttribute("user", user);
+		request.setAttribute("user", userDao.selectUserNoAs((String) session.getAttribute("email")));
 		return "admin/user-profile";
 	}
 }

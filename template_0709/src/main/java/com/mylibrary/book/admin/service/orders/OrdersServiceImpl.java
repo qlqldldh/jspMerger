@@ -16,9 +16,7 @@ public class OrdersServiceImpl implements OrdersService {
 	
 	
 	public List<OrdersVO> showAll(){
-		
 		return OrdersDAO.showAll();
-		
 	}
 
 	public void insertOrders(OrdersVO vo) {

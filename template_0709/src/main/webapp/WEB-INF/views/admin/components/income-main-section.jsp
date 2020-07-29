@@ -3,9 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <script>
-	function confirm_delete() {
+	function confirm_delete(dd) {
 		var x = confirm("Are you sure you want to delete?");
-		var dd = document.getElementById("del").value;
 		if (x)
 			location.href = 'incomeDelete?incomenum=' + dd;
 		else
@@ -84,7 +83,7 @@
 															<%-- 	<button type="button" class="btn-secondry m-r5"
 																onclick="location.href='incomeDelete?incomenum=${icl.incomenum}'">Delete</button> --%>
 															<button type="button" class="btn-secondry m-r5" id="del"
-																onclick="return confirm_delete();"
+																onclick="confirm_delete(${icl.incomenum})"
 																value="${icl.incomenum}">Delete</button></td>
 													</tr>
 												</c:forEach>

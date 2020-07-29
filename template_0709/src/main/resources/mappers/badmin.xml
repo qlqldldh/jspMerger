@@ -47,7 +47,7 @@ insert into badmin (aemail,grp,pos) values(#{ email },#{ grp },#{ pos })
 </update>
 
 <update id="updateBadmin2" parameterType="com.mylibrary.book.admin.vo.BadminVO">
-	update buser set name = #{name}, passwd = #{passwd}, phone = #{phone}, address= #{address}, birth=#{birth} where email=#{email}
+	update buser set name = #{name}, phone = #{phone}, address= #{address}, birth=#{birth} where email=#{email}
 </update>
 
 </mapper>

@@ -1,7 +1,5 @@
 package com.mylibrary.book.admin.controller;
 
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -55,25 +53,12 @@ public class BadminController {
 	
 	@RequestMapping("/badminInsertdo")
 	public String badminInsertdo(@ModelAttribute BadminVO vo) {
-//		badminService.insertBadmin1(vo);
 		if (userDao.selectUser(vo.getEmail()) != null) {
-//			System.out.println("password가 다르거나 이미 존재하는 이메일입니다.");
 			System.out.println("This email is already register");
 		
 			return "redirect:badminInsert";
 		}
-		String dbpw = shaEncoder.saltEncoding(vo.getPasswd(), vo.getEmail());
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("email", vo.getEmail());
-		map.put("passwd", dbpw);
-		map.put("name", vo.getName());
-		map.put("birth", vo.getBirth());
-		map.put("phone", vo.getPhone());
-		map.put("address", vo.getAddress());
-		map.put("authority", "ROLE_ADMIN");
-		// affected rows, 영향을 받은 행의 수가 리턴됨
-		int result = userDao.insertUser(map);
-		
+		badminService.insertBadmin1(vo);
 		badminService.insertBadmin2(vo);
 		return "redirect:badminMain";
 	}
@@ -98,8 +83,5 @@ public class BadminController {
 		badminService.updateBadmin2(vo);
 		return "redirect:badminMain";
 	}
-	
-	
-	
 	
 }

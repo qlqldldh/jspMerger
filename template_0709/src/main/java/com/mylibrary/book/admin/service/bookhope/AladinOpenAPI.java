@@ -191,7 +191,6 @@ public class AladinOpenAPI {
 		} else if ((item.CategoryName).contains("위인")) {
 			result1 = "990";
 		} else result1 = "000";
-
 		System.out.println(result1);
 		String result2 = (item.Author).substring(0,1);
 		Random random = new Random();
@@ -254,7 +253,7 @@ public class AladinOpenAPI {
 						pstmt.setString(2, item.Title);
 						pstmt.setString(3, getAuthorName(item.Author));
 						pstmt.setString(4, item.Publisher);
-						pstmt.setString(5, item.Isbn13);
+						pstmt.setString(5, item.Isbn);
 						pstmt.setString(6, item.CategoryName);
 						pstmt.setString(7, getDeciDiv(item));
 						pstmt.setInt(8, 1);

@@ -27,7 +27,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		UPDATE income SET idate = #{idate}, price = #{price}, itype = #{itype} WHERE incomenum = #{incomenum}
 	</update>
 	
-	<select id="incomeUpdateSA" parameterType="Integer" resultMap="incomeMap">
+	<select id="getIncome" parameterType="Integer" resultMap="incomeMap">
 		select * from income where incomenum = #{incomenum}
 	</select>
 

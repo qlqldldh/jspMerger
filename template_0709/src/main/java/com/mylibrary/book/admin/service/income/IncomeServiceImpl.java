@@ -45,8 +45,4 @@ public class IncomeServiceImpl implements IncomeService {
 		return incomeMapper.getIncome(incomenum);
 		
 	}
-	
-	
-	
-
 }

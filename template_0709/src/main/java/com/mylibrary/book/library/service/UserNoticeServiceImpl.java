@@ -27,5 +27,13 @@ public class UserNoticeServiceImpl implements UserNoticeService {
 		return userNoticeMapper.boardNotice();
 	}
 
+	@Override
+	public UserNoticeVO getNoticeInfo(String nid) {
+		List<UserNoticeVO> temp = showList();
+		
+		for(UserNoticeVO unv:temp) if(unv.getNid().equals(nid)) return unv;
+		return null;
+	}
+
 
 }

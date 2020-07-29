@@ -1,6 +1,5 @@
 package com.mylibrary.book.admin.controller;
 
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,85 +17,72 @@ import com.mylibrary.book.admin.vo.BooklistVO;
 @RequestMapping("/admin")
 public class BooklistController {
 
-    @Autowired
-    BooklistService booklistService;
+	@Autowired
+	BooklistService booklistService;
 
-    // ================================LIST=======================================
-    @RequestMapping("/booklistMain")
-    public ModelAndView showMain() {
-	ModelAndView mav = new ModelAndView();
-	System.out.println("About to show the list of books....");
-	mav.addObject("booklist", booklistService.showList());
-	mav.setViewName("admin/library-main");
-	return mav;
-    }
-
-    // ================================UPDATE=======================================
-
-    @RequestMapping("/booklistUpdate")
-    public ModelAndView booklistUpdate(@RequestParam String bid, Model model) {
-	List<BooklistVO> listVO = booklistService.showList();
-
-	ModelAndView mav = new ModelAndView();
-
-	for (int i = 0; i < listVO.size(); i++) {
-	    if (listVO.get(i).getBid().equals(bid)) {
-		mav.addObject("item", listVO.get(i));
-		break;
-	    }
+	// ================================LIST=======================================
+	@RequestMapping("/booklistMain")
+	public ModelAndView showMain() {
+		ModelAndView mav = new ModelAndView();
+		System.out.println("About to show the list of books....");
+		mav.addObject("booklist", booklistService.showList());
+		mav.setViewName("admin/library-main");
+		return mav;
 	}
-	System.out.println("Controller: booklistUpdate");
-	mav.setViewName("admin/library-update");
-	return mav;
-    }
 
-    @RequestMapping("/booklistUpdatedo")
-    public String booklistUpdatedo(@RequestParam Map<String, String> map) {
-	booklistService.updateBooklist(map);
-	System.out.println("booklist updated successfully!");
-	return "redirect:booklistMain";
-    }
+	// ================================UPDATE=======================================
+
+	@RequestMapping("/booklistUpdate")
+	public ModelAndView booklistUpdate(@RequestParam String bid, Model model) {
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("item",booklistService.getBook(bid));
+		
+		System.out.println("Controller: booklistUpdate");
+		mav.setViewName("admin/library-update");
+		return mav;
+	}
+
+	@RequestMapping("/booklistUpdatedo")
+	public String booklistUpdatedo(@RequestParam Map<String, String> map) {
+		booklistService.updateBooklist(map);
+		System.out.println("booklist updated successfully!");
+		return "redirect:booklistMain";
+	}
 
 //================================INSERT=======================================
 
-    @RequestMapping("/booklistInsert")
-    public String booklistInsert() {
-	return "admin/library-insert";
-    }
-
-    @RequestMapping("/booklistInsertdo")
-    public String booklistInsertdo(@ModelAttribute BooklistVO vo) {
-	System.out.println("booklist- inserting...controller!");
-	booklistService.insertBooklist(vo);
-	System.out.println("book inserted successfully!");
-	return "redirect:booklistMain";
-    }
-
-    // ================================DELETE=======================================
-
-    @RequestMapping("/booklistDelete")
-    public String booklistDelete(@RequestParam String bid) {
-	booklistService.deleteBooklist(bid);
-	System.out.println("book deleted successfully!");
-	return "redirect:booklistMain";
-    }
-    
-    // ====================================Detail===================================
-    @RequestMapping("/booklistDetail")
-    public ModelAndView booklistDetail(@RequestParam String bid, Model model) {
-	List<BooklistVO> listVO = booklistService.showList();
-
-	ModelAndView mav = new ModelAndView();
-
-	for (int i = 0; i < listVO.size(); i++) {
-	    if (listVO.get(i).getBid().equals(bid)) {
-		mav.addObject("item", listVO.get(i));
-		break;
-	    }
+	@RequestMapping("/booklistInsert")
+	public String booklistInsert() {
+		return "admin/library-insert";
 	}
-	System.out.println("Controller: booklistDetail");
-	mav.setViewName("admin/library-detail");
-	return mav;
-    }
-    
+
+	@RequestMapping("/booklistInsertdo")
+	public String booklistInsertdo(@ModelAttribute BooklistVO vo) {
+		System.out.println("booklist- inserting...controller!");
+		booklistService.insertBooklist(vo);
+		System.out.println("book inserted successfully!");
+		return "redirect:booklistMain";
+	}
+
+	// ================================DELETE=======================================
+
+	@RequestMapping("/booklistDelete")
+	public String booklistDelete(@RequestParam String bid) {
+		booklistService.deleteBooklist(bid);
+		System.out.println("book deleted successfully!");
+		return "redirect:booklistMain";
+	}
+
+	// ====================================Detail===================================
+	@RequestMapping("/booklistDetail")
+	public ModelAndView booklistDetail(@RequestParam String bid, Model model) {
+		ModelAndView mav = new ModelAndView();
+
+		mav.addObject("item",booklistService.getBook(bid));
+		System.out.println("Controller: booklistDetail");
+		mav.setViewName("admin/library-detail");
+		return mav;
+	}
+
 }

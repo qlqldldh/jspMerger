@@ -102,7 +102,7 @@
 									<div class="col-sm-7">
 										<%-- <button type="button" class="btn-secondry m-r5" onclick="location.href='bhDel?bhid=${itm.bhid}'">Deny</button> --%>
 										<button type="button" class="btn-secondry m-r5" id="del"
-											onclick="return confirm_delete();" value="${bh.bhid }">Deny</button>
+											onclick="confirm_delete()" value="${bh.bhid }">Deny</button>
 										&nbsp;
 										<button type="button" class="btn-secondry m-r5"
 											onclick="location.href='bhInsert?btitle=${itm.btitle}&bauthor=${itm.bauthor}&bpublisher=${itm.bpublisher}&bhid=${itm.bhid}'">Accept</button>
