@@ -66,6 +66,7 @@
 															<option value="ROLE_ADMIN">ROLE_ADMIN</option>
 														</select>
 													</p> -->
+													<input type="hidden" name="authority" value="ROLE_USER">
 													<div class="clear"></div>
 													<input type="submit" value="Signup" name="signup" id="signup"
 														class="button btn btn-default">
