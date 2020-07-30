@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import org.springframework.stereotype.Component;
 
+import com.google.code.ssm.api.CacheKeyMethod;
+
 @Component
 public class OrdersVO implements Serializable{
 
@@ -18,6 +20,7 @@ public class OrdersVO implements Serializable{
 	private String descript;
 	private int totalcost;
 	
+	@CacheKeyMethod
 	public int getOrdernum() {
 		return ordernum;
 	}

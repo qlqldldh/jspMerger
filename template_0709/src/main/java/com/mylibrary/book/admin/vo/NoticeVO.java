@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import org.springframework.stereotype.Component;
 
+import com.google.code.ssm.api.CacheKeyMethod;
+
 @Component
 public class NoticeVO implements Serializable{
 
@@ -19,7 +21,8 @@ public class NoticeVO implements Serializable{
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
+	
+	@CacheKeyMethod
 	public String getNid() {
 	return nid;
     }

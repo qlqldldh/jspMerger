@@ -7,6 +7,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.google.code.ssm.api.InvalidateSingleCache;
+import com.google.code.ssm.api.ParameterValueKeyProvider;
 import com.google.code.ssm.api.ReadThroughAssignCache;
 import com.google.code.ssm.api.ReturnDataUpdateContent;
 import com.google.code.ssm.api.UpdateAssignCache;
@@ -36,10 +38,10 @@ public class NoticeServiceImpl implements NoticeService {
 	}
 
 	@Override
-	public void deleteNotice(String nid) {
+	@InvalidateSingleCache(namespace="admin")
+	public void deleteNotice(@ParameterValueKeyProvider String nid) {
 		NoticeMapper noticeMapper = sqlSession.getMapper(NoticeMapper.class);
 		noticeMapper.deleteNotice(nid);
-
 	}
 
 	@Override

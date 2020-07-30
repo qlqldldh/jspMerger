@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import org.springframework.stereotype.Component;
 
+import com.google.code.ssm.api.CacheKeyMethod;
+
 @Component
 public class IncomeVO implements Serializable{
 
@@ -12,7 +14,7 @@ public class IncomeVO implements Serializable{
 	private int price;
 	private String itype;
 	
-	
+	@CacheKeyMethod
 	public int getIncomenum() {
 		return incomenum;
 	}

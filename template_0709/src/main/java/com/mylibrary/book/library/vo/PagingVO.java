@@ -1,6 +1,10 @@
 package com.mylibrary.book.library.vo;
 
-public class PagingVO {
+import java.io.Serializable;
+
+import com.google.code.ssm.api.CacheKeyMethod;
+
+public class PagingVO implements Serializable{
 	// 현재페이지, 시작페이지, 끝페이지, 게시글 총 갯수, 페이지당 글 갯수, 마지막페이지, SQL쿼리에 쓸 start, end
 		private int nowPage, startPage, endPage, total, cntPerPage, lastPage, start, end;
 		private int cntPage = 5;
@@ -36,6 +40,7 @@ public class PagingVO {
 			setStart(getEnd() - cntPerPage + 1);
 		}
 		
+		@CacheKeyMethod
 		public int getNowPage() {
 			return nowPage;
 		}
@@ -96,4 +101,20 @@ public class PagingVO {
 					+ ", cntPerPage=" + cntPerPage + ", lastPage=" + lastPage + ", start=" + start + ", end=" + end
 					+ ", cntPage=" + cntPage + "]";
 		}
+		
+		@Override
+		public boolean equals(Object obj) {
+			if(obj instanceof PagingVO) {
+				PagingVO temp = (PagingVO)obj;
+				return (this.startPage+this.endPage+this.nowPage)==(temp.getStartPage()+temp.getEndPage()+temp.getNowPage());
+			}
+			return false;
+		}
+		@Override
+		public int hashCode() {
+			// TODO Auto-generated method stub
+			return nowPage+startPage;
+		}
+		
+		
 }

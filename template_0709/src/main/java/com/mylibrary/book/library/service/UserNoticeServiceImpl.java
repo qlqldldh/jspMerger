@@ -6,34 +6,37 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.google.code.ssm.api.ReadThroughAssignCache;
 import com.mylibrary.book.library.mapper.UserNoticeMapper;
 import com.mylibrary.book.library.vo.UserNoticeVO;
 
 @Service
 public class UserNoticeServiceImpl implements UserNoticeService {
 
-    @Autowired
-    private SqlSession sqlSession;
+	@Autowired
+	private SqlSession sqlSession;
 
-    @Override
-    public List<UserNoticeVO> showList() {
-	UserNoticeMapper userNoticeMapper=sqlSession.getMapper(UserNoticeMapper.class);
-	return userNoticeMapper.showList();
-    }
+	@Override
+	@ReadThroughAssignCache(namespace = "library", assignedKey = "noticelist")
+	public List<UserNoticeVO> showList() {
+		UserNoticeMapper userNoticeMapper = sqlSession.getMapper(UserNoticeMapper.class);
+		return userNoticeMapper.showList();
+	}
 
 	@Override
 	public List<UserNoticeVO> boardNotice() {
-		UserNoticeMapper userNoticeMapper=sqlSession.getMapper(UserNoticeMapper.class);
+		UserNoticeMapper userNoticeMapper = sqlSession.getMapper(UserNoticeMapper.class);
 		return userNoticeMapper.boardNotice();
 	}
 
 	@Override
 	public UserNoticeVO getNoticeInfo(String nid) {
 		List<UserNoticeVO> temp = showList();
-		
-		for(UserNoticeVO unv:temp) if(unv.getNid().equals(nid)) return unv;
+
+		for (UserNoticeVO unv : temp)
+			if (unv.getNid().equals(nid))
+				return unv;
 		return null;
 	}
-
 
 }

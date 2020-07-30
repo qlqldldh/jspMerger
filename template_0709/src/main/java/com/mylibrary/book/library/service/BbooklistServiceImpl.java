@@ -6,7 +6,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mylibrary.book.admin.mapper.BooklistMapper;
+import com.google.code.ssm.api.ParameterValueKeyProvider;
+import com.google.code.ssm.api.ReadThroughAssignCache;
+import com.google.code.ssm.api.ReadThroughSingleCache;
 import com.mylibrary.book.admin.vo.BooklistVO;
 import com.mylibrary.book.library.mapper.BbooklistMapper;
 import com.mylibrary.book.library.vo.PagingVO;
@@ -23,9 +25,9 @@ public class BbooklistServiceImpl implements BbooklistService {
 		return booklistMapper.bshowList();
 	}
 
-
 	@Override
-	public BooklistVO getBooklist(String bid) {
+	@ReadThroughSingleCache(namespace="library")
+	public BooklistVO getBooklist(@ParameterValueKeyProvider String bid) {
 		BbooklistMapper booklistMapper = sqlSession.getMapper(BbooklistMapper.class);
 		return booklistMapper.getBooklist(bid);
 	}
@@ -39,7 +41,8 @@ public class BbooklistServiceImpl implements BbooklistService {
 
 
 	@Override
-	public List<BooklistVO> selectBoard(PagingVO vo) {
+	@ReadThroughSingleCache(namespace="library")
+	public List<BooklistVO> selectBoard(@ParameterValueKeyProvider PagingVO vo) {
 		BbooklistMapper booklistMapper = sqlSession.getMapper(BbooklistMapper.class);
 		return booklistMapper.selectBoard(vo);
 	}

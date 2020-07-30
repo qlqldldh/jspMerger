@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.google.code.ssm.api.ReadThroughAssignCache;
 import com.mylibrary.book.admin.vo.BooklistVO;
 import com.mylibrary.book.library.mapper.BbooklistMapper;
 
@@ -18,8 +19,8 @@ public class BookSearchServiceImpl implements BookSearchService {
 
 
 	@Override
+	@ReadThroughAssignCache(namespace="library", assignedKey="searchlist")
 	public List<BooklistVO> showList() {
-		
 		BbooklistMapper bbooklistMapper = sqlSession.getMapper(BbooklistMapper.class);
 		return bbooklistMapper.bshowList();
 	}

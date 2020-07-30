@@ -32,58 +32,60 @@ public class BookDetailController {
 
 	@Autowired
 	ReservedService reservedService;
-	
-	
+
 	// action to put in data table //
 	void lendingWhenReturn(String bid) { // have to do 'returnDelete" first, then do this method
-		int mn = 1000000000; ReservedVO rsv=null;
+		int mn = 1000000000;
+		ReservedVO rsv = null;
 		List<ReservedVO> temp = reservedService.showAll();
-		
-		for(ReservedVO rv:temp) {
-			if(rv.getResbid().equals(bid)) {
-				if(Integer.parseInt(rv.getResid())<mn) {
-					mn=Integer.parseInt(rv.getResid());
-					rsv=rv;
+
+		for (ReservedVO rv : temp) {
+			if (rv.getResbid().equals(bid)) {
+				if (Integer.parseInt(rv.getResid()) < mn) {
+					mn = Integer.parseInt(rv.getResid());
+					rsv = rv;
 				}
 			}
 		}
-		
-		if(rsv==null) return;
-		
-		Map<String,String> mp = new HashMap<String,String>();
-		mp.put("renemail",rsv.getResemail());
-		mp.put("renbid",rsv.getResbid());
-		
+
+		if (rsv == null)
+			return;
+
+		Map<String, String> mp = new HashMap<String, String>();
+		mp.put("renemail", rsv.getResemail());
+		mp.put("renbid", rsv.getResbid());
+
 		BooklistDetailservice.insertLending(mp); // put the reserver automatically when someone return the book
-		mp.clear();	
-		mp.put("resemail",rsv.getResemail());
-		mp.put("resbid",rsv.getResbid());		
+		mp.clear();
+		mp.put("resemail", rsv.getResemail());
+		mp.put("resbid", rsv.getResbid());
 		BooklistDetailservice.reservedDelete(mp);
 	}
-	
-	String checkExist(String bid, String email){
-        for(BorrowedVO br: borrowedService.showAll()){
-            if(br.getRenbid().equals(bid)){
-                if(br.getRenemail().equals(email)){
-                	if(br.getIsExpanded() == 0)		{
-                		return "return";
-                	}
-                	else {
-                		return "expanded";
-                	}
-                } else {
-                	for(ReservedVO rv:reservedService.showAll()){
-            			if(rv.getResbid().equals(bid)){
-            				if(rv.getResemail().equals(email)) return "reserved cancel";
-            				else return "reserved";
-            			}
-            		}
-                }
-                return "reserved";
-            }
-        }
-        return "lending";
-    }
+
+	String checkExist(String bid, String email) {
+		for (BorrowedVO br : borrowedService.showAll()) {
+			if (br.getRenbid().equals(bid)) {
+				if (br.getRenemail().equals(email)) {
+					if (br.getIsExpanded() == 0) {
+						return "return";
+					} else {
+						return "expanded";
+					}
+				} else {
+					for (ReservedVO rv : reservedService.showAll()) {
+						if (rv.getResbid().equals(bid)) {
+							if (rv.getResemail().equals(email))
+								return "reserved cancel";
+							else
+								return "reserved";
+						}
+					}
+				}
+				return "reserved";
+			}
+		}
+		return "lending";
+	}
 
 	@RequestMapping("/bbookDetail")
 	public ModelAndView bshowDetail(HttpServletRequest request, @RequestParam String bid) {
@@ -99,7 +101,7 @@ public class BookDetailController {
 		} else {
 			mav.addObject("in", checkExist(bid, (String) session.getAttribute("email")));
 		}
-		
+
 		mav.setViewName("library/books-media-detail-v2");
 		return mav;
 	}
@@ -118,14 +120,14 @@ public class BookDetailController {
 	@RequestMapping("/exdateupdatedo")
 	public String exdateupdatedo(@RequestParam String bid, @SessionAttribute String email) {
 		Map<String, String> map = new HashMap<String, String>();
-		
+
 		map.put("renemail", email);
 		map.put("renbid", bid);
 		BooklistDetailservice.exdateupdate(map);
-		
+
 		return "redirect:BbooklistMain";
 	}
-	
+
 	@RequestMapping("/returndeletedo")
 	public String returndeletedo(@RequestParam String bid, @SessionAttribute String email) {
 		System.out.println("returndeletedo" + bid);
@@ -133,9 +135,9 @@ public class BookDetailController {
 		map.put("renemail", email);
 		map.put("renbid", bid);
 		BooklistDetailservice.returnDelete(map);
-		
+
 		lendingWhenReturn(bid);
-		
+
 		return "redirect:BbooklistMain";
 	}
 
@@ -152,7 +154,7 @@ public class BookDetailController {
 	public String reserveddelete(@RequestParam String bid, @SessionAttribute String email) {
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("resemail", email);
-		map.put("resbid", bid);		
+		map.put("resbid", bid);
 		BooklistDetailservice.reservedDelete(map);
 		return "redirect:BbooklistMain";
 	}
