@@ -105,6 +105,7 @@
 																return false;
 															}
 														}
+														alert("Registered Successfully!");
 														$('#send').submit();
 														}
 													});

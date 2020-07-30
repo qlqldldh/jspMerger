@@ -70,8 +70,7 @@
 												<div class="new-user-head">
 													<h2>MyPage</h2>
 													<span class="underline left"></span>
-													<p>If no barcode has been assigned for your account,
-														please contact the library.</p>
+													<p></p>
 												</div>
 
 												<p class="form-row form-row-first input-required">
@@ -123,7 +122,7 @@
 															class="input-text">
 													</p>
 													<div class="clear"></div>
-													<input type="submit" value="Inform reset" name="Inform reset"
+													<input type="submit" value="Update" name="Inform reset"
 														class="button btn btn-default" onclick="udpateInform(); return false;">
 													<div class="clear"></div>
 												</form>

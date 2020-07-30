@@ -43,9 +43,9 @@
 								class="ttr-label">Borrowed</span></a></li>
 						<li><a href="reservedMain" class="ttr-material-button"><span
 								class="ttr-label">Reserved</span></a></li>
-						<li><a href="management-user.html"
+					<!-- 	<li><a href="management-user.html"
 							class="ttr-material-button"><span class="ttr-label">Renewed</span></a>
-						</li>
+						</li> -->
 					</ul></li>
 				<li><a href="bhMain" class="ttr-material-button"> <span
 						class="ttr-icon"><i class="ti-book"></i></span> <span

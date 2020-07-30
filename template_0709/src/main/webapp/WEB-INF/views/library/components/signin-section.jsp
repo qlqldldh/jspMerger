@@ -31,7 +31,7 @@
 													<div class="password-form-row">
 														<span style="color:red;">${errMsg}</span>
 														<p class="lost_password">
-															<a href="email">Don't you remember your password?</a>
+															<a href="email"><font color="ff7236">Don't you remember your password?</font></a>
 														</p>
 													</div>
 													<br/>
@@ -52,4 +52,5 @@
 		</main>
 	</div>
 </div>
+<br><br><br><br>
 <!-- End: Cart Section -->

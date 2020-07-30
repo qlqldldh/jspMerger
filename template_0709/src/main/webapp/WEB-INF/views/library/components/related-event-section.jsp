@@ -3,10 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="container">
 	<div class="related-event text-center">
-		<h2>Related Event</h2>
+		<h2 class="section-title">NOTICE</h2>
 		<span class="underline center"></span>
-		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing
-			elit.</p>
+		<p class="lead">There is a lot of new stuff going on! Don't miss out!</p>
 		<div class="owl-carousel-event">
 		<c:forEach var="bno" items="${ bnotice }">
 			<div class="single-related-event">
@@ -33,3 +32,4 @@
 		</div>
 	</div>
 </div>
+<br><br>

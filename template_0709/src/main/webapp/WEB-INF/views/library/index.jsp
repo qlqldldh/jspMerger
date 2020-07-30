@@ -32,7 +32,7 @@
 
     <%-- <jsp:include page="components/news-event.jsp" flush="false"/> --%>
 
-    <jsp:include page="common-components/social-network.jsp" flush="false"/>
+    <%-- <jsp:include page="common-components/social-network.jsp" flush="false"/> --%>
 
     <jsp:include page="common-components/footer.jsp" flush="false" />
 	<jsp:include page="common-components/footer-javascript.jsp"

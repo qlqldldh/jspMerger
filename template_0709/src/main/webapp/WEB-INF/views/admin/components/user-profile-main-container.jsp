@@ -60,7 +60,11 @@
 			<div class="db-breadcrumb">
 				<h4 class="breadcrumb-title">User Profile</h4>
 				<ul class="db-breadcrumb-list">
-					<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+					<!-- <li><a href="#"><i class="fa fa-home"></i>Home</a></li> -->
+					<li><a href="/book/admin/index">
+						<!-- <i class="fa fa-home"> -->
+						Menu
+				</a></li>
 					<li>User Profile</li>
 				</ul>
 			</div>	

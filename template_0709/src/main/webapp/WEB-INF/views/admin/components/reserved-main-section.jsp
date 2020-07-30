@@ -31,8 +31,8 @@
 					<div class="wc-title">
 						<h4>All Reserved Books</h4>
 					</div>
-					<div class="widget-inner"></div>
-					<br />
+<!-- 					<div class="widget-inner"></div> -->
+			<!-- 		<br /> -->
 					<main>
 						<div class="container-fluid">
 							<!-- <div class="card mb-4">

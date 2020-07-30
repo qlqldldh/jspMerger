@@ -1,108 +1,118 @@
- <!-- Start: Contact Us Section -->
-        <div id="content" class="site-content">
-            <div id="primary" class="content-area">
-                <main id="main" class="site-main">
-                    <div class="contact-main">
-                        <div class="contact-us">
-                            <div class="container">
-                                <div class="contact-location">
-                                    <div class="flipcard">
-                                        <div class="front">
-                                            <div class="top-info">
-                                                <span><i class="fa fa-map-marker" aria-hidden="true"></i> Office Address</span>
-                                            </div>
-                                            <div class="bottom-info">
-                                                <span class="top-arrow"></span>
-                                                <ul>
-                                                    <li>121 King Street, Melbourne </li>
-                                                    <li>Victoria 3000 Australia</li>
-                                                    <li>PO Box 16122</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="back">
-                                            <div class="bottom-info orange-bg">
-                                                <span class="bottom-arrow"></span>
-                                                <ul>
-                                                    <li>121 King Street, Melbourne </li>
-                                                    <li>Victoria 3000 Australia</li>
-                                                    <li>PO Box 16122</li>
-                                                </ul>
-                                            </div>
-                                            <div class="top-info dark-bg">
-                                                <span><i class="fa fa-map-marker" aria-hidden="true"></i> Office Address</span>
-                                            </div>                                                
-                                        </div>
-                                    </div>
-                                    <div class="flipcard">
-                                        <div class="front">
-                                            <div class="top-info">
-                                                <span><i class="fa fa-fax" aria-hidden="true"></i> Phone and Fax</span>
-                                            </div>
-                                            <div class="bottom-info">
-                                                <span class="top-arrow"></span>
-                                                <ul>
-                                                    <li><a href="tel:+123-456-7890">Local: +123-456-7890</a></li>
-                                                    <li><a href="tel:+123-456-7890">Local: +123-456-7890</a></li>
-                                                    <li><a href="fax:(001)-254-7359">Fax: (001)-254-7359</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="back">
-                                            <div class="bottom-info orange-bg">
-                                                <span class="bottom-arrow"></span>
-                                                <ul>
-                                                    <li><a href="tel:+123-456-7890">Local: +123-456-7890</a></li>
-                                                    <li><a href="tel:+123-456-7890">Local: +123-456-7890</a></li>
-                                                    <li><a href="fax:(001)-254-7359">Fax: (001)-254-7359</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="top-info dark-bg">
-                                                <span><i class="fa fa-fax" aria-hidden="true"></i> Phone and Fax</span>
-                                            </div>                                                
-                                        </div>
-                                    </div>
-                                    <div class="flipcard">
-                                        <div class="front">
-                                            <div class="top-info">
-                                                <span><i class="fa fa-envelope" aria-hidden="true"></i> Email Address</span>
-                                            </div>
-                                            <div class="bottom-info">
-                                                <span class="top-arrow"></span>
-                                                <ul>
-                                                    <li>www.libraria.com</li>
-                                                    <li>support@libraria.com</li>
-                                                    <li>info@libraria.com</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="back">
-                                            <div class="bottom-info orange-bg">
-                                                <span class="bottom-arrow"></span>
-                                                <ul>
-                                                    <li><a href="http://www.libraria.com/">www.libraria.com </a></li>
-                                                    <li><a href="mailto:support@libraria.com">support@libraria.com</a></li>
-                                                    <li><a href="mailto:info@libraria.com">info@libraria.com</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="top-info dark-bg">
-                                                <span><i class="fa fa-envelope" aria-hidden="true"></i> Email Address</span>
-                                            </div>                                                
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="contact-area text-center">
-                                    		 <h1 style="color:black">Location</h1>
-                                    		 <span class="underline center"></span>
-                                    		 <p class="lead">Shinhan Innoplex 2nd floor<br>Geumcheon-gu, Seoul</p>
-                                        <div class="container">
-                                        		<div class="contact-map">
-                                        			<div class="company-map" id="map"></div>
-                                        		</div>
-                                        		
-                                            <!-- <div class="col-md-5 col-md-offset-1 border-gray-left">
+
+<!-- Start: Contact Us Section -->
+<div id="content" class="site-content">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+			<div class="contact-main">
+				<div class="contact-us">
+					<div class="container">
+						<div class="contact-location">
+							<div class="flipcard">
+								<div class="front">
+									<div class="top-info">
+										<span><i class="fa fa-map-marker" aria-hidden="true"></i>
+											Office Address</span>
+									</div>
+									<div class="bottom-info">
+										<span class="top-arrow"></span>
+										<ul>
+											<li>Shinhan Innoplex 2nd floor</li>
+											<li>Geumcheon-gu, Seoul</li>
+											<li>South Korea.</li>
+										</ul>
+									</div>
+								</div>
+								<div class="back">
+									<div class="bottom-info orange-bg">
+										<span class="bottom-arrow"></span>
+										<ul>
+											<li>Shinhan Innoplex 2nd floor</li>
+											<li>Geumcheon-gu, Seoul</li>
+											<li>South Korea.</li>
+										</ul>
+									</div>
+									<div class="top-info dark-bg">
+										<span><i class="fa fa-map-marker" aria-hidden="true"></i>
+											Office Address</span>
+									</div>
+								</div>
+							</div>
+							<div class="flipcard">
+								<div class="front">
+									<div class="top-info">
+										<span><i class="fa fa-fax" aria-hidden="true"></i>
+											Phone and Fax</span>
+									</div>
+									<div class="bottom-info">
+										<span class="top-arrow"></span>
+										<ul>
+											<li><a href="tel:+123-456-7890">Local: +123-456-7890</a></li>
+											<li><a href="tel:+123-456-7890">Local: +123-456-7890</a></li>
+											<li><a href="fax:(001)-254-7359">Fax: (001)-254-7359</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="back">
+									<div class="bottom-info orange-bg">
+										<span class="bottom-arrow"></span>
+										<ul>
+											<li><a href="tel:+123-456-7890">Local: +123-456-7890</a></li>
+											<li><a href="tel:+123-456-7890">Local: +123-456-7890</a></li>
+											<li><a href="fax:(001)-254-7359">Fax: (001)-254-7359</a></li>
+										</ul>
+									</div>
+									<div class="top-info dark-bg">
+										<span><i class="fa fa-fax" aria-hidden="true"></i>
+											Phone and Fax</span>
+									</div>
+								</div>
+							</div>
+							<div class="flipcard">
+								<div class="front">
+									<div class="top-info">
+										<span><i class="fa fa-envelope" aria-hidden="true"></i>
+											Email Address</span>
+									</div>
+									<div class="bottom-info">
+										<span class="top-arrow"></span>
+										<ul>
+											<li>www.libraria.com</li>
+											<li>libraria@libraria.com</li>
+											<li>info@libraria.com</li>
+										</ul>
+									</div>
+								</div>
+								<div class="back">
+									<div class="bottom-info orange-bg">
+										<span class="bottom-arrow"></span>
+										<ul>
+											<li><a href="http://www.libraria.com/">www.libraria.com
+											</a></li>
+											<li><a href="mailto:support@libraria.com">libraria@libraria.com</a></li>
+											<li><a href="mailto:info@libraria.com">info@libraria.com</a></li>
+										</ul>
+									</div>
+									<div class="top-info dark-bg">
+										<span><i class="fa fa-envelope" aria-hidden="true"></i>
+											Email Address</span>
+									</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="row">
+							<div class="contact-area text-center">
+								<h1 style="color: black">Location</h1>
+								<span class="underline center"></span>
+								<p class="lead">
+									Shinhan Innoplex 2nd floor<br>Geumcheon-gu, Seoul, South Korea.
+								</p>
+								<div class="container">
+									<div class="contact-map">
+										<div class="company-map" id="map"></div>
+									</div>
+
+									<!-- <div class="col-md-5 col-md-offset-1 border-gray-left">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="contact-map bg-light margin-left">
@@ -111,7 +121,7 @@
                                                     </div>
                                                 </div>
                                             </div> -->
-                                            <!-- <div class="col-md-5 border-gray-right">
+									<!-- <div class="col-md-5 border-gray-right">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="contact-form bg-light margin-right">
@@ -165,17 +175,19 @@
                                                     </div>
                                                 </div>
                                             </div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
-            </div>
-        </div>
-        <!-- End: Contact Us Section -->
-        <script type="text/javascript">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>
+<br>
+<br>
+<!-- End: Contact Us Section -->
+<script type="text/javascript">
         function initMap() {
  
             //지도 스타일
@@ -233,6 +245,6 @@
             }
         }
     </script>
-    <!-- key= 뒤에 API 키 입력 -->
-    <script src="https://maps.google.com/maps/api/js?key=&callback=initMap" type="text/javascript" async defer></script>
-    
+<!-- key= 뒤에 API 키 입력 -->
+<script src="https://maps.google.com/maps/api/js?key=&callback=initMap"
+	type="text/javascript" async defer></script>

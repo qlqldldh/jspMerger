@@ -1,10 +1,12 @@
 package com.mylibrary.book.user.controller;
 
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -28,35 +30,36 @@ public class UserController {
 
 	@Inject
 	UserDAO userDao;
-	
+
 	@Inject
 	BbooklistService bbooklistService;
-	
+
 	@Inject
 	UserNoticeService userNoticeService;
-	
+
 	@Inject
 	BadminDAO badminDAO;
 
 	// index 페이지로 이동
 	@RequestMapping("/index")
 	public String home(HttpServletRequest request, Model model) {
-		
+
 		HttpSession session = request.getSession();
-		if(session.getAttribute("email")!=null) {
-			if(badminDAO.showAll().contains(new BadminVO((String)session.getAttribute("email"))))
+		if (session.getAttribute("email") != null) {
+			if (badminDAO.showAll().contains(new BadminVO((String) session.getAttribute("email"))))
 				session.setAttribute("role", "admin");
-			else session.setAttribute("role", "gen");
+			else
+				session.setAttribute("role", "gen");
 		}
-		
+
 		model.addAttribute("bbooklist", bbooklistService.selectCount());
 		model.addAttribute("bnotice", userNoticeService.boardNotice());
 		System.out.println(userNoticeService.boardNotice().size());
-		
+
 		return "library/index"; // home.jsp로 이동
-		
- 	}
-	
+
+	}
+
 	// 에러 페이지로 이동
 	@RequestMapping("/error") // 시작 페이지
 	public String error(Model model) {
@@ -136,13 +139,19 @@ public class UserController {
 	@RequestMapping("/insertUser")
 	public String insertUser(@RequestParam String email, @RequestParam String passwd, @RequestParam String passwdre,
 			@RequestParam String name, @RequestParam String birth, @RequestParam String phone,
-			@RequestParam String address, @RequestParam String authority) {
+			@RequestParam String address, @RequestParam String authority, HttpServletResponse response) {
+
 		// 비밀번호 암호화
 		if (!(passwd.equals(passwdre)) || (userDao.selectUser(email) != null)) {
 //			System.out.println("password가 다르거나 이미 존재하는 이메일입니다.");
-		System.out.println("This email is already register, or your password does not match! Please try again!");
-		
-			return "redirect:join";
+			System.out.println("This email is already register, or your password does not match! Please try again!");
+//			try {
+//				response.sendRedirect("join");
+//				return;
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+			return "join";
 		}
 		String dbpw = shaEncoder.saltEncoding(passwd, email);
 		Map<String, String> map = new HashMap<String, String>();
@@ -155,7 +164,14 @@ public class UserController {
 		map.put("authority", authority);
 		// affected rows, 영향을 받은 행의 수가 리턴됨
 		int result = userDao.insertUser(map);
-		
+
+//		try {
+//			PrintWriter pwr = response.getWriter();
+//			pwr.write("<script language=javascript>alert('Registered successfully!'); location.href='login';</script>");
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+
 		return "library/signin"; // login.jsp로 이동
 	}
 }

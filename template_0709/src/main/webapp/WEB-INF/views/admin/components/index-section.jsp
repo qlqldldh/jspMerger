@@ -78,20 +78,22 @@
 			</div>
 		</div>
 		<!-- Card END -->
+		
 		<div class="row">
 			<!-- Your Profile Views Chart -->
 			<div class="col-lg-8 m-b30">
 				<div class="widget-box">
 					<div class="wc-title">
-						<h4>Your Profile Views</h4>
+						<h4>Book Count</h4>
 					</div>
 					<div class="widget-inner">
-						<canvas id="myChart" width="500" height="300"></canvas>
+						<canvas id="myChart" width="1000" height="400"></canvas>
 
 					</div>
 				</div>
 			</div>
-			<!-- Your Profile Views Chart END-->
+			
+<!-- Your Profile Views Chart END
 			<div class="col-lg-4 m-b30">
 				<div class="widget-box">
 					<div class="wc-title">
@@ -247,7 +249,11 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>  -->
+	 
+	 
+	 
+	 
 </main>
 <div class="ttr-overlay"></div>
 <script>

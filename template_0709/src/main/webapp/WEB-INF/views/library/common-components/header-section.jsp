@@ -23,9 +23,9 @@
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="topbar-info">
-										<a href="tel:+61-3-8376-6284"><i class="fa fa-phone"></i>+61-3-8376-6284</a>
-										<span>/</span> <a href="mailto:support@libraria.com"><i
-											class="fa fa-envelope"></i>support@libraria.com</a>
+										<a href="tel:+61-3-8376-6284"><i class="fa fa-phone"></i>+82-8376-6284</a>
+										<span>/</span> <a href="mailto:libraria@libraria.com"><i
+											class="fa fa-envelope"></i>libraria@libraria.com</a>
 									</div>
 								</div>
 								<div class="col-sm-6">

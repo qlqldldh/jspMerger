@@ -9,8 +9,7 @@
 									<div class="col-md-6 col-md-offset-3 text-center">
 										<h2 class="section-title">Check Out The New Releases</h2>
 										<span class="underline center"></span>
-										<p class="lead">The standard chunk of Lorem Ipsum used
-											since the 1500s is reproduced below for those interested.</p>
+										<p class="lead">Check out our new releases! And reserve them before someone else does!</p>
 									</div>
 								</div>
 							</div>

@@ -32,7 +32,7 @@
 					<div class="wc-title">
 						<h4>All Incomes</h4>
 					</div>
-					<div class="widget-inner"></div>
+<!-- 					<div class="widget-inner"></div> -->
 					<br />
 					<main>
 						<div class="container-fluid">

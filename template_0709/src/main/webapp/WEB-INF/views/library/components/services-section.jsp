@@ -42,7 +42,7 @@
 								<div class="company-image"></div>
 							</div>
 						</section>
-						<section class="services-offering">
+						<!-- <section class="services-offering">
 							<div class="container">
 								<div class="center-content">
 									<h2 class="section-title">SERVICE WE ARE OFFERING</h2>
@@ -248,7 +248,7 @@
 									<div class="clearfix"></div>
 								</div>
 							</div>
-						</section>
+						</section> -->
 						<!-- <section class="who-we-are">
 							<div class="company-info">
 								<div class="container">

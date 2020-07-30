@@ -83,7 +83,7 @@
 							<aside id="secondary" class="sidebar widget-area"
 								data-accordion-group>
 								<div class="widget widget_recent_entries">
-									<h4 class="widget-title">Visited Items</h4>
+									<h4 class="widget-title">Browsing History</h4>
 									<ul>
 										<li>
 											<figure>
