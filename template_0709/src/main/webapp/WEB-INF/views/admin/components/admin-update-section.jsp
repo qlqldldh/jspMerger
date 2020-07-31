@@ -4,8 +4,14 @@
 			<div class="db-breadcrumb">
 				<h4 class="breadcrumb-title"></h4>
 				<ul class="db-breadcrumb-list">
-					<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-					<li>orders update</li>
+					<!-- <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+					<li>orders update</li> -->
+					<li><a href=“/book/admin/index”>
+						<!-- <i class=“fa fa-home”></i> -->Menu
+				</a></li>
+				<li>Admin</li>
+				<li><a href=“/book/admin/badminMain”>Admin List</a></li>
+				<li>Info Update</li>
 				</ul>
 			</div>	
 			<div class="row">

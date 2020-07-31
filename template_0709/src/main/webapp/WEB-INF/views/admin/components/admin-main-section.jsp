@@ -75,7 +75,7 @@
 														<td><button type="button" class="btn-secondry m-r5" onclick="location.href='badminUpdate?email=${itm.email}'">Update</button>&nbsp;
 													<%-- 	<button type="button" class="btn-secondry m-r5" onclick="location.href='badminDelete?email=${itm.email}'">Delete</button> --%>
 														<button type="button" class="btn-secondry m-r5" id="del"
-																onclick="confirm_delete(${itm.email})" value="${itm.email }">Delete</button>
+																onclick="confirm_delete('${itm.email}')" value="${itm.email }">Delete</button>
 														</td>
 													</tr>
 													</c:forEach>

@@ -3,6 +3,8 @@ package com.mylibrary.book.admin.controller;
 
 import javax.inject.Inject;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +22,8 @@ import com.mylibrary.book.user.service.ShaEncoder;
 @RequestMapping("/admin")
 public class BadminController {
 
+	private static final Logger logger = LoggerFactory.getLogger(BadminController.class);
+	
 	@Inject
 	ShaEncoder shaEncoder; // 암호화 빈
 	
@@ -79,6 +83,7 @@ public class BadminController {
 	
 	@RequestMapping("/badminUpdatedo")
 	public String badminUpdatedo(@ModelAttribute BadminVO vo) { // 형님 여기서 이러시면 곤란합니다 .. @ModelAttribute or @RequestParam //
+//		logger.info("이름은 제대로 들어가는거 같은데 왜 되지 않음? {}.", vo.getName());
 		badminService.updateBadmin1(vo);
 		badminService.updateBadmin2(vo);
 		return "redirect:badminMain";

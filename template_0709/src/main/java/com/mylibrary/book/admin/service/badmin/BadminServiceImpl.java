@@ -75,7 +75,7 @@ public class BadminServiceImpl implements BadminService {
 
 	@Override
 	public int updateBadmin2(BadminVO vo) {
-		return badminDAO.updateBadmin1(vo);
+		return badminDAO.updateBadmin2(vo);
 	}
 
 }

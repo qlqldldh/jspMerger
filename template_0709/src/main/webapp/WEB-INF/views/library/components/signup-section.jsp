@@ -43,23 +43,63 @@
 															class="input-text">
 													</p>
 													<p class="form-row input-required">
-														<label> <span class="first-letter">Birth</span> <span
+														<label> <span class="first-letter">Date of Birth (YY-MM-DD)</span> <span
 															class="second-letter">*</span>
 														</label> <input type="text" id="birth" name="birth"
 															class="input-text">
 													</p>
 													<p class="form-row input-required">
-														<label> <span class="first-letter">Phone Number</span> <span
+														<label> <span class="first-letter">Phone Number (Only numbers)</span> <span
 															class="second-letter">*</span>
 														</label> <input type="text" id="phone" name="phone"
 															class="input-text">
 													</p>
 													<p class="form-row input-required">
-														<label> <span class="first-letter">Address</span> <span
+														<label> <span class="first-letter">Address (City, Country)</span> <span
 															class="second-letter">*</span>
 														</label> <input type="text" id="address" name="address"
 															class="input-text">
 													</p>
+													
+													<!-- <p class=“form-row input-required”>
+														<label> <span class=“first-letter”>Password</span>
+															<span class=“second-letter”>*</span>
+														</label> <input type=“password” id=“passwd” name=“passwd”
+															class=“input-text”>
+													</p>
+													<p class=“form-row input-required”>
+														<label> <span class=“first-letter”>Repeat
+																Password</span> <span class=“second-letter”>*</span>
+														</label> <input type=“password” id=“passwdre” name=“passwdre”
+															class=“input-text”>
+													</p>
+													<p class=“form-row input-required”>
+														<label> <span class=“first-letter”>Name</span> <span
+															class=“second-letter”>*</span>
+														</label> <input type=“text” id=“name” name=“name”
+															class=“input-text”>
+													</p>
+													<p class=“form-row input-required”>
+														<label> <span class=“first-letter”>Birth Date </span> <span class=“first-letter”>(YY-MM-DD)</span><span
+															class=“second-letter”>*</span>
+														</label> <input type=“text” id=“birth” name=“birth”
+															class=“input-text”>
+													</p>
+												
+													<p class=“form-row input-required”>
+														<label> <span class=“first-letter”>Phone
+																Number </span><span class=“first-letter”>(Only numbers)</span> <span class=“second-letter”>*</span>
+														</label> <input type=“text” id=“phone” name=“phone”
+															class=“input-text”>
+													</p>
+													<p class=“form-row input-required”>
+														<label> <span class=“first-letter”>City, Country</span>
+															<span class=“second-letter”>*</span>
+																
+														</label> <input type=“text” id=“address” name=“address”
+															class=“input-text”>
+													</p> -->
+													
 													<!-- <p>
 														<select name="authority">
 															<option value="ROLE_USER">ROLE_USER</option>

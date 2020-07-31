@@ -66,12 +66,12 @@
 										<input class="form-control" type="text" value="${itm.price }" name="price">
 									</div>
 								</div>
-								<div class="form-group row">
+								<%-- <div class="form-group row">
 									<label class="col-sm-2 col-form-label">Unit</label>
 									<div class="col-sm-7">
 										<input class="form-control" type="text" value="${itm.unit }" name="unit">
 									</div>
-								</div>
+								</div> --%>
 								<div class="form-group row">
 									<label class="col-sm-2 col-form-label">ExtraCost</label>
 									<div class="col-sm-7">
