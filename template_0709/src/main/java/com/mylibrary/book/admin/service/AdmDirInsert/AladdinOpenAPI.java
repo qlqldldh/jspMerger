@@ -220,7 +220,7 @@ public class AladdinOpenAPI {
 	
 	public static String GetUrl(String searchWord) throws Exception {
 		Map<String, String> hm = new HashMap<String, String>();
-		hm.put("ttbkey", "ttbmomomo12051044002");
+		hm.put("ttbkey", "TTBKEY");
 		hm.put("Query", URLEncoder.encode(searchWord, "UTF-8"));
 		hm.put("QueryType", "Title");
 		hm.put("MaxResults", "100");
