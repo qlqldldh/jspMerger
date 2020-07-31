@@ -19,7 +19,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	delete from resinfo where resid=#{resid}
 </delete>
 
-
+<delete id="deleteReservedByEmail" parameterType="String">
+	delete from resinfo where resemail=#{resemail}
+</delete>
 
 
 </mapper>

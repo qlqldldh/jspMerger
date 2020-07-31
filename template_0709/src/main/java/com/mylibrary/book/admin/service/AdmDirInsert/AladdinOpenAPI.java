@@ -250,6 +250,8 @@ public class AladdinOpenAPI {
 		boolean flag = false;
 		
 		for (Item item : api.Items) {
+			System.out.println("Title : "+item.Title
+					+" / Author : "+item.Author + " / publisher : "+item.Publisher + " / ISBN : " + item.Isbn13);
 			if ((item.Author).contains(author)) {
 				if ((item.Publisher).contains(publisher)) {
 					System.out.println(item.Isbn13);

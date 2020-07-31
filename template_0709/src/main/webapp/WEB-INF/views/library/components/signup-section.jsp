@@ -130,6 +130,21 @@
 														$('#passwdre').focus();
 														return false;
 														}
+													else if($('#name').val()==""){
+														alert("Please insert Your Name.");
+														$('#name').focus();
+														return false;
+														}
+													else if($('#birth').val()==""){
+														alert("Please insert Your Birthday.");
+														$('#birth').focus();
+														return false;
+														}
+													else if($('#address').val()==""){
+														alert("Please insert Your Address.");
+														$('#address').focus();
+														return false;
+														}
 													else if($('#phone').val()==""){
 														alert("Please insert Your phone number.");
 														$('#phone').focus();
@@ -146,7 +161,7 @@
 															}
 														}
 														alert("Registered Successfully!");
-														$('#send').submit();
+														$('#signup').submit();
 														}
 													});
 												});

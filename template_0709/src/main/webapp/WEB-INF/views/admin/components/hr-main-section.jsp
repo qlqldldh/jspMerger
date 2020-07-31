@@ -80,7 +80,7 @@
 															<%-- <button type="button" class="btn-secondry m-r5" onclick="location.href='hrDelete?tel=${itm.tel}'">Delete</button> --%>
 
 															<button type="button" class="btn-secondry m-r5" id="del"
-																onclick="confirm_delete(${itm.tel})" value="${itm.tel}">Delete</button></td>
+																onclick="confirm_delete('${itm.tel}')" value="${itm.tel}">Delete</button></td>
 													</tr>
 												</c:forEach>
 											</tbody>

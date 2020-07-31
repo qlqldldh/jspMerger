@@ -23,6 +23,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		delete from rentinfo where rentid=#{rentid}
 	</delete>
 
-
+	<delete id="borrowedDeleteByEmail" parameterType="String">
+		delete from rentinfo where renemail=#{renemail}
+	</delete>
 
 </mapper>

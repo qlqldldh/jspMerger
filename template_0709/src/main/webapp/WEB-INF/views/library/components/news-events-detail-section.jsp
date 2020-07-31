@@ -120,7 +120,7 @@
                                     <div class="news-list-detail">
                                         <div class="news-list-box">
                                             <div class="single-news-list">
-                                                <div class="social-content">
+                                                <!-- <div class="social-content">
                                                     <div class="social-share">
                                                         <ul>
                                                             <li><a href="#."><i class="fa fa-comment"></i> 37</a></li>
@@ -137,7 +137,7 @@
                                                             <li><a href="#." target="_blank"><i class="fa fa-linkedin"></i></a></li>
                                                         </ul>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <figure>
                                                     <img src="${pageContext.request.contextPath}/images/news-event/new-detail-img.jpg" alt="News &amp; Event">
                                                 </figure>

@@ -47,6 +47,7 @@ public class BadminController {
 		
 		badminService.deleteBadmin1(email);
 		badminService.deleteBadmin2(email);
+		System.out.println("one admin info is deleted");
 		return "redirect:badminMain";
 		
 	}

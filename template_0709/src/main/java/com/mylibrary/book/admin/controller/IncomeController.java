@@ -54,6 +54,7 @@ public class IncomeController {
 	@RequestMapping("/incomeUpdatedo")
 	public String update(@ModelAttribute IncomeVO vo) {
 		incomeService.incomeUpdate(vo);
+		System.out.println("Access income update do method");
 		return "redirect:incomeMain";
 	}
 }

@@ -10,6 +10,11 @@
 		else
 			return false;
 	}
+
+	function alert_accept(btitle, bauthor, bpublisher, bhid){
+		alert("Accepted");
+		location.href='bhInsert?btitle='+ btitle +'&bauthor='+ bauthor +'&bpublisher='+ bpublisher +'&bhid='+ bhid;
+	}
 </script>
 <!--Main container start -->
 <main class="ttr-wrapper">
@@ -85,8 +90,10 @@
 															<button type="button" class="btn-secondry m-r5" id="del"
 																onclick="confirm_delete(${bh.bhid})" value="${bh.bhid }">Deny</button>
 															&nbsp;
+															<%-- <button type="button" class="btn-secondry m-r5"
+																onclick="location.href='bhInsert?btitle=${bh.btitle}&bauthor=${bh.bauthor}&bpublisher=${bh.bpublisher}&bhid=${bh.bhid}'">Accept</button> --%>
 															<button type="button" class="btn-secondry m-r5"
-																onclick="location.href='bhInsert?btitle=${bh.btitle}&bauthor=${bh.bauthor}&bpublisher=${bh.bpublisher}&bhid=${bh.bhid}'">Accept</button>
+																onclick="alert_accept('${bh.btitle}','${bh.bauthor }','${bh.bpublisher }','${bh.bhid }')">Accept</button>
 														</td>
 													</tr>
 												</c:forEach>

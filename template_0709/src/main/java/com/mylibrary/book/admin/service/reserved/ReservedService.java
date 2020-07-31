@@ -10,4 +10,5 @@ public interface ReservedService {
 	public void insertReserved(ReservedVO vo); //쓰기
 	public int updateReserved(int resid);  //수정
 	public int deleteReserved(String resid);  //삭제
+	public void deleteReservedByEmail(String resemail);
 }

@@ -45,6 +45,12 @@ public class ReservedServiceImpl implements ReservedService {
 		return reservedMapper.deleteReserved(resid);
 	}
 
+	@Override
+	public void deleteReservedByEmail(String resemail) {
+		ReservedMapper reservedMapper = sqlSession.getMapper(ReservedMapper.class);
+		reservedMapper.deleteReservedByEmail(resemail);
+	}
+
 	
 	
 }

@@ -47,6 +47,7 @@
 											<input class="form-control" type="text" name="price" value="${icl.price }">
 										</div>
 									</div>
+									<input type="hidden" name="incomenum" value="${icl.incomenum }">
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">Form</label>
 										<div class="col-sm-7">

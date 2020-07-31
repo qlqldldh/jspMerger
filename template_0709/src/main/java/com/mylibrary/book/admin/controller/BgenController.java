@@ -2,6 +2,7 @@ package com.mylibrary.book.admin.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.mylibrary.book.admin.service.bgenerals.BgenService;
+import com.mylibrary.book.admin.service.borrowed.BorrowedService;
+import com.mylibrary.book.admin.service.reserved.ReservedService;
 import com.mylibrary.book.admin.vo.BgenVO;
 
 @Controller
@@ -17,6 +20,12 @@ public class BgenController {
 	@Autowired
 	BgenService bgenService;
 	
+	@Autowired
+	BorrowedService borrowedService;
+	
+	@Autowired
+	ReservedService reservedService;
+	
 	@RequestMapping("/genMain")
 	public String usersMain(Model model) {
 		model.addAttribute("genlist",bgenService.showAll());
@@ -24,8 +33,12 @@ public class BgenController {
 	}
 	
 	@RequestMapping("/genDelete")
+	@Transactional
 	public String userDelete(@RequestParam String email, Model model) {
+		borrowedService.borrowedDeleteByEmail(email);
+		reservedService.deleteReservedByEmail(email);
 		bgenService.deleteUserInfo(email);
+		System.out.println("delete one user info");
 		return "redirect:genMain";
 	}
 	

@@ -74,8 +74,11 @@
 														<td>${itm.pos }</td>
 														<td><button type="button" class="btn-secondry m-r5" onclick="location.href='badminUpdate?email=${itm.email}'">Update</button>&nbsp;
 													<%-- 	<button type="button" class="btn-secondry m-r5" onclick="location.href='badminDelete?email=${itm.email}'">Delete</button> --%>
+														<c:set var="eml" value="${itm.email }"/>
+														<c:if test="${sessionScope.email ne eml}">
 														<button type="button" class="btn-secondry m-r5" id="del"
 																onclick="confirm_delete('${itm.email}')" value="${itm.email }">Delete</button>
+														</c:if>
 														</td>
 													</tr>
 													</c:forEach>

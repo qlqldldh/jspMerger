@@ -26,4 +26,11 @@ public class BorrowedServiceImpl implements BorrowedService {
 		BorrowedMapper borrowedMapper = sqlSession.getMapper(BorrowedMapper.class);
 		borrowedMapper.borrowedDelete(rentid);
 	}
+
+	@Override
+	public void borrowedDeleteByEmail(String renemail) {
+		BorrowedMapper borrowedMapper = sqlSession.getMapper(BorrowedMapper.class);
+		borrowedMapper.borrowedDeleteByEmail(renemail);
+	}
+	
 }

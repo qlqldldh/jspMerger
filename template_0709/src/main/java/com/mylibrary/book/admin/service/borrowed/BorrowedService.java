@@ -8,4 +8,5 @@ public interface BorrowedService {
 
 	public List<BorrowedVO> showAll();
 	public void borrowedDelete(String rentid);
+	public void borrowedDeleteByEmail(String renemail);
 }

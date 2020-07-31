@@ -80,7 +80,7 @@ public class NoticeController {
 	@RequestMapping("/noticeDelete")
 	public String noticeDelete(@RequestParam String nid) {
 		noticeService.deleteNotice(nid);
-		System.out.println("deleted successfully!");
+		System.out.println("notice deleted successfully!");
 		return "redirect:noticeMain";
 	}
 

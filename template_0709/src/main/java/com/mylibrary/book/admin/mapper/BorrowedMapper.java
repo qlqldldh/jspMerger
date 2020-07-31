@@ -8,5 +8,5 @@ public interface BorrowedMapper {
 	
 	public List<BorrowedVO> selectAll();
 	public void borrowedDelete(String rentid);
-	
+	public void borrowedDeleteByEmail(String renemail);
 }

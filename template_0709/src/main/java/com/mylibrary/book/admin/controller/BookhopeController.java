@@ -46,7 +46,7 @@ public class BookhopeController {
 
 	@RequestMapping("/bhDetail")
 	public String bhDetail(@RequestParam String bhid, Model model) {
-		bookhopeService.getWishedBook(bhid);
+		model.addAttribute("itm",bookhopeService.getWishedBook(bhid));
 
 		return "admin/bookhope-detail";
 	}

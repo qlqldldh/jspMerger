@@ -53,7 +53,7 @@
 													<th>Title</th>
 													<!-- <th>ISBN</th> -->
 													<th>Price</th>
-													<th>Unit</th>
+													<!-- <th>Unit</th> -->
 													<!-- <th>Extra Costs</th> -->
 													<!-- <th>descript</th> -->
 													<th>TotalCost
@@ -88,7 +88,7 @@
 														<td><a href="ordersDetail?ordernum=${itm.ordernum }">${itm.title }</a></td>
 														<%-- 	<td>${itm.isbn }</td> --%>
 														<td>${itm.price }</td>
-														<td>${itm.unit }</td>
+														<%-- <td>${itm.unit }</td> --%>
 														<%-- <td>${itm.extracost }</td>
 														<td>${itm.descript }</td> --%>
 														<td>${itm.totalcost }</td>

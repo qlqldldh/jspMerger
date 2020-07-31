@@ -49,20 +49,20 @@
 																<div class="form-group row">
 																	<label class="col-sm-2 col-form-label">Title</label>
 																	<div class="col-sm-7">
-																		<input class="form-control" name="btitle" type="text">
+																		<input class="form-control" name="btitle" type="text" id="btitle">
 																	</div>
 																</div>
 																<div class="form-group row">
 																	<label class="col-sm-2 col-form-label">Author</label>
 																	<div class="col-sm-7">
-																		<input class="form-control" name="bauthor" type="text">
+																		<input class="form-control" name="bauthor" type="text" id="bauthor">
 																	</div>
 																</div>
 																<div class="form-group row">
 																	<label class="col-sm-2 col-form-label">Publisher</label>
 																	<div class="col-sm-7">
 																		<input class="form-control" name="bpublisher"
-																			type="text">
+																			type="text" id="bpublisher">
 																	</div>
 																</div>
 																<div class="form-group row">
@@ -70,7 +70,7 @@
 																	<div class="col-sm-7">
 																		<span class="help">Also, let us know if you are
 																			okay with other editions, too!</span> <input
-																			class="form-control" name="comments" type="text">
+																			class="form-control" name="comments" type="text" id="comments">
 
 																	</div>
 																</div>
@@ -87,7 +87,7 @@
 																					<div class="col-sm-2"></div>
 																					<div class="col-sm-7">
 																						<input type="submit" class="btn-secondry m-r5"
-																							value="Request" /> <input type="reset"
+																							value="Request" id="req"/> <input type="reset"
 																							class="btn-secondry" value="Cancel" />
 																					</div>
 																				</div>
@@ -95,8 +95,34 @@
 																		</div>
 																	</div>
 																</div>
-																</div>
+															</div>
 														</form>
+														<script>
+															$(document).ready(function(){
+												                $('#req').click(function(){
+												                    if($('#btitle').val()==""){
+												                        alert("should type title");
+												                        $('#btitle').focus();
+												                        return false;
+												                    }
+												                    else if($('#bauthor').val()==""){
+												                        alert("should type author name");
+												                        $('#bauthor').focus();
+												                        return false;
+												                    }
+												                    else if($('#bpublisher').val()==""){
+												                        alert("should type publisher");
+												                        $('#bpublisher').focus();
+												                        return false;
+												                    }
+												                    else{
+													                    	alert("Requested Successfully!");
+												                        $('#req').submit();
+												                    }
+												                });
+												            });
+														</script>
+														
 													</div>
 												</div>
 											</div>

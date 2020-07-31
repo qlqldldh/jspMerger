@@ -9,6 +9,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttribute;
@@ -107,29 +108,30 @@ public class BookDetailController {
 	}
 
 	@RequestMapping("/lendinginsertdo")
-	public String lendinginsertdo(@RequestParam String bid, @SessionAttribute String email) {
+	public String lendinginsertdo(@RequestParam String bid, @SessionAttribute String email, Model model) {
 
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("renemail", email);
 		map.put("renbid", bid);
 		BooklistDetailservice.insertLending(map);
 		BooklistDetailservice.updatebcount(bid);
-		return "redirect:BbooklistMain";
+		model.addAttribute("bid",bid);
+		return "redirect:bbookDetail";
 	}
 
 	@RequestMapping("/exdateupdatedo")
-	public String exdateupdatedo(@RequestParam String bid, @SessionAttribute String email) {
+	public String exdateupdatedo(@RequestParam String bid, @SessionAttribute String email, Model model) {
 		Map<String, String> map = new HashMap<String, String>();
 
 		map.put("renemail", email);
 		map.put("renbid", bid);
 		BooklistDetailservice.exdateupdate(map);
-
-		return "redirect:BbooklistMain";
+		model.addAttribute("bid",bid);
+		return "redirect:bbookDetail";
 	}
 
 	@RequestMapping("/returndeletedo")
-	public String returndeletedo(@RequestParam String bid, @SessionAttribute String email) {
+	public String returndeletedo(@RequestParam String bid, @SessionAttribute String email, Model model) {
 		System.out.println("returndeletedo" + bid);
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("renemail", email);
@@ -137,25 +139,27 @@ public class BookDetailController {
 		BooklistDetailservice.returnDelete(map);
 
 		lendingWhenReturn(bid);
-
-		return "redirect:BbooklistMain";
+		model.addAttribute("bid",bid);
+		return "redirect:bbookDetail";
 	}
 
 	@RequestMapping("/reservedinsertdo")
-	public String reservedinsertdo(@RequestParam String bid, @SessionAttribute String email) {
+	public String reservedinsertdo(@RequestParam String bid, @SessionAttribute String email, Model model) {
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("resemail", email);
 		map.put("resbid", bid);
 		BooklistDetailservice.reservedInsert(map);
-		return "redirect:BbooklistMain";
+		model.addAttribute("bid",bid);
+		return "redirect:bbookDetail";
 	}
 
 	@RequestMapping("/reserveddeletedo")
-	public String reserveddelete(@RequestParam String bid, @SessionAttribute String email) {
+	public String reserveddelete(@RequestParam String bid, @SessionAttribute String email, Model model) {
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("resemail", email);
 		map.put("resbid", bid);
 		BooklistDetailservice.reservedDelete(map);
-		return "redirect:BbooklistMain";
+		model.addAttribute("bid",bid);
+		return "redirect:bbookDetail";
 	}
 }

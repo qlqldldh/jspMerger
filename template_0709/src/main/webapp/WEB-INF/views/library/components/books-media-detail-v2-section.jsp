@@ -50,20 +50,20 @@
                                             <p><strong>On the shelves now at:</strong> ${booklist.blocation}</p>
                                             <c:choose>
 												<c:when test="${in == 'lending'}">
-													<a href="${pageContext.request.contextPath}/user/lendinginsertdo?bid=${booklist.bid }" class="btn btn-dark-gray"></i>Lending</a>
+													<a href="${pageContext.request.contextPath}/user/lendinginsertdo?bid=${booklist.bid }" class="btn btn-dark-gray">Lending</a>
 												</c:when>
 											
 												<c:when test="${in == 'return'}">
-													<a href="${pageContext.request.contextPath}/user/returndeletedo?bid=${booklist.bid }" class="btn btn-dark-gray"></i>Return</a>
-													<a href="${pageContext.request.contextPath}/user/exdateupdatedo?bid=${booklist.bid }" class="btn btn-dark-gray"></i>Expanded</a>
+													<a href="${pageContext.request.contextPath}/user/returndeletedo?bid=${booklist.bid }" class="btn btn-dark-gray">Return</a>
+													<a href="${pageContext.request.contextPath}/user/exdateupdatedo?bid=${booklist.bid }" class="btn btn-dark-gray">Expanded</a>
 												</c:when>
 												
 												<c:when test="${in == 'expanded'}">
-													<a href="${pageContext.request.contextPath}/user/returndeletedo?bid=${booklist.bid }" class="btn btn-dark-gray"></i>Return</a>
+													<a href="${pageContext.request.contextPath}/user/returndeletedo?bid=${booklist.bid }" class="btn btn-dark-gray">Return</a>
 												</c:when>
 																								
 												<c:when test="${in == 'reserved'}">
-													<a href="${pageContext.request.contextPath}/user/reservedinsertdo?bid=${booklist.bid }" class="btn btn-dark-gray"></i>Reserved</a>
+													<a href="${pageContext.request.contextPath}/user/reservedinsertdo?bid=${booklist.bid }" class="btn btn-dark-gray">Reserved</a>
 												</c:when>
 												
 												<c:when test="${in == 'reserved cancel'}">
