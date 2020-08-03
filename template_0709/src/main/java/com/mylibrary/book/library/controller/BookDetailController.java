@@ -1,10 +1,12 @@
 package com.mylibrary.book.library.controller;
 
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -108,30 +110,46 @@ public class BookDetailController {
 	}
 
 	@RequestMapping("/lendinginsertdo")
-	public String lendinginsertdo(@RequestParam String bid, @SessionAttribute String email, Model model) {
+	public void lendinginsertdo(@RequestParam String bid, @SessionAttribute String email, Model model, HttpServletResponse response) {
 
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("renemail", email);
 		map.put("renbid", bid);
 		BooklistDetailservice.insertLending(map);
 		BooklistDetailservice.updatebcount(bid);
-		model.addAttribute("bid",bid);
-		return "redirect:bbookDetail";
+//		model.addAttribute("bid",bid);
+		
+		try {
+			PrintWriter out = response.getWriter();
+			out.print("<script>alert('Lendded Successfully'); location.href='bbookDetail?bid="+bid+"';</script>");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+//		return "redirect:bbookDetail";
 	}
 
 	@RequestMapping("/exdateupdatedo")
-	public String exdateupdatedo(@RequestParam String bid, @SessionAttribute String email, Model model) {
+	public void exdateupdatedo(@RequestParam String bid, @SessionAttribute String email, Model model, HttpServletResponse response) {
 		Map<String, String> map = new HashMap<String, String>();
 
 		map.put("renemail", email);
 		map.put("renbid", bid);
 		BooklistDetailservice.exdateupdate(map);
-		model.addAttribute("bid",bid);
-		return "redirect:bbookDetail";
+		
+		try {
+			PrintWriter out = response.getWriter();
+			out.print("<script>alert('Extended Successfully'); location.href='bbookDetail?bid="+bid+"';</script>");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+//		model.addAttribute("bid",bid);
+//		return "redirect:bbookDetail";
 	}
 
 	@RequestMapping("/returndeletedo")
-	public String returndeletedo(@RequestParam String bid, @SessionAttribute String email, Model model) {
+	public void returndeletedo(@RequestParam String bid, @SessionAttribute String email, Model model, HttpServletResponse response) {
 		System.out.println("returndeletedo" + bid);
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("renemail", email);
@@ -139,27 +157,51 @@ public class BookDetailController {
 		BooklistDetailservice.returnDelete(map);
 
 		lendingWhenReturn(bid);
-		model.addAttribute("bid",bid);
-		return "redirect:bbookDetail";
+		
+		try {
+			PrintWriter out = response.getWriter();
+			out.print("<script>alert('Returned Successfully'); location.href='bbookDetail?bid="+bid+"';</script>");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+//		model.addAttribute("bid",bid);
+//		return "redirect:bbookDetail";
 	}
 
 	@RequestMapping("/reservedinsertdo")
-	public String reservedinsertdo(@RequestParam String bid, @SessionAttribute String email, Model model) {
+	public void reservedinsertdo(@RequestParam String bid, @SessionAttribute String email, Model model, HttpServletResponse response) {
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("resemail", email);
 		map.put("resbid", bid);
 		BooklistDetailservice.reservedInsert(map);
-		model.addAttribute("bid",bid);
-		return "redirect:bbookDetail";
+		
+		try {
+			PrintWriter out = response.getWriter();
+			out.print("<script>alert('Reserved Successfully'); location.href='bbookDetail?bid="+bid+"';</script>");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+//		model.addAttribute("bid",bid);
+//		return "redirect:bbookDetail";
 	}
 
 	@RequestMapping("/reserveddeletedo")
-	public String reserveddelete(@RequestParam String bid, @SessionAttribute String email, Model model) {
+	public void reserveddelete(@RequestParam String bid, @SessionAttribute String email, Model model, HttpServletResponse response) {
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("resemail", email);
 		map.put("resbid", bid);
 		BooklistDetailservice.reservedDelete(map);
-		model.addAttribute("bid",bid);
-		return "redirect:bbookDetail";
+		
+		try {
+			PrintWriter out = response.getWriter();
+			out.print("<script>alert('Reservation is cancelled'); location.href='bbookDetail?bid="+bid+"';</script>");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+//		model.addAttribute("bid",bid);
+//		return "redirect:bbookDetail";
 	}
 }

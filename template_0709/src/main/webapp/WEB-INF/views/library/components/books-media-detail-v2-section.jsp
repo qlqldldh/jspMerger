@@ -44,7 +44,7 @@
                                     </div> --%>
                                     <div class="post-right-content">
                                             <h4>Available now</h4>
-                                            <p><strong>Total Copies:</strong> ${booklist.bcount}</p>
+                                            <%-- <p><strong>Total Copies:</strong> ${booklist.bcount}</p> --%>
                                             <p><strong>Available:</strong> 01</p>
                                             <p><strong>Holds:</strong>  01</p>
                                             <p><strong>On the shelves now at:</strong> ${booklist.blocation}</p>
