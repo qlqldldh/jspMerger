@@ -106,7 +106,7 @@
                                     </div>
                                   <!--  <div class="clearfix"></div> --> <!-- clearfix 주석처리하여 이미지 라인부 배경 색깔 제거 -->
                                 </div>
-                                <div class="clearfix"></div>
+                                <div class="clearfix"></div><br>
                                 <p><strong>Description :</strong> ${booklist.descrip} </p>
 
                                 <!-- <div class="table-tabs" id="responsiveTabs">

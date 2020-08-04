@@ -21,7 +21,7 @@
 											<img src="${itm.img }" alt="Book Image" style="width:436px; height:237px;"/>
 											<figcaption class="bg-orange">
 												<div class="info-block">
-													<span class="author"><strong><h4>${itm.title}</h4></strong></span>
+													<span class="author"><strong><a href="bbookDetail?bid=${itm.bid }"><h4>${itm.title}</h4></a></strong></span>
 													<span class="author"><strong>Author:</strong>${itm.author }</span>
 													<span class="author"><strong>ISBN:</strong> ${itm.isbn }</span>
 												</div>
