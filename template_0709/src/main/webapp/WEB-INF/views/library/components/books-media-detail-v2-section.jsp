@@ -109,7 +109,7 @@
                                 <div class="clearfix"></div>
                                 <p><strong>Description :</strong> ${booklist.descrip} </p>
 
-                                <div class="table-tabs" id="responsiveTabs">
+                                <!-- <div class="table-tabs" id="responsiveTabs">
                                     <ul class="nav nav-tabs">
                                         <li class="active"><b class="arrow-up"></b><a data-toggle="tab" href="#sectionA">Copies: 05</a></li>
                                         <li><b class="arrow-up"></b><a data-toggle="tab" href="#sectionB">Reviews (12)</a></li>
@@ -206,10 +206,11 @@
                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
                 </main>
             </div>
         </div>
+        <br><br><br>

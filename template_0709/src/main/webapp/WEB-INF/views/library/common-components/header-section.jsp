@@ -113,10 +113,10 @@
 									class="dropdown-toggle disabled" href="index">Home</a></li>
 								<li class="dropdown"><a data-toggle="dropdown"
 									class="dropdown-toggle disabled"
-									href="BbooklistMain">Books &amp; Media</a></li>
+									href="BbooklistMain">Books</a></li>
 								<li class="dropdown"><a data-toggle="dropdown"
 									class="dropdown-toggle disabled"
-									href="userNoticeMain">News &amp; Events</a></li>
+									href="userNoticeMain">Notice</a></li>
 								<li><a href="about">About us</a></li>
 								<li><a href="contact">Contact</a></li>
 							</ul>
@@ -137,8 +137,7 @@
 									<li><a href="home-v2.html">Home V2</a></li>
 									<li><a href="home-v3.html">Home V3</a></li>
 								</ul> --></li>
-							<li><a href="bookList">Books &amp;
-									Media</a>
+							<li><a href="BbooklistMain">Books</a>
 								<!-- <ul>
 									<li><a href="books-media-list-view.html">Books &amp;
 											Media List View</a></li>
@@ -151,8 +150,7 @@
 									<li><a href="books-media-detail-v2.html">Books &amp;
 											Media Detail V2</a></li>
 								</ul> --></li>
-							<li><a href="userNoticeMain">News &amp;
-									Events</a>
+							<li><a href="userNoticeMain">Notice</a>
 								<!-- <ul>
 									<li><a href="news-events-list-view.html">News &amp;
 											Events List View</a></li>
@@ -173,6 +171,18 @@
 								</ul></li> -->
 							<li><a href="about">About us</a></li>
 							<li><a href="contact">Contact</a></li>
+							<c:choose>
+								<c:when test="${sessionScope.email != null }">
+								<%-- <a><i class="fa fa-lock"></i>${email }</a> --%>
+								<li><a href="logout">${email }(Logout)</a></li>
+								<c:if test="${role !='admin'}">
+									<li><a href="mypage">mypage</a></li>
+								</c:if>
+								</c:when>
+								<c:when test="${sessionScope.email == null }">
+								<li><a href="login">Login / Register</a></li>
+								</c:when>
+							</c:choose>
 						</ul>
 					</div>
 				</div>

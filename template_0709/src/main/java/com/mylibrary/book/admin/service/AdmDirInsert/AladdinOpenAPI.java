@@ -268,7 +268,7 @@ public class AladdinOpenAPI {
 							pstmt.setString(5, item.Isbn13);
 							pstmt.setString(6, item.CategoryName);
 							pstmt.setString(7, getDeciDiv(item));
-							pstmt.setInt(8, 1);
+							pstmt.setInt(8, 0);
 							pstmt.setString(9, item.Description);
 							pstmt.setInt(10, 0);
 							pstmt.setString(11, item.Cover);

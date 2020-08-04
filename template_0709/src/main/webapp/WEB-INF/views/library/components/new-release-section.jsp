@@ -7,9 +7,9 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-md-6 col-md-offset-3 text-center">
-										<h2 class="section-title">Check Out The New Releases</h2>
+										<h2 class="section-title">Check Out The Recommended</h2>
 										<span class="underline center"></span>
-										<p class="lead">Check out our new releases! And reserve them before someone else does!</p>
+										<p class="lead">Check out our recommended books! Many users already read them!</p>
 									</div>
 								</div>
 							</div>
